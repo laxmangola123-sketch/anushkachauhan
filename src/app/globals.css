@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), sans-serif;
+  
+  --color-gold: #e8d6b3; /* Champagne Gold */
+  --color-gold-light: #f5eedc; /* Light Champagne */
+  --color-gold-dark: #aa9775; /* Dark Champagne */
+  --color-cream: #f5eedc; /* Champagne Cream */
+  --color-dark-bg: #35020c; /* Deep Burgundy background */
+  --color-dark-card: #4d0b17; /* Burgundy card background */
+  --color-rust: #e8d6b3; /* Champagne accent */
+}
+
+/* Custom CSS Variables */
+:root {
+  --background: #35020c; /* Deep Burgundy velvet background */
+  --foreground: #f5eedc; /* Champagne cream text */
+}
+
+body {
+  background-color: var(--background);
+  background-image: 
+    linear-gradient(90deg, rgba(232, 214, 179, 0.02) 1px, transparent 0),
+    linear-gradient(rgba(232, 214, 179, 0.02) 1px, transparent 0),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10 C62 35, 85 58, 110 60 C85 62, 62 85, 60 110 C58 85, 35 62, 10 60 C35 58, 58 35, 60 10 Z' fill='%23e8d6b3' fill-opacity='0.02'/%3E%3Cpath d='M60 40 A20 20 0 1 0 60 80 A20 20 0 1 0 60 40' fill='none' stroke='%23e8d6b3' stroke-width='0.5' stroke-opacity='0.025'/%3E%3C/svg%3E");
+  background-size: 6px 6px, 6px 6px, 120px 120px;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom styles for luxury appearance */
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Global Bold Overrides */
+body, p, span, a, button, label, input, select, textarea, li, option, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+}
+
+.font-light {
+  font-weight: 700 !important;
+}
+
+.font-thin {
+  font-weight: 600 !important;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(245, 238, 220, 0.2);
+  color: transparent;
+}
+
+.text-stroke-gold {
+  -webkit-text-stroke: 1px rgba(232, 214, 179, 0.6);
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #35020c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d0b17;
+  border: 1px solid #e8d6b3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8d6b3;
+}
+
+/* Custom animations helper */
+.luxury-hover-scale {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.line-glow {
+  position: relative;
+}
+.line-glow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e8d6b3, transparent);
+}
+
+/* Lenis smooth scrolling requirement */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   DYNAMIC THEME OVERRIDES (BURGUNDY & CHAMPAGNE)
+   Directly overrides hardcoded utility hex classes across component files.
+   ========================================================================== */
+
+/* Background Overrides */
+.bg-\[\#f5ebd9\] {
+  background-color: #35020c !important;
+}
+.bg-\[\#f5ebd9\]\/80 {
+  background-color: rgba(53, 2, 12, 0.8) !important;
+}
+.bg-\[\#f5ebd9\]\/98 {
+  background-color: rgba(53, 2, 12, 0.98) !important;
+}
+.bg-\[\#f5ebd9\]\/90 {
+  background-color: rgba(53, 2, 12, 0.9) !important;
+}
+.bg-\[\#f5ebd9\]\/30 {
+  background-color: rgba(53, 2, 12, 0.3) !important;
+}
+.bg-\[\#f5ebd9\]\/50 {
+  background-color: rgba(53, 2, 12, 0.5) !important;
+}
+.bg-\[\#f5ebd9\]\/60 {
+  background-color: rgba(53, 2, 12, 0.6) !important;
+}
+
+/* Card Background Overrides (Beige -> Burgundy Card) */
+.bg-\[\#ece2ce\] {
+  background-color: #4d0b17 !important;
+}
+.bg-\[\#ece2ce\]\/15 {
+  background-color: rgba(77, 11, 23, 0.15) !important;
+}
+.bg-\[\#ece2ce\]\/20 {
+  background-color: rgba(77, 11, 23, 0.25) !important;
+}
+.bg-\[\#ece2ce\]\/30 {
+  background-color: rgba(77, 11, 23, 0.35) !important;
+}
+.bg-\[\#ece2ce\]\/40 {
+  background-color: rgba(77, 11, 23, 0.5) !important;
+}
+
+/* Button & Dark Element Overrides (Charcoal -> Champagne) */
+.bg-\[\#1c1813\] {
+  background-color: #e8d6b3 !important;
+  color: #35020c !important;
+}
+.text-\[\#1c1813\] {
+  color: #f5eedc !important;
+}
+.text-\[\#1c1813\]\/40 {
+  color: rgba(245, 238, 220, 0.4) !important;
+}
+.text-\[\#1c1813\]\/50 {
+  color: rgba(245, 238, 220, 0.5) !important;
+}
+.text-\[\#1c1813\]\/55 {
+  color: rgba(245, 238, 220, 0.55) !important;
+}
+.text-\[\#1c1813\]\/60 {
+  color: rgba(245, 238, 220, 0.6) !important;
+}
+.text-\[\#1c1813\]\/65 {
+  color: rgba(245, 238, 220, 0.65) !important;
+}
+.text-\[\#1c1813\]\/75 {
+  color: rgba(245, 238, 220, 0.75) !important;
+}
+.border-\[\#1c1813\] {
+  border-color: #e8d6b3 !important;
+}
+
+/* Border Overrides (Old muted gold -> Champagne Gold) */
+.border-\[\#c5a880\]\/10 {
+  border-color: rgba(232, 214, 179, 0.15) !important;
+}
+.border-\[\#c5a880\]\/15 {
+  border-color: rgba(232, 214, 179, 0.25) !important;
+}
+.border-\[\#c5a880\]\/20 {
+  border-color: rgba(232, 214, 179, 0.35) !important;
+}
+.border-\[\#c5a880\]\/30 {
+  border-color: rgba(232, 214, 179, 0.45) !important;
+}
+
+/* Hover Overrides */
+.hover\:bg-\[\#c5a880\]:hover {
+  background-color: #e8d6b3 !important;
+  color: #35020c !important;
+}
+.hover\:text-\[\#1c1813\]:hover {
+  color: #35020c !important;
+}
+.hover\:bg-\[\#c5a880\]\/10:hover {
+  background-color: rgba(232, 214, 179, 0.15) !important;
+}
+
+/* Cream Text Overrides */
+.text-cream {
+  color: #f5eedc !important;
+}
+.text-cream\/70 {
+  color: rgba(245, 238, 220, 0.7) !important;
+}
+.text-cream\/55 {
+  color: rgba(245, 238, 220, 0.55) !important;
+}
+.text-cream\/50 {
+  color: rgba(245, 238, 220, 0.5) !important;
+}
+.text-cream\/40 {
+  color: rgba(245, 238, 220, 0.4) !important;
+}
+.text-\[\#f6f3eb\] {
+  color: #f5eedc !important;
+}
+
+/* Backdrop Overrides */
+.bg-\[\#0d0704\]\/60 {
+  background-color: rgba(34, 0, 5, 0.7) !important;
+}
+.bg-\[\#0d0704\]\/85 {
+  background-color: rgba(34, 0, 5, 0.85) !important;
+}
+
+/* Custom Selection Overrides */
+::selection {
+  background-color: #e8d6b3 !important;
+  color: #35020c !important;
+}
+
+/* Very Dark Burgundy overrides (#12011b replacement) */
+.bg-\[\#12011b\] {
+  background-color: #220005 !important;
+}
+.bg-\[\#12011b\]\/80 {
+  background-color: rgba(34, 0, 5, 0.8) !important;
+}
+.bg-\[\#12011b\]\/50 {
+  background-color: rgba(34, 0, 5, 0.5) !important;
+}
+.bg-\[\#12011b\]\/95 {
+  background-color: rgba(34, 0, 5, 0.95) !important;
+}
+
+/* Velvet Burgundy overrides (#1d032e replacement) */
+.bg-\[\#1d032e\] {
+  background-color: #35020c !important;
+}
+.bg-\[\#1d032e\]\/90 {
+  background-color: rgba(53, 2, 12, 0.9) !important;
+}
+.bg-\[\#1d032e\]\/95 {
+  background-color: rgba(53, 2, 12, 0.95) !important;
+}
+.bg-\[\#1d032e\]\/80 {
+  background-color: rgba(53, 2, 12, 0.8) !important;
+}
+.bg-\[\#1d032e\]\/50 {
+  background-color: rgba(53, 2, 12, 0.5) !important;
+}
+.bg-\[\#1d032e\]\/30 {
+  background-color: rgba(53, 2, 12, 0.3) !important;
+}
+
+/* Gradient Stop Overrides */
+.from-\[\#12011b\]\/95 {
+  --tw-gradient-from: rgba(34, 0, 5, 0.95) var(--tw-gradient-from-position, 0%) !important;
+  --tw-gradient-to: rgba(34, 0, 5, 0) var(--tw-gradient-to-position, 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.via-\[\#1d032e\]\/45 {
+  --tw-gradient-to: rgba(53, 2, 12, 0) var(--tw-gradient-to-position, 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(53, 2, 12, 0.45) var(--tw-gradient-via-position, 50%), var(--tw-gradient-to) !important;
+}
+.to-\[\#12011b\]\/80 {
+  --tw-gradient-to: rgba(34, 0, 5, 0.8) var(--tw-gradient-to-position, 100%) !important;
+}
+.from-\[\#12011b\]\/70 {
+  --tw-gradient-from: rgba(34, 0, 5, 0.7) var(--tw-gradient-from-position, 0%) !important;
+  --tw-gradient-to: rgba(34, 0, 5, 0) var(--tw-gradient-to-position, 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-\[\#12011b\]\/70 {
+  --tw-gradient-to: rgba(34, 0, 5, 0.7) var(--tw-gradient-to-position, 100%) !important;
+}
