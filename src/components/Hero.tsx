@@ -33,19 +33,27 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#12011b]">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
+        {/* Logo in the background behind the video layer */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[-1]">
+          <img
+            src="/logo.jpg"
+            alt="Anushka Chauhan Background Logo"
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gold/25 object-cover opacity-35 filter brightness-[0.6]"
+          />
+        </div>
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover scale-105 filter brightness-[0.65] contrast-[1.1] saturate-[0.9]"
+          className="w-full h-full object-cover scale-105 filter brightness-[0.65] contrast-[1.1] saturate-[0.9] relative z-0"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Royal deep overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#12011b]/95 via-[#1d032e]/45 to-[#12011b]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#12011b]/95 via-[#1d032e]/45 to-[#12011b]/80 z-10" />
         {/* Side vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#12011b]/70 via-transparent to-[#12011b]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#12011b]/70 via-transparent to-[#12011b]/70 z-10" />
       </div>
 
       {/* Hero Content */}
@@ -56,14 +64,6 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center"
         >
-          {/* Logo Medallion */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <img
-              src="/logo.jpg"
-              alt="Anushka Chauhan Logo Medallion"
-              className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-gold/45 shadow-2xl object-cover filter brightness-[0.95]"
-            />
-          </motion.div>
 
           {/* Subheading */}
           <motion.p

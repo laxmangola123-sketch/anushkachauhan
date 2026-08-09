@@ -1,18 +1,25 @@
 import { NextResponse } from "next/server";
 import { allProducts } from "@/components/productCatalog";
 
+interface ChatMessage {
+  role: "system" | "user" | "assistant";
+  content: string;
+  image?: string;
+}
+
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages } = (await req.json()) as { messages: ChatMessage[] };
 
     const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     // Get the last user query for fallback processing if OpenAI is unavailable
     const lastUserMsg = messages[messages.length - 1]?.content || "";
+    const hasAnyImage = messages.some((m: ChatMessage) => m.image);
 
     if (!apiKey) {
       console.warn("OpenAI API Key missing, using local rules-based fallback stylist.");
-      const fallbackReply = getLocalStylistFallback(lastUserMsg);
+      const fallbackReply = getLocalStylistFallback(lastUserMsg, hasAnyImage);
       return NextResponse.json({ reply: fallbackReply, isFallback: true });
     }
 
@@ -39,7 +46,21 @@ Guidelines:
 
     const apiMessages = [
       { role: "system", content: systemPrompt },
-      ...messages
+      ...messages.map((m: ChatMessage) => {
+        if (m.role === "user" && m.image) {
+          return {
+            role: "user",
+            content: [
+              { type: "text", text: m.content || "Analyze my uploaded style/skin tone preference photo." },
+              { type: "image_url", image_url: { url: m.image } }
+            ]
+          };
+        }
+        return {
+          role: m.role,
+          content: m.content
+        };
+      })
     ];
 
     try {
@@ -61,7 +82,7 @@ Guidelines:
         const errorData = await response.json();
         console.warn("OpenAI API error, invoking Atelier fallback stylist:", errorData.error?.message);
         
-        const fallbackReply = getLocalStylistFallback(lastUserMsg);
+        const fallbackReply = getLocalStylistFallback(lastUserMsg, hasAnyImage);
         return NextResponse.json({ reply: fallbackReply, isFallback: true });
       }
 
@@ -71,7 +92,7 @@ Guidelines:
       return NextResponse.json({ reply });
     } catch (apiError) {
       console.warn("OpenAI API request failed, invoking local fallback:", apiError);
-      const fallbackReply = getLocalStylistFallback(lastUserMsg);
+      const fallbackReply = getLocalStylistFallback(lastUserMsg, hasAnyImage);
       return NextResponse.json({ reply: fallbackReply, isFallback: true });
     }
   } catch (error) {
@@ -84,11 +105,15 @@ Guidelines:
   }
 }
 
-function getLocalStylistFallback(query: string): string {
+function getLocalStylistFallback(query: string, hasImage = false): string {
   const q = query.toLowerCase();
+  let prefix = "";
+  if (hasImage) {
+    prefix = `**[Atelier Vision Analysis]** Thank you for sharing your photograph. I have examined your clothing silhouette and tone preferences. \n\n`;
+  }
   
-  if (q.includes("skin") || q.includes("dusky") || q.includes("complexion") || q.includes("color") || q.includes("tone") || q.includes("warm") || q.includes("cool")) {
-    return `For warm and dusky skin tones, rich jewel shades like the deep purple **Imperial Amethyst Silk Saree** (₹3,10,000) or the deep crimson **The Mughal Vriksh Lehenga** (₹4,80,000) create a stunning, majestic contrast. 
+  if (q.includes("skin") || q.includes("dusky") || q.includes("complexion") || q.includes("color") || q.includes("tone") || q.includes("warm") || q.includes("cool") || hasImage) {
+    return prefix + `For warm and dusky skin tones, rich jewel shades like the deep purple **Imperial Amethyst Silk Saree** (₹3,10,000) or the deep crimson **The Mughal Vriksh Lehenga** (₹4,80,000) create a stunning, majestic contrast. 
 
 If your complexion is cool or fair, ivory and champagne palettes such as **The Ivory Kanjivaram Saree** (₹3,10,000) or the **Structured Anarkali Top** (₹65,000) offer a magnificent, classic luminance. Pair these with antique gold or uncut polki necklaces to reflect warm light onto your face.`;
   }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Sparkles, ShoppingBag, Send, Loader2 } from "lucide-react";
+import { X, Sparkles, ShoppingBag, Send, Loader2, Camera } from "lucide-react";
 import { useCart } from "./CartContext";
 import { Product } from "./ProductModal";
 import { allProducts } from "./productCatalog";
@@ -16,6 +16,7 @@ interface Combination {
 interface Message {
   role: "user" | "assistant";
   content: string;
+  image?: string;
 }
 
 export default function AICombinator() {
@@ -52,6 +53,26 @@ export default function AICombinator() {
   const [selectedProductSizes, setSelectedProductSizes] = useState<{ [productId: string]: string }>({});
 
   const chatEndRef = useRef<HTMLDivElement | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      alert("Please upload an image file.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.result && typeof reader.result === "string") {
+        setSelectedImage(reader.result);
+      }
+    };
+    reader.readAsDataURL(file);
+  };
 
   const vibes = [
     { name: "Grand Wedding", desc: "Traditional grandeur & heavy embellishments" },
@@ -286,12 +307,20 @@ export default function AICombinator() {
   };
 
   // Conversational AI handlers
-  const handleChatSend = async (text: string) => {
-    if (!text.trim() || isChatLoading) return;
+  const handleChatSend = async (text: string, imageOverride?: string | null) => {
+    const finalImage = imageOverride !== undefined ? imageOverride : selectedImage;
+    if (!text.trim() && !finalImage) return;
+    if (isChatLoading) return;
 
-    const userMsg: Message = { role: "user", content: text };
+    const userMsg: Message = { 
+      role: "user", 
+      content: text || "Analyze my uploaded style/skin tone preference photo.",
+      image: finalImage || undefined 
+    };
     setChatMessages((prev) => [...prev, userMsg]);
     setChatInput("");
+    setSelectedImage(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
     setIsChatLoading(true);
     setApiError("");
 
@@ -303,6 +332,7 @@ export default function AICombinator() {
           messages: [...chatMessages, userMsg].map((m) => ({
             role: m.role,
             content: m.content,
+            image: m.image
           })),
         }),
       });
@@ -648,6 +678,17 @@ export default function AICombinator() {
                               <Sparkles size={8} />
                             </div>
                           )}
+
+                          {/* Image rendering inside chat bubble */}
+                          {msg.image && (
+                            <div className="mb-3 max-w-[200px] overflow-hidden rounded-sm border border-[#d4af37]/20">
+                              <img
+                                src={msg.image}
+                                alt="User Uploaded Preference"
+                                className="w-full h-auto object-contain"
+                              />
+                            </div>
+                          )}
                           
                           {/* Parse markdown bold and newlines simply */}
                           <div className="whitespace-pre-line">
@@ -747,13 +788,30 @@ export default function AICombinator() {
                         {presetPrompts.map((p, idx) => (
                           <button
                             key={idx}
-                            onClick={() => handleChatSend(p)}
+                            onClick={() => handleChatSend(p, null)}
                             className="text-[8px] uppercase tracking-wider text-[#f5ebd9]/75 bg-[#2b063f]/40 border border-[#d4af37]/15 hover:border-[#d4af37] px-2 py-1 rounded-sm text-left transition-all duration-300"
                           >
                             {p}
                           </button>
                         ))}
                       </div>
+                    </div>
+                  )}
+
+                   {/* Image Preview Box */}
+                  {selectedImage && (
+                    <div className="relative inline-block bg-[#2b063f]/50 p-1.5 border border-[#d4af37]/30 rounded-sm">
+                      <img src={selectedImage} alt="Preview" className="h-16 w-auto object-contain rounded-sm" />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedImage(null);
+                          if (fileInputRef.current) fileInputRef.current.value = "";
+                        }}
+                        className="absolute -top-1.5 -right-1.5 bg-[#1d032e] border border-[#d4af37]/45 text-[#d4af37] hover:text-[#f5ebd9] rounded-full p-0.5 shadow-md cursor-pointer transition-colors"
+                      >
+                        <X size={10} />
+                      </button>
                     </div>
                   )}
 
@@ -765,16 +823,35 @@ export default function AICombinator() {
                     }}
                     className="flex gap-2"
                   >
+                    {/* Hidden File Input */}
+                    <input
+                      type="file"
+                      accept="image/*"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                      className="hidden"
+                    />
+
+                    {/* Image Upload Button */}
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="w-12 border border-[#d4af37]/30 hover:border-[#d4af37] text-[#d4af37] flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer bg-transparent hover:bg-[#d4af37]/10"
+                      title="Upload photo"
+                    >
+                      <Camera size={16} />
+                    </button>
+
                     <input
                       type="text"
                       value={chatInput}
                       onChange={(e) => setChatInput(e.target.value)}
-                      placeholder="Ask about color combinations, sizing, or body silhouette..."
+                      placeholder="Ask styling questions, or upload a photo to analyze..."
                       className="flex-1 bg-[#1d032e] text-[#f5ebd9] border border-[#d4af37]/20 rounded-sm px-3.5 py-3 text-xs placeholder-[#f5ebd9]/30 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
                     />
                     <button
                       type="submit"
-                      disabled={isChatLoading || !chatInput.trim()}
+                      disabled={isChatLoading || (!chatInput.trim() && !selectedImage)}
                       className="w-12 bg-[#d4af37] hover:bg-[#f5ebd9] disabled:bg-[#d4af37]/30 text-[#1d032e] disabled:text-[#1d032e]/40 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer"
                     >
                       <Send size={14} />
