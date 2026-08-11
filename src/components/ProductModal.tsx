@@ -128,8 +128,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
     const inputClass = (field: keyof OrderForm) =>
         `w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border ${
-            errors[field] ? "border-red-400" : "border-[#c5a880]/30"
-        } text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors duration-300 font-light tracking-wide`;
+            errors[field] ? "border-red-400" : "border-[#c5a880]/40"
+        } text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors duration-300 font-semibold tracking-wide`;
 
     return (
         <AnimatePresence>
@@ -171,7 +171,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                     style={{ minHeight: "300px" }}
                                 />
                                 {product.tag && (
-                                    <div className="absolute top-6 left-6 text-[8px] uppercase tracking-[0.4em] px-3 py-1.5 bg-[#c5a880] text-[#f5ebd9] font-light">
+                                    <div className="absolute top-6 left-6 text-[8px] uppercase tracking-[0.4em] px-3 py-1.5 bg-[#c5a880] text-[#f5ebd9] font-bold">
                                         {product.tag}
                                     </div>
                                 )}
@@ -179,13 +179,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                 {/* Subtle Overlay showing active cart total on Success/Form steps */}
                                 {step !== "product" && (
                                     <div className="absolute inset-0 bg-[#35020c]/85 backdrop-blur-xs flex flex-col justify-end p-8 md:p-12 text-[#f5eedc]">
-                                        <p className="text-[9px] uppercase tracking-[0.45em] text-[#e8d6b3] font-light mb-2">Order summary</p>
-                                        <h3 className="font-editorial text-xl uppercase tracking-wider mb-1">{product.name}</h3>
-                                        <p className="text-xs uppercase tracking-widest text-[#f5eedc]/60 font-light mb-4">Size: {selectedSize}</p>
+                                        <p className="text-[9px] uppercase tracking-[0.45em] text-[#e8d6b3] font-semibold mb-2">Order summary</p>
+                                        <h3 className="font-editorial text-xl font-bold uppercase tracking-wider mb-1">{product.name}</h3>
+                                        <p className="text-xs uppercase tracking-widest text-[#f5eedc]/80 font-semibold mb-4">Size: {selectedSize}</p>
                                         <div className="w-12 h-[1px] bg-[#e8d6b3]/30 mb-4" />
                                         <div className="flex justify-between items-center">
-                                            <span className="text-[9px] uppercase tracking-widest text-[#f5eedc]/55 font-light">Total Price</span>
-                                            <span className="text-2xl font-light tracking-wide text-[#e8d6b3]">{product.price}</span>
+                                            <span className="text-[9px] uppercase tracking-widest text-[#f5eedc]/70 font-semibold">Total Price</span>
+                                            <span className="text-2xl font-bold tracking-wide text-[#e8d6b3]">{product.price}</span>
                                         </div>
                                     </div>
                                 )}
@@ -197,15 +197,15 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                 {step === "product" && (
                                     <div className="flex-grow flex flex-col justify-between">
                                         <div>
-                                            <p className="text-[9px] uppercase tracking-[0.6em] text-[#c5a880] font-light mb-3">
+                                            <p className="text-[9px] uppercase tracking-[0.6em] text-[#aa9775] font-bold mb-3">
                                                 Anushka Chauhan — {product.category}
                                             </p>
 
-                                            <h2 className="font-editorial text-2xl md:text-3xl lg:text-4xl text-[#1c1813] tracking-wide uppercase leading-tight mb-2">
+                                            <h2 className="font-editorial text-2xl md:text-3xl lg:text-4xl text-[#1c1813] tracking-wide uppercase leading-tight mb-2 font-bold">
                                                 {product.name}
                                             </h2>
 
-                                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#c5a880]/70 font-light mb-4">
+                                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#aa9775] font-semibold mb-4">
                                                 {product.type} · {product.fabric}
                                             </p>
 
@@ -215,34 +215,34 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                         <Star
                                                             key={i}
                                                             size={11}
-                                                            className={i < Math.floor(product.rating!) ? "fill-[#c5a880] text-[#c5a880]" : "text-[#c5a880]/30"}
+                                                            className={i < Math.floor(product.rating!) ? "fill-[#aa9775] text-[#aa9775]" : "text-[#aa9775]/30"}
                                                         />
                                                     ))}
-                                                    <span className="text-[9px] text-[#1c1813]/55 uppercase tracking-widest">
+                                                    <span className="text-[9px] text-[#1c1813]/80 uppercase tracking-widest font-semibold">
                                                         {product.reviews} reviews
                                                     </span>
                                                 </div>
                                             )}
 
                                             <div className="flex items-baseline gap-3 mb-6">
-                                                <span className="text-2xl md:text-3xl text-[#1c1813] font-light tracking-wide">
+                                                <span className="text-2xl md:text-3xl text-[#1c1813] font-bold tracking-wide">
                                                     {product.price}
                                                 </span>
                                                 {product.originalPrice && (
-                                                    <span className="text-sm text-[#1c1813]/40 line-through">{product.originalPrice}</span>
+                                                    <span className="text-sm text-[#1c1813]/60 line-through font-semibold">{product.originalPrice}</span>
                                                 )}
                                             </div>
 
                                             <div className="w-12 h-[1px] bg-[#c5a880]/40 mb-6" />
 
-                                            <p className="text-[#1c1813]/65 text-xs leading-relaxed font-light mb-7">
+                                            <p className="text-[#1c1813]/80 text-xs leading-relaxed font-medium mb-7">
                                                 {product.description}
                                             </p>
 
                                             <ul className="space-y-2 mb-8">
                                                 {product.details.map((d, i) => (
-                                                    <li key={i} className="flex items-start gap-2 text-[9px] uppercase tracking-[0.2em] text-[#1c1813]/55 font-light">
-                                                        <span className="text-[#c5a880] mt-[2px]">—</span>
+                                                    <li key={i} className="flex items-start gap-2 text-[9.5px] uppercase tracking-[0.2em] text-[#1c1813]/85 font-semibold">
+                                                        <span className="text-[#aa9775] mt-[2px]">—</span>
                                                         {d}
                                                     </li>
                                                 ))}
@@ -250,10 +250,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
                                             <div className="mb-8">
                                                 <div className="flex items-center justify-between mb-3">
-                                                    <p className="text-[9px] uppercase tracking-[0.4em] text-[#1c1813]/60 font-light">
+                                                    <p className="text-[9px] uppercase tracking-[0.4em] text-[#1c1813]/75 font-semibold">
                                                         Select Size
                                                     </p>
-                                                    <button className="flex items-center gap-1 text-[9px] uppercase tracking-widest text-[#c5a880] font-light">
+                                                    <button className="flex items-center gap-1 text-[9px] uppercase tracking-widest text-[#aa9775] font-semibold">
                                                         <Ruler size={10} /> Size Guide
                                                     </button>
                                                 </div>
@@ -262,9 +262,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                         <button
                                                             key={size}
                                                             onClick={() => setSelectedSize(size)}
-                                                            className={`px-4 py-2 text-[9px] uppercase tracking-[0.3em] border transition-all duration-300 font-light cursor-pointer ${selectedSize === size
-                                                                ? "border-[#c5a880] bg-[#c5a880]/10 text-[#1c1813]"
-                                                                : "border-[#c5a880]/25 text-[#1c1813]/60 hover:border-[#c5a880]/60"
+                                                            className={`px-4 py-2 text-[9px] uppercase tracking-[0.3em] border transition-all duration-300 font-semibold cursor-pointer ${selectedSize === size
+                                                                ? "border-[#aa9775] bg-[#aa9775]/10 text-[#1c1813]"
+                                                                : "border-[#c5a880]/25 text-[#1c1813]/70 hover:border-[#aa9775]/60"
                                                                 }`}
                                                         >
                                                             {size}
@@ -280,7 +280,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                 <motion.button
                                                     whileTap={{ scale: 0.98 }}
                                                     onClick={handleProceedToOrder}
-                                                    className="flex-grow py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#c5a880] hover:text-[#1c1813] border border-[#1c1813] text-[9px] uppercase tracking-[0.5em] font-light flex items-center justify-center gap-2 cursor-pointer transition-all duration-500 shadow-md"
+                                                    className="flex-grow py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] border border-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold flex items-center justify-center gap-2 cursor-pointer transition-all duration-500 shadow-md"
                                                 >
                                                     <ShoppingBag size={13} />
                                                     Order Now (Direct Checkout)
@@ -290,7 +290,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                 <motion.button
                                                     whileTap={{ scale: 0.98 }}
                                                     onClick={handleAddToCart}
-                                                    className={`sm:px-6 py-4 text-[9px] uppercase tracking-[0.3em] font-light flex items-center justify-center gap-2 transition-all duration-500 border ${added
+                                                    className={`sm:px-6 py-4 text-[9.5px] uppercase tracking-[0.3em] font-bold flex items-center justify-center gap-2 transition-all duration-500 border ${added
                                                         ? "bg-[#5a7a5a] text-white border-[#5a7a5a]"
                                                         : "border-[#c5a880]/30 text-[#1c1813] hover:bg-[#c5a880]/10"
                                                     }`}
@@ -299,7 +299,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                 </motion.button>
                                                 
                                                 <button className="sm:w-14 py-4 border border-[#c5a880]/30 flex items-center justify-center hover:border-[#c5a880] hover:bg-[#c5a880]/10 transition-all duration-300">
-                                                    <Heart size={14} className="text-[#c5a880]" />
+                                                    <Heart size={14} className="text-[#aa9775]" />
                                                 </button>
                                             </div>
                                             
@@ -309,13 +309,13 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                     onClose();
                                                     openAIStylist(product);
                                                 }}
-                                                className="w-full py-3.5 border border-[#c5a880] text-[#c5a880] text-[9px] uppercase tracking-[0.4em] font-light hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500 flex items-center justify-center gap-2 cursor-pointer"
+                                                className="w-full py-3.5 border border-[#aa9775] text-[#aa9775] text-[9.5px] uppercase tracking-[0.4em] font-bold hover:bg-[#aa9775] hover:text-[#1c1813] transition-all duration-500 flex items-center justify-center gap-2 cursor-pointer"
                                             >
                                                 <span className="inline-block animate-pulse">✨</span> Style with AI Combinator
                                             </motion.button>
                                         </div>
 
-                                        <p className="text-[9px] uppercase tracking-[0.3em] text-[#1c1813]/40 font-light mt-6 text-center">
+                                        <p className="text-[9.5px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-semibold mt-6 text-center">
                                             Free shipping across India · Custom sizing available
                                         </p>
                                     </div>
@@ -330,36 +330,36 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                 <button 
                                                     type="button"
                                                     onClick={() => setStep("product")}
-                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#c5a880] hover:text-[#1c1813] transition-colors"
+                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#aa9775] hover:text-[#1c1813] transition-colors font-bold"
                                                 >
-                                                    ← Back to Details
+                                                    &larr; Back to Details
                                                 </button>
                                                 <div className="text-right">
-                                                    <span className="text-[7px] uppercase tracking-widest text-[#1c1813]/50 block">Selected Size</span>
-                                                    <span className="text-[10px] uppercase font-semibold text-[#1c1813] tracking-widest">{selectedSize}</span>
+                                                    <span className="text-[7.5px] uppercase tracking-widest text-[#1c1813]/60 block font-semibold">Selected Size</span>
+                                                    <span className="text-[10px] uppercase font-bold text-[#1c1813] tracking-widest">{selectedSize}</span>
                                                 </div>
                                             </div>
 
-                                            <h3 className="font-editorial text-xl text-[#1c1813] uppercase tracking-wider mb-6">Delivery Details</h3>
+                                            <h3 className="font-editorial text-xl text-[#1c1813] uppercase tracking-wider mb-6 font-bold">Delivery Details</h3>
                                             
                                             {/* Scrollable Form Fields */}
                                             <div className="space-y-4 max-h-[calc(100vh-22rem)] overflow-y-auto pr-2 custom-scrollbar">
                                                 {/* Full Name */}
                                                 <div>
-                                                    <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Full Name *</label>
+                                                    <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Full Name *</label>
                                                     <input 
                                                         className={inputClass("name")} 
                                                         placeholder="e.g. Anushka Sharma" 
                                                         value={form.name} 
                                                         onChange={(e) => setForm({ ...form, name: e.target.value })} 
                                                     />
-                                                    {errors.name && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.name}</p>}
+                                                    {errors.name && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.name}</p>}
                                                 </div>
 
                                                 {/* Mobile Number & Email */}
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Mobile Number *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Mobile Number *</label>
                                                         <input 
                                                             className={inputClass("phone")} 
                                                             placeholder="10-digit number" 
@@ -367,48 +367,48 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                             onChange={(e) => setForm({ ...form, phone: e.target.value })} 
                                                             maxLength={10} 
                                                         />
-                                                        {errors.phone && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.phone}</p>}
+                                                        {errors.phone && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.phone}</p>}
                                                     </div>
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Email Address</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Email Address</label>
                                                         <input 
                                                             className={inputClass("email")} 
                                                             placeholder="your@email.com" 
                                                             value={form.email} 
                                                             onChange={(e) => setForm({ ...form, email: e.target.value })} 
                                                         />
-                                                        {errors.email && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.email}</p>}
+                                                        {errors.email && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.email}</p>}
                                                     </div>
                                                 </div>
 
                                                 {/* House No & Colony / Location */}
                                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                                     <div className="sm:col-span-1">
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">House / Flat No *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">House / Flat No *</label>
                                                         <input 
                                                             className={inputClass("houseNo")} 
                                                             placeholder="e.g. Flat 302, A Block" 
                                                             value={form.houseNo} 
                                                             onChange={(e) => setForm({ ...form, houseNo: e.target.value })} 
                                                         />
-                                                        {errors.houseNo && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.houseNo}</p>}
+                                                        {errors.houseNo && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.houseNo}</p>}
                                                     </div>
                                                     <div className="sm:col-span-2">
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Colony / Street / Location *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Colony / Street / Location *</label>
                                                         <input 
                                                             className={inputClass("address")} 
                                                             placeholder="e.g. Sector 70, Noida" 
                                                             value={form.address} 
                                                             onChange={(e) => setForm({ ...form, address: e.target.value })} 
                                                         />
-                                                        {errors.address && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.address}</p>}
+                                                        {errors.address && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.address}</p>}
                                                     </div>
                                                 </div>
 
                                                 {/* Landmark & City */}
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Landmark</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Landmark</label>
                                                         <input 
                                                             className={inputClass("landmark")} 
                                                             placeholder="e.g. Near Heritage Park" 
@@ -417,21 +417,21 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                         />
                                                     </div>
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">City / Town *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">City / Town *</label>
                                                         <input 
                                                             className={inputClass("city")} 
                                                             placeholder="e.g. Noida / Delhi" 
                                                             value={form.city} 
                                                             onChange={(e) => setForm({ ...form, city: e.target.value })} 
                                                         />
-                                                        {errors.city && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.city}</p>}
+                                                        {errors.city && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.city}</p>}
                                                     </div>
                                                 </div>
 
                                                 {/* State & Pincode */}
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">State *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">State *</label>
                                                         <select 
                                                             className={`${inputClass("state")} appearance-none`}
                                                             value={form.state} 
@@ -440,10 +440,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                             <option value="">Select State</option>
                                                             {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
                                                         </select>
-                                                        {errors.state && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.state}</p>}
+                                                        {errors.state && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.state}</p>}
                                                     </div>
                                                     <div>
-                                                        <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Pincode *</label>
+                                                        <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Pincode *</label>
                                                         <input 
                                                             className={inputClass("pincode")} 
                                                             placeholder="6-digit PIN" 
@@ -451,15 +451,15 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                             onChange={(e) => setForm({ ...form, pincode: e.target.value })} 
                                                             maxLength={6} 
                                                         />
-                                                        {errors.pincode && <p className="text-[8px] text-red-400 mt-1 font-light uppercase tracking-wider">{errors.pincode}</p>}
+                                                        {errors.pincode && <p className="text-[8px] text-red-500 mt-1 font-semibold uppercase tracking-wider">{errors.pincode}</p>}
                                                     </div>
                                                 </div>
 
                                                 {/* Notes */}
                                                 <div>
-                                                    <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-light block mb-1.5">Customization Requests / Notes</label>
+                                                    <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Customization Requests / Notes</label>
                                                     <textarea 
-                                                        className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/30 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors resize-none font-light tracking-wide" 
+                                                        className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/30 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors resize-none font-medium tracking-wide" 
                                                         rows={2} 
                                                         placeholder="Specify height adjustments, custom necklines or sleeve requests..." 
                                                         value={form.note} 
@@ -472,7 +472,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                         <div className="pt-6 border-t border-[#c5a880]/15 mt-4">
                                             <button
                                                 type="submit"
-                                                className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#c5a880] hover:text-[#1c1813] text-[9px] uppercase tracking-[0.5em] font-light transition-all duration-500 cursor-pointer shadow-lg"
+                                                className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg"
                                             >
                                                 Confirm Royal Order
                                             </button>
@@ -488,28 +488,28 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                             animate={{ scale: 1 }} 
                                             transition={{ type: "spring", stiffness: 200, damping: 15 }}
                                         >
-                                            <CheckCircle size={56} className="text-[#c5a880] mb-6" />
+                                            <CheckCircle size={56} className="text-[#aa9775] mb-6" />
                                         </motion.div>
 
-                                        <p className="text-[8px] uppercase tracking-[0.6em] text-[#c5a880] font-light mb-3">Order Received</p>
+                                        <p className="text-[8.5px] uppercase tracking-[0.6em] text-[#aa9775] font-bold mb-3">Order Received</p>
                                         
-                                        <h3 className="font-editorial text-2xl text-[#1c1813] uppercase tracking-wider mb-4">
+                                        <h3 className="font-editorial text-2xl text-[#1c1813] uppercase tracking-wider mb-4 font-bold">
                                             Thank You, {form.name.split(" ")[0]}!
                                         </h3>
                                         
                                         <div className="w-10 h-[1px] bg-[#c5a880]/50 mb-5" />
                                         
-                                        <p className="text-[10px] uppercase tracking-[0.2em] text-[#1c1813]/60 font-light leading-relaxed mb-4 max-w-sm">
+                                        <p className="text-[10px] uppercase tracking-[0.2em] text-[#1c1813]/70 font-semibold leading-relaxed mb-4 max-w-sm">
                                             Your bespoke order for the **{product.name}** in size **{selectedSize}** has been successfully placed.
                                         </p>
                                         
-                                        <p className="text-[9px] text-[#1c1813]/55 font-light mb-1.5">
-                                            Our concierge team will call you at <strong className="text-[#1c1813]/75">{form.phone}</strong> within 24 hours to confirm your custom measurements and delivery schedule.
+                                        <p className="text-[9.5px] text-[#1c1813]/70 font-medium mb-1.5">
+                                            Our concierge team will call you at <strong className="text-[#1c1813] font-bold">{form.phone}</strong> within 24 hours to confirm your custom measurements and delivery schedule.
                                         </p>
                                         
                                         <div className="bg-[#ece2ce]/40 border border-[#c5a880]/15 p-4 rounded-sm text-left w-full mt-6 space-y-1.5">
-                                            <p className="text-[8px] uppercase tracking-[0.3em] text-[#c5a880] font-semibold">Delivery Address</p>
-                                            <p className="text-[10px] text-[#1c1813] font-light leading-relaxed">
+                                            <p className="text-[8px] uppercase tracking-[0.3em] text-[#aa9775] font-bold">Delivery Address</p>
+                                            <p className="text-[10px] text-[#1c1813] font-semibold leading-relaxed">
                                                 {form.houseNo}, {form.address}<br />
                                                 {form.landmark && `Landmark: ${form.landmark}`}<br />
                                                 {form.city}, {form.state} — {form.pincode}
@@ -518,7 +518,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
                                         <button 
                                             onClick={handleCloseModal}
-                                            className="px-8 py-3.5 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#c5a880] hover:text-[#1c1813] text-[9px] uppercase tracking-[0.5em] font-light transition-all duration-500 mt-8 shadow-md"
+                                            className="px-8 py-3.5 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 mt-8 shadow-md"
                                         >
                                             Continue Curation
                                         </button>

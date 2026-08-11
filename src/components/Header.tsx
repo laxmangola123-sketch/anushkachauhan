@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Heart, ShoppingBag, Menu, X } from "lucide-react";
+import { Search, Heart, ShoppingBag, Menu, X, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "./CartContext";
 
@@ -23,89 +23,95 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Shop", href: "#shop" },
+    { name: "Shop", href: "#collections" },
     { name: "Collections", href: "#collections" },
-    { name: "Lehengas", href: "#lehengas" },
-    { name: "Stories", href: "#stories" },
-    { name: "New Arrivals", href: "#new-arrivals" },
+    { name: "About Us", href: "#our-world" },
   ];
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isScrolled
-          ? "bg-[#f5ebd9]/80 backdrop-blur-md py-4 border-b border-[#c5a880]/15"
-          : "bg-transparent py-8"
+          ? "bg-[#f5ebd9]/90 backdrop-blur-md py-4 border-b border-[#c5a880]/15 shadow-sm"
+          : "bg-transparent py-6"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Mobile Menu Icon */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden text-cream hover:text-gold transition-colors duration-300"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+            }`}
             aria-label="Open menu"
           >
             <Menu size={22} />
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
+          <nav className="hidden md:flex items-center space-x-10 lg:space-x-14">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs uppercase tracking-[0.25em] text-cream/70 hover:text-gold transition-colors duration-500 relative group py-2"
+                className={`text-[11px] uppercase tracking-[0.25em] transition-colors duration-500 relative group py-2 font-bold ${
+                  isScrolled ? "text-[#1c1813]/85 hover:text-[#aa9775]" : "text-white/95 hover:text-[#e8d6b3]"
+                }`}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-500 group-hover:w-full" />
+                <span className={`absolute bottom-0 left-0 w-0 h-[1px] transition-all duration-500 group-hover:w-full ${
+                  isScrolled ? "bg-[#aa9775]" : "bg-[#e8d6b3]"
+                }`} />
               </a>
             ))}
           </nav>
 
           {/* Luxury Logo */}
           <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-            <a href="#" className="flex items-center gap-3 group py-1">
-              <img
-                src="/logo.jpg"
-                alt="Anushka Chauhan Logo"
-                className="h-10 md:h-12 w-auto rounded-full border border-gold/15 object-cover transition-all duration-500 group-hover:border-gold/50"
-              />
-              <div className="flex flex-col items-start text-left">
-                <span className="font-editorial text-sm md:text-lg tracking-[0.15em] text-white uppercase transition-colors duration-500 group-hover:text-gold font-semibold">
-                  ANUSHKA CHAUHAN
-                </span>
-                <span className="text-[8px] tracking-[0.05em] text-gold/80 font-light mt-0.5">
-                  भारत की विरासत से प्रेरित
-                </span>
-              </div>
+            <a href="#" className="flex flex-col items-center group py-1">
+              <span className={`font-editorial text-xl md:text-2xl tracking-[0.22em] uppercase font-bold transition-colors duration-500 ${
+                isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
+              }`}>
+                ANUSHKA CHAUHAN
+              </span>
+              <span className={`text-[7.5px] tracking-[0.45em] font-bold mt-1.5 uppercase transition-colors duration-500 ${
+                isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
+              }`}>
+                HERITAGE COUTURE
+              </span>
             </a>
           </div>
 
           {/* Icons Bar */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-6 md:space-x-8">
             <button
-              className="text-cream hover:text-gold transition-colors duration-300 hidden sm:block"
+              className={`transition-colors duration-300 hidden sm:block ${
+                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+              }`}
               aria-label="Search collection"
             >
-              <Search size={18} strokeWidth={1.5} />
+              <Search size={18} strokeWidth={1.8} />
             </button>
             <button
-              className="text-cream hover:text-gold transition-colors duration-300 relative"
-              aria-label="Wishlist"
+              className={`transition-colors duration-300 relative hidden sm:block ${
+                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+              }`}
+              aria-label="Profile"
             >
-              <Heart size={18} strokeWidth={1.5} />
-              <span className="absolute -top-1.5 -right-2 bg-gold text-[#f5ebd9] text-[8px] font-bold rounded-full w-3.5 h-3.5 flex items-center justify-center">
-                0
-              </span>
+              <User size={18} strokeWidth={1.8} />
             </button>
             <button
-              className="text-cream hover:text-gold transition-colors duration-300 relative"
+              className={`transition-colors duration-300 flex items-center relative ${
+                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+              }`}
               aria-label="Shopping Bag"
               onClick={openCart}
             >
-              <ShoppingBag size={18} strokeWidth={1.5} />
-              <span className="absolute -top-1.5 -right-2 bg-gold text-[#f5ebd9] text-[8px] font-bold rounded-full w-3.5 h-3.5 flex items-center justify-center">
-                {totalItems}
+              <ShoppingBag size={18} strokeWidth={1.8} />
+              <span className={`text-[11px] font-sans font-bold ml-1.5 ${
+                isScrolled ? "text-[#1c1813]" : "text-white"
+              }`}>
+                ({totalItems})
               </span>
             </button>
           </div>
@@ -120,18 +126,16 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 bg-[#f5ebd9]/98 z-50 flex flex-col justify-between p-8 md:hidden"
+            className="fixed inset-0 bg-[#f5ebd9] z-50 flex flex-col justify-between p-8 md:hidden"
           >
             {/* Header in Overlay */}
             <div className="flex items-center justify-between border-b border-[#c5a880]/15 pb-4 w-full">
-              <img
-                src="/logo.jpg"
-                alt="Anushka Chauhan Logo"
-                className="h-10 w-auto rounded-full border border-gold/20 object-cover"
-              />
+              <span className="font-editorial text-sm tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
+                ANUSHKA CHAUHAN
+              </span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-cream hover:text-gold transition-colors"
+                className="text-[#1c1813] hover:text-[#aa9775] transition-colors"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -148,7 +152,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg uppercase tracking-[0.3em] font-editorial text-cream hover:text-gold transition-colors duration-300"
+                  className="text-lg uppercase tracking-[0.3em] font-editorial text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300"
                 >
                   {link.name}
                 </motion.a>
@@ -157,10 +161,10 @@ export default function Header() {
 
             {/* Footer in Overlay */}
             <div className="text-center border-t border-[#c5a880]/15 pt-6 flex flex-col items-center">
-              <p className="text-[9px] uppercase tracking-[0.3em] text-cream/50 mb-1">
+              <p className="text-[9px] uppercase tracking-[0.3em] text-[#1c1813]/60 mb-1">
                 Anushka Chauhan Couture
               </p>
-              <p className="text-[8px] uppercase tracking-[0.5em] text-gold">
+              <p className="text-[8px] uppercase tracking-[0.5em] text-[#aa9775]">
                 Handcrafted in India
               </p>
             </div>

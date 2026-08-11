@@ -1,138 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, ShoppingBag } from "lucide-react";
 import { useCart } from "./CartContext";
 
 export default function Hero() {
-  const { openCart } = useCart();
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
+      x: 0,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1] as [number, number, number, number], // Custom luxury cubic-bezier ease
+        duration: 1.0,
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
       },
     },
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#12011b]">
+    <section className="relative h-screen w-full overflow-hidden flex items-center bg-[#12011b]">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {/* Logo in the background behind the video layer */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[-1]">
-          <img
-            src="/logo.jpg"
-            alt="Anushka Chauhan Background Logo"
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gold/25 object-cover opacity-35 filter brightness-[0.6]"
-          />
-        </div>
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover scale-105 filter brightness-[0.65] contrast-[1.1] saturate-[0.9] relative z-0"
+          className="w-full h-full object-cover scale-105 filter brightness-[0.45] contrast-[1.3] saturate-[0.85]"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* Royal deep overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#12011b]/95 via-[#1d032e]/45 to-[#12011b]/80 z-10" />
-        {/* Side vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#12011b]/70 via-transparent to-[#12011b]/70 z-10" />
+        {/* Deep dark elegant gradient overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent z-10" />
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl flex flex-col items-center">
+      {/* Hero Text Box on the Left */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full mt-16 md:mt-24">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center"
+          className="max-w-md md:max-w-lg flex flex-col items-start text-left"
         >
-
-          {/* Subheading */}
-          <motion.p
+          {/* Chapter Header */}
+          <motion.span
             variants={itemVariants}
-            className="text-xs md:text-sm uppercase tracking-[0.5em] text-gold font-light mb-6"
+            className="text-[10px] sm:text-xs uppercase tracking-[0.4em] text-[#e8d6b3] font-bold mb-2"
           >
-            Handcrafted in India
-          </motion.p>
+            CHAPTER I
+          </motion.span>
 
-          {/* Headline */}
+          {/* Collection Title */}
           <motion.h1
             variants={itemVariants}
-            className="font-editorial text-5xl sm:text-7xl md:text-9xl text-white tracking-[0.1em] uppercase leading-none mb-4"
+            className="font-editorial text-4xl sm:text-6xl md:text-7xl text-white tracking-[0.1em] uppercase leading-none font-bold mb-4"
           >
-            Anushka <br className="sm:hidden" />
-            Chauhan
+            VEERANGANA
           </motion.h1>
 
-          {/* Hindi Tagline */}
-          <motion.p
-            variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl tracking-[0.25em] text-gold/90 font-light mb-10"
-          >
-            भारत की विरासत से प्रेरित
-          </motion.p>
-
-          {/* Divider */}
+          {/* Elegant Gold Divider */}
           <motion.div
             variants={itemVariants}
-            className="w-16 h-[1px] bg-gold/40 mb-10"
-          />
+            className="flex items-center gap-2 w-full max-w-xs mb-6"
+          >
+            <div className="h-[1px] bg-[#e8d6b3]/40 flex-1" />
+            <span className="text-[#e8d6b3] text-[8px] sm:text-[10px]">&#10047;</span>
+            <div className="h-[1px] bg-[#e8d6b3]/40 flex-1" />
+          </motion.div>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <motion.a
-              variants={itemVariants}
-              href="#shop"
-              className="px-8 py-4 border border-gold/60 text-gold text-xs uppercase tracking-[0.3em] bg-transparent hover:bg-gold hover:text-[#1c1813] hover:border-gold transition-all duration-700 ease-in-out relative group overflow-hidden"
-            >
-              <span className="relative z-10">Explore Collection</span>
-              <span className="absolute inset-0 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left -z-0" />
-            </motion.a>
+          {/* Poetic Description */}
+          <motion.div
+            variants={itemVariants}
+            className="space-y-1.5 text-xs sm:text-sm md:text-base text-white/85 font-semibold tracking-wide mb-8"
+          >
+            <p>A tribute to the royal bloodline.</p>
+            <p>Crafted with legacy.</p>
+            <p>Worn with pride.</p>
+          </motion.div>
 
-            <motion.button
-              variants={itemVariants}
-              onClick={openCart}
-              className="px-8 py-4 bg-white text-[#1c1813] text-xs uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-all duration-500 flex items-center gap-3 font-light group"
-            >
-              <ShoppingBag size={14} className="group-hover:scale-110 transition-transform duration-300" />
-              Order Now
-            </motion.button>
-          </div>
+          {/* Explore Collection Button */}
+          <motion.a
+            variants={itemVariants}
+            href="#collections"
+            className="inline-block px-7 py-3.5 bg-[#e8d6b3] hover:bg-white text-[#1c1813] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.3em] font-bold transition-all duration-500 shadow-md hover:shadow-lg"
+          >
+            Explore Collection
+          </motion.a>
         </motion.div>
-      </div>
-
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
-        <motion.span
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="text-cream/50 text-[9px] uppercase tracking-[0.3em] flex flex-col items-center cursor-pointer"
-          onClick={() => {
-            const nextSec = document.getElementById("heritage");
-            nextSec?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          Discover More
-          <ChevronDown size={14} className="mt-2 text-gold" />
-        </motion.span>
       </div>
     </section>
   );

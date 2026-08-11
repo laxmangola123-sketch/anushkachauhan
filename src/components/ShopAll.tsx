@@ -49,9 +49,9 @@ export default function ShopAll() {
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`px-6 py-2.5 text-[9px] uppercase tracking-[0.4em] border transition-all duration-400 font-light ${activeCategory === cat
+                                className={`px-6 py-2.5 text-[9px] uppercase tracking-[0.4em] border transition-all duration-400 font-semibold ${activeCategory === cat
                                         ? "border-[#1c1813] bg-[#1c1813] text-[#f5ebd9]"
-                                        : "border-[#c5a880]/30 text-[#1c1813]/60 hover:border-[#c5a880] hover:text-[#1c1813]"
+                                        : "border-[#c5a880]/30 text-[#1c1813]/80 hover:border-[#c5a880] hover:text-[#1c1813]"
                                     }`}
                             >
                                 {cat}
@@ -72,23 +72,23 @@ export default function ShopAll() {
                                 className="group cursor-pointer"
                             >
                                 {/* Image */}
-                                <div className="relative aspect-[3/4] overflow-hidden mb-4 border border-[#c5a880]/10">
+                                <div className="relative aspect-[3/4] overflow-hidden mb-4 border border-[#c5a880]/15">
                                     <img
                                         src={product.imageUrl}
                                         alt={product.name}
-                                        className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 filter brightness-[0.85] group-hover:brightness-[0.7]"
+                                        className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-[0.75]"
                                     />
                                     {/* Gold frame */}
                                     <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/30 transition-all duration-700 pointer-events-none" />
                                     {/* Tag */}
                                     {product.tag && (
-                                        <div className="absolute top-3 left-3 text-[7px] uppercase tracking-[0.3em] px-2 py-1 bg-[#f5ebd9]/90 text-[#c5a880] border border-[#c5a880]/30 font-light">
+                                        <div className="absolute top-3 left-3 text-[7.5px] uppercase tracking-[0.3em] px-2 py-1 bg-[#f5ebd9]/95 text-[#aa9775] border border-[#c5a880]/30 font-semibold">
                                             {product.tag}
                                         </div>
                                     )}
                                     {/* View Details overlay */}
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                        <div className="bg-[#f5ebd9]/90 px-4 py-2 flex items-center gap-2 text-[8px] uppercase tracking-[0.4em] text-[#1c1813] font-light">
+                                        <div className="bg-[#f5ebd9]/95 px-4 py-2 flex items-center gap-2 text-[8px] uppercase tracking-[0.4em] text-[#1c1813] font-semibold">
                                             <ShoppingBag size={10} />
                                             View & Order
                                         </div>
@@ -97,8 +97,8 @@ export default function ShopAll() {
 
                                 {/* Info */}
                                 <div>
-                                    <p className="text-[8px] uppercase tracking-[0.3em] text-[#c5a880] font-light mb-1">{product.type}</p>
-                                    <h3 className="text-[#1c1813] text-xs md:text-sm font-light tracking-wide mb-1 leading-snug group-hover:text-[#c5a880] transition-colors duration-300">
+                                    <p className="text-[8.5px] uppercase tracking-[0.3em] text-[#aa9775] font-semibold mb-1">{product.type}</p>
+                                    <h3 className="text-[#1c1813] text-xs md:text-sm font-bold tracking-wide mb-1 leading-snug group-hover:text-[#aa9775] transition-colors duration-300">
                                         {product.name}
                                     </h3>
                                     {/* Rating */}
@@ -108,15 +108,15 @@ export default function ShopAll() {
                                                 <Star
                                                     key={i}
                                                     size={8}
-                                                    className={i < product.rating! ? "fill-[#c5a880] text-[#c5a880]" : "text-[#c5a880]/25"}
+                                                    className={i < product.rating! ? "fill-[#aa9775] text-[#aa9775]" : "text-[#aa9775]/25"}
                                                 />
                                             ))}
                                         </div>
                                     )}
                                     <div className="flex items-center gap-2">
-                                        <span className="text-[#1c1813] text-sm font-light tracking-wide">{product.price}</span>
+                                        <span className="text-[#1c1813] text-sm font-bold tracking-wide">{product.price}</span>
                                         {product.originalPrice && (
-                                            <span className="text-[9px] text-[#1c1813]/40 line-through">{product.originalPrice}</span>
+                                            <span className="text-[9px] text-[#1c1813]/60 font-semibold line-through">{product.originalPrice}</span>
                                         )}
                                     </div>
                                 </div>
