@@ -100,27 +100,27 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-xs font-bold text-[#1c1813]">
             <li>
-              <a href="#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
                 Wedding Couture
               </a>
             </li>
             <li>
-              <a href="#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
                 Festive Edit
               </a>
             </li>
             <li>
-              <a href="#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
                 Luxury Sarees
               </a>
             </li>
             <li>
-              <a href="#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
                 Lehengas
               </a>
             </li>
             <li>
-              <a href="#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
                 Fine Jewellery
               </a>
             </li>
@@ -134,28 +134,38 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-xs font-bold text-[#1c1813]">
             <li>
-              <a href="#heritage" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/pages/our-journey" className="hover:text-[#aa9775] transition-colors duration-300">
                 Heritage Story
               </a>
             </li>
             <li>
-              <a href="#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
                 Artisan Stories
               </a>
             </li>
             <li>
-              <a href="#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
                 Craftsmanship
               </a>
             </li>
             <li>
-              <a href="#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
                 Sustainability
               </a>
             </li>
             <li>
-              <a href="#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
                 Atelier Careers
+              </a>
+            </li>
+            <li>
+              <a href="/pages/track-order" className="hover:text-[#aa9775] transition-colors duration-300">
+                Track Your Order
+              </a>
+            </li>
+            <li>
+              <a href="/pages/staff-portal" className="hover:text-[#aa9775] transition-colors duration-300">
+                Staff Portal
               </a>
             </li>
           </ul>
@@ -167,11 +177,18 @@ export default function Footer() {
             Contact & Service
           </h4>
           <ul className="space-y-3 text-xs font-bold text-[#1c1813]">
-            <li className="flex items-center gap-2.5">
-              <Mail size={14} className="text-[#aa9775]" strokeWidth={2} />
-              <a href="mailto:business@anushkauchhan.com" className="hover:text-[#aa9775] transition-colors">
-                business@anushkauchhan.com
-              </a>
+            <li className="flex items-start gap-2.5">
+              <Mail size={14} className="text-[#aa9775] mt-0.5" strokeWidth={2} />
+              <div className="flex flex-col">
+                <span className="text-[9px] uppercase tracking-wider text-[#aa9775] font-semibold mb-0.5">Customer Care</span>
+                <a href="mailto:care@anushkachauhan.in" className="hover:text-[#aa9775] transition-colors mb-2 break-all">
+                  care@anushkachauhan.in
+                </a>
+                <span className="text-[9px] uppercase tracking-wider text-[#aa9775] font-semibold mb-0.5">Couture Enquiries</span>
+                <a href="mailto:business@anushkachauhan.com" className="hover:text-[#aa9775] transition-colors break-all">
+                  business@anushkachauhan.com
+                </a>
+              </div>
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={14} className="text-[#aa9775]" strokeWidth={2} />
@@ -187,9 +204,15 @@ export default function Footer() {
               </span>
             </li>
           </ul>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-wrap gap-2">
             <a
-              href="#appointment"
+              href="/pages/contact"
+              className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#aa9775] text-[#f5ebd9] bg-[#1c1813] hover:bg-[#aa9775] hover:text-[#f5ebd9] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
+            >
+              Contact Support
+            </a>
+            <a
+              href="/pages/contact"
               className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#aa9775] text-[#1c1813] hover:text-[#aa9775] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
             >
               Request Private Fit

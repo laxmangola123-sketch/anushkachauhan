@@ -12,7 +12,7 @@ export interface CartItem {
 interface CartContextType {
     items: CartItem[];
     isOpen: boolean;
-    addItem: (product: Product, size: string) => void;
+    addItem: (product: Product, size: string, quantity?: number) => void;
     removeItem: (productId: string, size: string) => void;
     updateQty: (productId: string, size: string, qty: number) => void;
     openCart: () => void;
@@ -32,17 +32,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const [isAIStylistOpen, setIsAIStylistOpen] = useState(false);
     const [aiPreselectedProduct, setAiPreselectedProduct] = useState<Product | null>(null);
 
-    const addItem = (product: Product, size: string) => {
+    const addItem = (product: Product, size: string, quantity: number = 1) => {
         setItems((prev) => {
             const existing = prev.find((i) => i.product.id === product.id && i.size === size);
             if (existing) {
                 return prev.map((i) =>
                     i.product.id === product.id && i.size === size
-                        ? { ...i, quantity: i.quantity + 1 }
+                        ? { ...i, quantity: i.quantity + quantity }
                         : i
                 );
             }
-            return [...prev, { product, size, quantity: 1 }];
+            return [...prev, { product, size, quantity }];
         });
         setIsOpen(true);
     };

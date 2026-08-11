@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Sparkles, ShoppingBag, Send, Loader2, Camera } from "lucide-react";
+import { X, Sparkles, ShoppingBag, Send, Loader2, Camera, ChevronDown } from "lucide-react";
 import { useCart } from "./CartContext";
 import { Product } from "./ProductModal";
 import { allProducts } from "./productCatalog";
@@ -44,7 +44,7 @@ export default function AICombinator() {
   const [chatMessages, setChatMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Namaste. I am your Atelier AI Stylist. Share your occasion, body silhouette, or skin tone preferences, and I will craft the perfect color combinations and couture suggestions for you."
+      content: "Namaste. Welcome to Anushka's Atelier, your personal couture assistant. Share your occasion, body silhouette, or skin tone preferences, and I will craft the perfect color combinations and couture suggestions for you."
     }
   ]);
   const [chatInput, setChatInput] = useState("");
@@ -55,6 +55,23 @@ export default function AICombinator() {
   const chatEndRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // FAQs State
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const faqs = [
+    {
+      q: "What is Anushka Chauhan known for?",
+      a: "Anushka Chauhan is a luxury Indian heritage couture label known for handcrafted bridal lehengas, designer sarees, and Indian festive wear featuring authentic zardozi, resham, cutdana, and sequin embroidery."
+    },
+    {
+      q: "Are Anushka Chauhan outfits handcrafted?",
+      a: "Yes. Every piece is 100% handcrafted in India, from sketch to final stitch, by expert artisans using traditional Indian embroidery techniques."
+    },
+    {
+      q: "Do you offer custom bridal couture?",
+      a: "Yes, we offer bespoke bridal lehengas and occasion wear. Contact our studio for custom consultations."
+    }
+  ];
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -99,7 +116,7 @@ export default function AICombinator() {
           setChatMessages([
             {
               role: "assistant",
-              content: `Greetings. I see you are admiring **${aiPreselectedProduct.name}** (${aiPreselectedProduct.price}). How may I help you style this magnificent piece to suit your body type, or help you match it with the perfect color coordinate?`
+              content: `Greetings. Welcome to Anushka's Atelier. I see you are admiring **${aiPreselectedProduct.name}** (${aiPreselectedProduct.price}). How may I help you style this magnificent piece to suit your body type, or help you match it with the perfect color coordinate?`
             }
           ]);
           setActiveTab("chat"); // Default to chat if styling a specific product
@@ -383,15 +400,21 @@ export default function AICombinator() {
             {/* Header */}
             <div className="p-6 md:p-8 border-b border-[#d4af37]/15 flex items-center justify-between bg-[#12011b]/50">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/30 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-                  <Sparkles className="text-[#d4af37] animate-pulse" size={18} />
+                <div className="relative w-11 h-11 rounded-full border border-[#d4af37]/35 overflow-hidden shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.15)] bg-[#1d032e]">
+                  <img
+                    src="/couture-assistant.jpg"
+                    alt="Anushka's Atelier Stylist Avatar"
+                    className="w-full h-full object-cover scale-105"
+                  />
+                  {/* Green active dot */}
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border border-[#1d032e] rounded-full" />
                 </div>
                 <div>
-                  <h3 className="font-editorial text-lg tracking-[0.1em] text-[#f5ebd9] uppercase">
-                    Atelier AI Stylist
+                  <h3 className="font-editorial text-lg tracking-[0.1em] text-[#f5ebd9] uppercase font-bold">
+                    Anushka&apos;s Atelier
                   </h3>
                   <p className="text-[8px] tracking-[0.15em] text-[#d4af37]/80 uppercase font-light">
-                    Personal Consultation & Color Harmony
+                    Your Personal Couture Assistant
                   </p>
                 </div>
               </div>
@@ -697,6 +720,52 @@ export default function AICombinator() {
                             )}
                           </div>
                         </div>
+
+                        {/* FAQs Accordion under initial welcome message */}
+                        {index === 0 && isAssistant && (
+                          <div className="w-full max-w-[85%] mt-3 border border-[#d4af37]/20 bg-[#2b063f]/30 rounded-sm p-4 text-[#f5ebd9] relative">
+                            <h4 className="font-editorial text-xs tracking-[0.1em] text-[#d4af37] uppercase mb-3 flex items-center gap-2 font-bold">
+                              <Sparkles className="text-[#d4af37]" size={10} /> Why Choose Anushka Chauhan?
+                            </h4>
+                            <div className="space-y-3 divide-y divide-[#d4af37]/10">
+                              {faqs.map((faq, faqIdx) => {
+                                const isOpen = openFaqIndex === faqIdx;
+                                return (
+                                  <div key={faqIdx} className={faqIdx > 0 ? "pt-3" : ""}>
+                                    <button
+                                      type="button"
+                                      onClick={() => setOpenFaqIndex(isOpen ? null : faqIdx)}
+                                      className="w-full flex items-center justify-between text-left text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#f5ebd9] hover:text-[#d4af37] transition-colors gap-2 cursor-pointer"
+                                    >
+                                      <span>{faq.q}</span>
+                                      <ChevronDown
+                                        size={12}
+                                        className={`text-[#d4af37] shrink-0 transition-transform duration-300 ${
+                                          isOpen ? "rotate-180" : ""
+                                        }`}
+                                      />
+                                    </button>
+                                    <AnimatePresence initial={false}>
+                                      {isOpen && (
+                                        <motion.div
+                                          initial={{ height: 0, opacity: 0 }}
+                                          animate={{ height: "auto", opacity: 1 }}
+                                          exit={{ height: 0, opacity: 0 }}
+                                          transition={{ duration: 0.3 }}
+                                          className="overflow-hidden"
+                                        >
+                                          <p className="text-[10.5px] sm:text-xs text-[#f5ebd9]/75 font-light leading-relaxed mt-2 pl-2 border-l border-[#d4af37]/35 normal-case tracking-normal">
+                                            {faq.a}
+                                          </p>
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
 
                         {/* Inline Product Cards */}
                         {mentionedProducts.length > 0 && (

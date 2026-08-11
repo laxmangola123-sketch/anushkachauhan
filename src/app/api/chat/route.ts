@@ -38,6 +38,15 @@ Your purpose:
 Here is our exclusive boutique catalog:
 ${catalogString}
 
+Brand FAQs & Core Knowledge:
+- Why Choose Anushka Chauhan?
+- What is Anushka Chauhan known for?
+  Answer: Anushka Chauhan is a luxury Indian heritage couture label known for handcrafted bridal lehengas, designer sarees, and Indian festive wear featuring authentic zardozi, resham, cutdana, and sequin embroidery.
+- Are Anushka Chauhan outfits handcrafted?
+  Answer: Yes. Every piece is 100% handcrafted in India, from sketch to final stitch, by expert artisans using traditional Indian embroidery techniques.
+- Do you offer custom bridal couture?
+  Answer: Yes, we offer bespoke bridal lehengas and occasion wear. Contact our studio for custom consultations (via care@anushkachauhan.in or WhatsApp +919041588678).
+
 Guidelines:
 - When a customer asks about what suits their body shape or skin tone, provide helpful fashion styling theories (e.g., empire line cuts for certain shapes, specific necklines, warm jewelry metal combinations, color contrast rules).
 - Connect these styling theories directly to specific items in our catalog (recommend matching base items and coordinates).
@@ -110,6 +119,17 @@ function getLocalStylistFallback(query: string, hasImage = false): string {
   let prefix = "";
   if (hasImage) {
     prefix = `**[Atelier Vision Analysis]** Thank you for sharing your photograph. I have examined your clothing silhouette and tone preferences. \n\n`;
+  }
+
+  // Brand FAQ Fallbacks
+  if (q.includes("known for") || q.includes("who is") || q.includes("what is anushka chauhan")) {
+    return `Anushka Chauhan is a luxury Indian heritage couture label known for handcrafted bridal lehengas, designer sarees, and Indian festive wear featuring authentic zardozi, resham, cutdana, and sequin embroidery.`;
+  }
+  if (q.includes("handcrafted") || q.includes("handmade") || q.includes("artisans") || q.includes("traditional")) {
+    return `Yes. Every piece is 100% handcrafted in India, from sketch to final stitch, by expert artisans using traditional Indian embroidery techniques.`;
+  }
+  if (q.includes("custom") || q.includes("bespoke") || q.includes("bridal appointments") || q.includes("appointment")) {
+    return `Yes, we offer bespoke bridal lehengas and occasion wear. You can contact our studio at care@anushkachauhan.in or WhatsApp us at +919041588678 for custom consultations. Private appointments are available by prior consultation.`;
   }
   
   if (q.includes("skin") || q.includes("dusky") || q.includes("complexion") || q.includes("color") || q.includes("tone") || q.includes("warm") || q.includes("cool") || hasImage) {

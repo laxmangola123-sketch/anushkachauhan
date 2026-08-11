@@ -23,9 +23,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Shop", href: "#collections" },
-    { name: "Collections", href: "#collections" },
-    { name: "About Us", href: "#our-world" },
+    { name: "Shop", href: "/#collections" },
+    { name: "About Us", href: "/about-anushka-chauhan" },
+    { name: "Track Order", href: "/pages/track-order" },
+    { name: "Staff Portal", href: "/pages/staff-portal" },
   ];
 
   return (
@@ -68,7 +69,7 @@ export default function Header() {
 
           {/* Luxury Logo */}
           <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-            <a href="#" className="flex flex-col items-center group py-1">
+            <a href="/" className="flex flex-col items-center group py-1">
               <span className={`font-editorial text-xl md:text-2xl tracking-[0.22em] uppercase font-bold transition-colors duration-500 ${
                 isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
               }`}>

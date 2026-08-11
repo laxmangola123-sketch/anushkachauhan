@@ -1,18 +1,13 @@
 "use client";
 
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Collections from "@/components/Collections";
-import OurWorld from "@/components/OurWorld";
-import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
-import ShopAll from "@/components/ShopAll";
 import CartDrawer from "@/components/CartDrawer";
 import AICombinator from "@/components/AICombinator";
 import { useCart } from "@/components/CartContext";
 import { Sparkles } from "lucide-react";
 
-export default function Home() {
+export default function PageShell({ children }: { children: React.ReactNode }) {
   const { openAIStylist } = useCart();
 
   return (
@@ -20,24 +15,12 @@ export default function Home() {
       {/* Floating Global Header */}
       <Header />
 
-      <main className="flex-grow">
-        {/* 1. Editorial Image Hero */}
-        <Hero />
-
-        {/* 2. Our Collections (5 Columns) */}
-        <Collections />
-
-        {/* 2.5. Shop All (Product Grid) */}
-        <ShopAll />
-
-        {/* 3. Our World (Brand Pillars) */}
-        <OurWorld />
-
-        {/* 4. Bottom Info Banner */}
-        <InfoBanner />
+      {/* Main Page Content */}
+      <main className="flex-grow pt-28 pb-16">
+        {children}
       </main>
 
-      {/* 5. Luxury Footer */}
+      {/* Luxury Footer */}
       <Footer />
 
       {/* Floating Anushka's Atelier Button */}
