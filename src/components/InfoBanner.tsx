@@ -46,10 +46,10 @@ export default function InfoBanner() {
                   <Icon size={18} strokeWidth={1.2} />
                 </div>
                 <div className="flex flex-col text-left">
-                  <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#aa9775] mb-0.5">
+                  <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#aa9775] mb-1">
                     {item.title}
                   </h4>
-                  <p className="font-editorial text-[11px] sm:text-xs text-[#1c1813] font-semibold tracking-wide">
+                  <p className="font-editorial text-sm sm:text-base text-[#1c1813] font-bold tracking-wide">
                     {item.description}
                   </p>
                 </div>

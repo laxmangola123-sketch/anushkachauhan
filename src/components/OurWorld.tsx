@@ -94,10 +94,10 @@ export default function OurWorld() {
                 className="flex flex-col items-center px-4"
               >
                 <Icon />
-                <h3 className="text-xs uppercase tracking-[0.25em] text-[#aa9775] font-semibold mb-3">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.25em] text-[#aa9775] font-bold mb-3">
                   {pillar.title}
                 </h3>
-                <p className="font-editorial text-xs sm:text-sm text-[#1c1813] leading-relaxed font-semibold">
+                <p className="font-editorial text-sm sm:text-base md:text-lg text-[#1c1813] leading-relaxed font-semibold">
                   {pillar.description}
                 </p>
               </motion.div>

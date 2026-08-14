@@ -42,6 +42,7 @@ export default function CartDrawer() {
     const [transactionId, setTransactionId] = useState("");
     const [transactionError, setTransactionError] = useState("");
     const [copiedField, setCopiedField] = useState<string | null>(null);
+    const [placedOrderId, setPlacedOrderId] = useState("");
 
     const totalPrice = items.reduce((sum, item) => {
         const num = parseInt(item.product.price.replace(/[₹,]/g, ""), 10) || 0;
@@ -85,7 +86,7 @@ export default function CartDrawer() {
         // Post order details to database API
         if (items.length > 0) {
             try {
-                await fetch("/api/orders", {
+                const res = await fetch("/api/orders", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -115,6 +116,10 @@ export default function CartDrawer() {
                         }
                     })
                 });
+                const result = await res.json();
+                if (result.success && result.data) {
+                    setPlacedOrderId(result.data.id);
+                }
             } catch (err) {
                 console.error("Order API posting failed:", err);
             }
@@ -137,6 +142,7 @@ export default function CartDrawer() {
             // If the checkout was successful, empty the cart
             if (isCompleted) {
                 items.forEach((item) => removeItem(item.product.id, item.size));
+                setPlacedOrderId("");
             }
         }, 400);
     };
@@ -516,6 +522,23 @@ export default function CartDrawer() {
 
                                 <div className="border border-[#c5a880]/20 rounded-sm p-4 bg-[#eedec8]/5 w-full space-y-2 text-left mb-6 text-[10px]">
                                     <p className="text-[8px] uppercase tracking-wider text-[#aa9775] font-bold pb-1 border-b border-[#c5a880]/10">Order & Payment Info</p>
+                                    
+                                    {placedOrderId && (
+                                        <div className="flex items-center justify-between bg-[#eedec8]/20 border border-[#c5a880]/15 p-2 rounded-sm mb-3">
+                                            <div className="flex flex-col">
+                                                <span className="text-[7.5px] uppercase tracking-wider text-[#aa9775] font-bold">Your Tracking ID</span>
+                                                <span className="text-xs font-mono font-bold text-[#1c1813]">{placedOrderId}</span>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => handleCopy(placedOrderId, "tracking")}
+                                                className="p-1 hover:bg-[#c5a880]/10 rounded-sm text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
+                                            >
+                                                {copiedField === "tracking" ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
+                                            </button>
+                                        </div>
+                                    )}
+
                                     <p className="text-[#1c1813]/60">Payment Method: <strong className="text-[#1c1813]/90">{paymentMethod === "online" ? "Online Transfer" : "Cash on Delivery (COD)"}</strong></p>
                                     {paymentMethod === "online" && (
                                         <p className="text-[#1c1813]/60">UTR / Ref No: <strong className="text-[#1c1813]/90">{transactionId}</strong></p>
@@ -525,16 +548,26 @@ export default function CartDrawer() {
                                 </div>
 
                                 {paymentMethod === "online" ? (
-                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-8 max-w-xs leading-relaxed">
+                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-6 max-w-xs leading-relaxed">
                                         Our accounts team will verify the payment reference <strong className="text-[#1c1813]">{transactionId}</strong>. We will notify you and call you within 24 hours to confirm dispatch.
                                     </p>
                                 ) : (
-                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-8 max-w-xs leading-relaxed">
+                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-6 max-w-xs leading-relaxed">
                                         We will call you at <strong className="text-[#1c1813]">{details.phone}</strong> within 24 hours to verify your address and confirm dispatch before shipping.
                                     </p>
                                 )}
 
-                                <button onClick={handleClose} className="px-8 py-3 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-light hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500">
+                                {placedOrderId && (
+                                    <a
+                                        href={`/pages/track-order?id=${placedOrderId}`}
+                                        onClick={handleClose}
+                                        className="w-full py-3.5 mb-3.5 bg-[#aa9775] text-[#f5ebd9] text-[9px] uppercase tracking-[0.4em] font-bold hover:bg-[#1c1813] hover:text-[#f5ebd9] transition-all duration-500 rounded-sm text-center shadow-md cursor-pointer"
+                                    >
+                                        Track Lehenga Journey Live
+                                    </a>
+                                )}
+
+                                <button onClick={handleClose} className="px-8 py-3 bg-[#1c1813]/90 text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-light hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500">
                                     Continue Shopping
                                 </button>
                             </div>

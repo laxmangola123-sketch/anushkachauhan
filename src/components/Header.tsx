@@ -74,15 +74,15 @@ export default function Header() {
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
                 className={`rounded-full border border-[#aa9775]/25 object-cover mb-2 transition-all duration-700 group-hover:scale-105 ${
-                  isScrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-16 w-16 md:h-20 md:w-20"
+                  isScrolled ? "h-14 w-14 md:h-16 md:w-16" : "h-20 w-20 md:h-28 md:w-28"
                 }`}
               />
-              <span className={`font-editorial text-sm md:text-lg tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-tight ${
+              <span className={`font-editorial text-base md:text-xl tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-tight ${
                 isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
               }`}>
                 ANUSHKA CHAUHAN
               </span>
-              <span className={`text-[6px] md:text-[7.5px] tracking-[0.45em] font-bold mt-1 uppercase transition-colors duration-700 ${
+              <span className={`text-[8px] md:text-[10px] tracking-[0.45em] font-bold mt-1.5 uppercase transition-colors duration-700 ${
                 isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
               }`}>
                 HERITAGE COUTURE
@@ -138,13 +138,13 @@ export default function Header() {
           >
             {/* Header in Overlay */}
             <div className="flex items-center justify-between border-b border-[#c5a880]/15 pb-4 w-full">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-3">
                 <img
                   src="/logo.jpg"
                   alt="Anushka Chauhan Logo"
-                  className="h-8 w-8 rounded-full border border-[#aa9775]/20 object-cover"
+                  className="h-12 w-12 rounded-full border border-[#aa9775]/20 object-cover"
                 />
-                <span className="font-editorial text-sm tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
+                <span className="font-editorial text-base tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
                   ANUSHKA CHAUHAN
                 </span>
               </div>

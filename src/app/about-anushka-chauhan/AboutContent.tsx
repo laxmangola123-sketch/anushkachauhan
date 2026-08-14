@@ -15,8 +15,6 @@ const FloralDivider = () => (
   </div>
 );
 
-
-
 interface FAQItem {
   question: string;
   answer: React.ReactNode;
@@ -99,30 +97,34 @@ export default function AboutContent() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="flex flex-col items-center"
             >
+              {/* Increased About Page Logo size to w-28 h-28 */}
               <img
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
-                className="w-16 h-16 rounded-full border border-[#aa9775]/20 object-cover mb-3 shadow-sm"
+                className="w-28 h-28 rounded-full border border-[#aa9775]/25 object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
               />
               
-              <h2 className="font-editorial text-lg tracking-[0.25em] text-[#1c1813] uppercase font-bold mt-2">
+              {/* Increased font sizes here */}
+              <h2 className="font-editorial text-2xl tracking-[0.25em] text-[#1c1813] uppercase font-bold mt-3">
                 ANUSHKA CHAUHAN
               </h2>
-              <span className="text-[8px] tracking-[0.45em] text-[#aa9775] font-bold uppercase mt-1">
+              <span className="text-[10px] tracking-[0.45em] text-[#aa9775] font-bold uppercase mt-1.5">
                 HERITAGE COUTURE
               </span>
 
               <FloralDivider />
 
-              <h1 className="font-editorial text-5xl sm:text-6xl tracking-[0.1em] text-[#1c1813] font-bold mb-4">
+              {/* Increased ABOUT US title to text-6xl / sm:text-7xl */}
+              <h1 className="font-editorial text-6xl sm:text-7xl tracking-[0.1em] text-[#1c1813] font-bold mb-4">
                 ABOUT US
               </h1>
 
+              {/* Increased Hindi poetical text size to text-xl / sm:text-2xl */}
               <div className="space-y-2 mt-2">
-                <p className="font-editorial text-lg sm:text-xl text-[#aa9775] tracking-wide leading-relaxed font-medium">
+                <p className="font-editorial text-xl sm:text-2xl text-[#aa9775] tracking-wide leading-relaxed font-semibold">
                   भारत की विरासत से प्रेरित,
                 </p>
-                <p className="font-editorial text-lg sm:text-xl text-[#aa9775] tracking-wide leading-relaxed font-medium">
+                <p className="font-editorial text-xl sm:text-2xl text-[#aa9775] tracking-wide leading-relaxed font-semibold">
                   आज की स्त्री के लिए रचा गया।
                 </p>
               </div>
@@ -151,12 +153,14 @@ export default function AboutContent() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="lg:col-span-5 space-y-6 text-[#1c1813]/90"
           >
-            <h2 className="font-editorial text-2xl sm:text-3xl text-[#1c1813] font-bold tracking-wide leading-snug">
+            {/* Increased Section 2 Header size to text-3xl / sm:text-4xl */}
+            <h2 className="font-editorial text-3xl sm:text-4xl text-[#1c1813] font-bold tracking-wide leading-snug">
               ROOTED IN HERITAGE.<br />
               REIMAGINED FOR TODAY.
             </h2>
             
-            <div className="space-y-4 text-xs sm:text-sm font-light leading-relaxed text-[#1c1813]/80">
+            {/* Increased paragraph text sizes from text-xs/sm to text-sm/base */}
+            <div className="space-y-4 text-sm sm:text-base font-light leading-relaxed text-[#1c1813]/80">
               <p>
                 Anushka Chauhan is an Indian couture label inspired by the richness of India&apos;s artistic heritage, royal architecture and generations of craftsmanship.
               </p>
@@ -228,13 +232,15 @@ export default function AboutContent() {
             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="md:col-span-4 border border-[#c5a880]/15 p-8 flex flex-col justify-center items-center text-center bg-[#fdfbf7] shadow-sm rounded-sm relative"
           >
-            <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase">
+            {/* Increased title to text-2xl */}
+            <h3 className="font-editorial text-2xl text-[#1c1813] font-bold tracking-[0.15em] uppercase">
               THE ART OF CRAFT
             </h3>
             
             <FloralDivider />
             
-            <p className="text-xs sm:text-sm font-light text-[#1c1813]/80 leading-relaxed max-w-xs">
+            {/* Increased text size from text-xs/sm to text-sm/base */}
+            <p className="text-sm sm:text-base font-light text-[#1c1813]/80 leading-relaxed max-w-xs">
               At the heart of Anushka Chauhan is the belief that true luxury lies in the hands that create it. Our embroideries bring together traditional handwork, resham, zardozi, cutdana, sequins and intricate surface techniques, carefully composed to preserve the character of Indian craftsmanship while giving it a modern expression.
             </p>
           </motion.div>
@@ -287,24 +293,27 @@ export default function AboutContent() {
               transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="flex flex-col items-center"
             >
-              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.2em] uppercase">
+              {/* Increased title size to text-2xl */}
+              <h3 className="font-editorial text-2xl text-[#1c1813] font-bold tracking-[0.2em] uppercase">
                 OUR PHILOSOPHY
               </h3>
 
               <FloralDivider />
 
+              {/* Increased quote and paragraph text sizes */}
               <div className="space-y-4 max-w-md">
-                <p className="font-editorial text-sm sm:text-base italic text-[#aa9775] leading-relaxed">
+                <p className="font-editorial text-base sm:text-lg italic text-[#aa9775] leading-relaxed">
                   Heritage is not something we simply preserve. It is something we continue to create.
                 </p>
-                <p className="text-xs sm:text-sm font-light text-[#1c1813]/80 leading-relaxed">
+                <p className="text-sm sm:text-base font-light text-[#1c1813]/85 leading-relaxed">
                   Anushka Chauhan is for the woman who appreciates where she comes from, yet chooses to express it in her own way.
                 </p>
               </div>
 
               <FloralDivider />
 
-              <div className="text-[10px] tracking-[0.3em] font-bold text-[#aa9775]/90 space-y-1.5 mt-2">
+              {/* Increased footer note text to text-xs / sm:text-sm */}
+              <div className="text-xs sm:text-sm tracking-[0.3em] font-bold text-[#aa9775]/90 space-y-1.5 mt-2">
                 <p>MADE IN INDIA.</p>
                 <p>INSPIRED BY ITS HERITAGE.</p>
                 <p>CREATED FOR GENERATIONS TO COME.</p>
@@ -334,10 +343,12 @@ export default function AboutContent() {
         {/* Section 5: FAQs (Frequently Asked Questions Accordion) */}
         <div className="border-t border-[#c5a880]/20 pt-20 mt-20 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-editorial text-3xl sm:text-4xl tracking-[0.15em] text-[#1c1813] font-bold uppercase">
+            {/* Increased FAQ main title size to text-4xl/5xl */}
+            <h2 className="font-editorial text-4xl sm:text-5xl tracking-[0.15em] text-[#1c1813] font-bold uppercase">
               FAQs
             </h2>
-            <span className="text-[9px] uppercase tracking-[0.35em] text-[#aa9775] font-bold mt-2 block">
+            {/* Increased FAQ subtitle size to text-xs */}
+            <span className="text-xs uppercase tracking-[0.35em] text-[#aa9775] font-bold mt-2 block">
               Frequently Asked Questions
             </span>
             <div className="flex justify-center mt-4">
@@ -354,7 +365,8 @@ export default function AboutContent() {
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left group cursor-pointer focus:outline-none"
                   >
-                    <span className="font-editorial text-base sm:text-lg text-[#1c1813] group-hover:text-[#aa9775] transition-colors duration-300 pr-4">
+                    {/* Increased FAQ question size to text-lg/xl */}
+                    <span className="font-editorial text-lg sm:text-xl text-[#1c1813] group-hover:text-[#aa9775] transition-colors duration-300 pr-4 font-semibold">
                       {faq.question}
                     </span>
                     <span className="relative w-4 h-4 flex items-center justify-center shrink-0">
@@ -376,7 +388,8 @@ export default function AboutContent() {
                         transition={{ duration: 0.35, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="mt-3 text-xs sm:text-sm font-light text-[#1c1813]/80 leading-relaxed pl-1 pr-6 max-w-3xl">
+                        {/* Increased FAQ answer size to text-sm/base */}
+                        <p className="mt-3 text-sm sm:text-base font-light text-[#1c1813]/80 leading-relaxed pl-1 pr-6 max-w-3xl">
                           {faq.answer}
                         </p>
                       </motion.div>
@@ -396,16 +409,19 @@ export default function AboutContent() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="mt-24 p-8 md:p-12 border border-[#c5a880]/20 bg-[#eedec8]/10 text-center space-y-6 rounded-sm"
         >
-          <h3 className="font-editorial text-2xl sm:text-3xl text-[#1c1813] tracking-wide font-bold">
+          {/* Increased Consultation CTA title to text-3xl/4xl */}
+          <h3 className="font-editorial text-3xl sm:text-4xl text-[#1c1813] tracking-wide font-bold">
             Begin Your Bridal Consultation
           </h3>
-          <p className="text-xs sm:text-sm font-light text-[#1c1813]/75 max-w-xl mx-auto leading-relaxed">
+          {/* Increased Consultation CTA description to text-sm/base */}
+          <p className="text-sm sm:text-base font-light text-[#1c1813]/75 max-w-xl mx-auto leading-relaxed">
             Let our design studio assist you in crafting the perfect bespoke outfit. We offer customisable designs for bridal lehengas, occasion sarees, and custom festive collections.
           </p>
+          {/* Increased button font size to text-sm */}
           <div className="pt-2">
             <Link
               href="/pages/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-[#1c1813] hover:border-[#aa9775] bg-[#1c1813] hover:bg-[#aa9775] text-[#f5ebd9] transition-all text-xs uppercase tracking-[0.25em] font-bold rounded-sm cursor-pointer shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[#1c1813] hover:border-[#aa9775] bg-[#1c1813] hover:bg-[#aa9775] text-[#f5ebd9] transition-all text-sm uppercase tracking-[0.25em] font-bold rounded-sm cursor-pointer shadow-md"
             >
               Contact Our Studio <ArrowRight size={14} />
             </Link>

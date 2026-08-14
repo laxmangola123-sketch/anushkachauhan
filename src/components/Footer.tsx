@@ -66,7 +66,7 @@ export default function Footer() {
             <img
               src="/logo.jpg"
               alt="Anushka Chauhan Logo"
-              className="h-16 w-auto rounded-full border border-[#aa9775]/20 object-cover"
+              className="h-24 w-auto rounded-full border border-[#aa9775]/20 object-cover"
             />
             <div className="flex flex-col">
               <span className="font-editorial text-xl tracking-[0.1em] text-[#1c1813] uppercase font-bold">
@@ -80,15 +80,18 @@ export default function Footer() {
           <p className="text-xs text-[#1c1813] leading-relaxed font-bold max-w-sm">
             Preserving the legacy of Indian craftsmanship and ancestral handloom techniques, Anushka Chauhan Couture weaves royal history and gold threads into modern luxury.
           </p>
-          <div className="flex items-center space-x-4 pt-2">
-            <a href="https://www.instagram.com/anushkachauhanlabel?igsh=dmZuNGU2bml0eWNq" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300">
-              <Instagram size={18} strokeWidth={2} />
+          <div className="flex items-center space-x-5 pt-2">
+            <a href="https://www.instagram.com/anushkachauhanlabel?igsh=dmZuNGU2bml0eWNq" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+              <Instagram size={24} strokeWidth={1.8} />
             </a>
-            <a href="https://www.facebook.com/share/1K5D4RbUSt/" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300">
-              <Facebook size={18} strokeWidth={2} />
+            <a href="https://www.facebook.com/share/1K5D4RbUSt/" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+              <Facebook size={24} strokeWidth={1.8} />
             </a>
-            <a href="https://wa.me/919041588678" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300">
-              <Whatsapp size={18} strokeWidth={2} />
+            <a href="https://wa.me/919041588678" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+              <Whatsapp size={24} strokeWidth={1.8} />
+            </a>
+            <a href="mailto:business@anushkachauhan.com" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+              <Mail size={24} strokeWidth={1.8} />
             </a>
           </div>
         </div>
@@ -220,11 +223,14 @@ export default function Footer() {
           <span>© 2026 Anushka Chauhan Couture. All rights reserved.</span>
         </div>
         <div className="flex flex-wrap justify-center space-x-6">
-          <a href="#privacy" className="hover:text-[#aa9775] transition-colors">
+          <a href="/pages/privacy" className="hover:text-[#aa9775] transition-colors">
             Privacy Policy
           </a>
-          <a href="#terms" className="hover:text-[#aa9775] transition-colors">
+          <a href="/pages/terms" className="hover:text-[#aa9775] transition-colors">
             Terms & Conditions
+          </a>
+          <a href="/pages/returns" className="hover:text-[#aa9775] transition-colors">
+            Returns & Exchanges
           </a>
           <a href="#sitemap" className="hover:text-[#aa9775] transition-colors">
             Sitemap
