@@ -15,17 +15,7 @@ const FloralDivider = () => (
   </div>
 );
 
-// Elegant Custom Logo Crest SVG
-const CrestLogo = () => (
-  <svg className="w-14 h-14 text-[#aa9775] mb-2 drop-shadow-sm" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-    <circle cx="50" cy="50" r="42" strokeWidth="0.75" strokeDasharray="2 2" />
-    <path d="M38 72 L49 32 L51 32 L62 72" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M42 58 L58 58" strokeWidth="1" />
-    <path d="M66 40 C61 27, 43 27, 41 48 C40 68, 59 71, 66 58" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M50 4 Q50 12 45 12 M50 4 Q50 12 55 12" strokeWidth="0.75" />
-    <path d="M50 96 Q50 88 45 88 M50 96 Q50 88 55 88" strokeWidth="0.75" />
-  </svg>
-);
+
 
 interface FAQItem {
   question: string;
@@ -109,7 +99,11 @@ export default function AboutContent() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="flex flex-col items-center"
             >
-              <CrestLogo />
+              <img
+                src="/logo.jpg"
+                alt="Anushka Chauhan Logo"
+                className="w-16 h-16 rounded-full border border-[#aa9775]/20 object-cover mb-3 shadow-sm"
+              />
               
               <h2 className="font-editorial text-lg tracking-[0.25em] text-[#1c1813] uppercase font-bold mt-2">
                 ANUSHKA CHAUHAN
