@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Instagram = ({ size = 18, ...props }: { size?: number } & React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -195,13 +195,6 @@ export default function Footer() {
               <a href="tel:+919041588678" className="hover:text-[#aa9775] transition-colors">
                 +91-9041588678
               </a>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <MapPin size={14} className="text-[#aa9775] mt-0.5" strokeWidth={2} />
-              <span className="text-[#1c1813] font-bold">
-                A-87, A Block, Sector 70, <br />
-                Noida 201301 Delhi (NCR) India
-              </span>
             </li>
           </ul>
           <div className="pt-2 flex flex-wrap gap-2">

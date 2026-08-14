@@ -84,9 +84,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
     const { addItem, openAIStylist } = useCart();
 
-    if (!product) return null;
-
     const handleAddToCart = () => {
+        if (!product) return;
         if (!selectedSize) {
             alert("Please select a size first.");
             return;
@@ -100,6 +99,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     };
 
     const handleOrderViaWhatsApp = () => {
+        if (!product) return;
         if (!selectedSize) {
             alert("Please select a size first.");
             return;
@@ -147,6 +147,7 @@ Please let me know how to proceed. Thank you!`;
     };
 
     const handleCompletePayment = async (methodName: string) => {
+        if (!product) return;
         setIsPaymentProcessing(true);
         try {
             const response = await fetch("/api/orders", {
@@ -273,6 +274,8 @@ Please let me know how to proceed. Thank you!`;
         `w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border ${
             errors[field] ? "border-red-400" : "border-[#c5a880]/40"
         } text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors duration-300 font-semibold tracking-wide`;
+
+    if (!product) return null;
 
     return (
         <AnimatePresence>

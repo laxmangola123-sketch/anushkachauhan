@@ -97,7 +97,7 @@ export default function OurWorld() {
                 <h3 className="text-xs uppercase tracking-[0.25em] text-[#aa9775] font-semibold mb-3">
                   {pillar.title}
                 </h3>
-                <p className="font-editorial text-xs sm:text-sm text-[#1c1813]/70 leading-relaxed font-light">
+                <p className="font-editorial text-xs sm:text-sm text-[#1c1813] leading-relaxed font-semibold">
                   {pillar.description}
                 </p>
               </motion.div>

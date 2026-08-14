@@ -69,13 +69,20 @@ export default function Header() {
 
           {/* Luxury Logo */}
           <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-            <a href="/" className="flex flex-col items-center group py-1">
-              <span className={`font-editorial text-xl md:text-2xl tracking-[0.22em] uppercase font-bold transition-colors duration-500 ${
+            <a href="/" className="flex flex-col items-center group py-1 justify-center">
+              <img
+                src="/logo.jpg"
+                alt="Anushka Chauhan Logo"
+                className={`rounded-full border border-[#aa9775]/25 object-cover mb-2 transition-all duration-700 group-hover:scale-105 ${
+                  isScrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-16 w-16 md:h-20 md:w-20"
+                }`}
+              />
+              <span className={`font-editorial text-sm md:text-lg tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-tight ${
                 isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
               }`}>
                 ANUSHKA CHAUHAN
               </span>
-              <span className={`text-[7.5px] tracking-[0.45em] font-bold mt-1.5 uppercase transition-colors duration-500 ${
+              <span className={`text-[6px] md:text-[7.5px] tracking-[0.45em] font-bold mt-1 uppercase transition-colors duration-700 ${
                 isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
               }`}>
                 HERITAGE COUTURE
@@ -131,9 +138,16 @@ export default function Header() {
           >
             {/* Header in Overlay */}
             <div className="flex items-center justify-between border-b border-[#c5a880]/15 pb-4 w-full">
-              <span className="font-editorial text-sm tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
-                ANUSHKA CHAUHAN
-              </span>
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/logo.jpg"
+                  alt="Anushka Chauhan Logo"
+                  className="h-8 w-8 rounded-full border border-[#aa9775]/20 object-cover"
+                />
+                <span className="font-editorial text-sm tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
+                  ANUSHKA CHAUHAN
+                </span>
+              </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-[#1c1813] hover:text-[#aa9775] transition-colors"

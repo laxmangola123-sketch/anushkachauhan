@@ -2,7 +2,7 @@
 
 import PageShell from "@/components/PageShell";
 import { motion } from "framer-motion";
-import { Mail, Clock, MessageSquare, ShieldCheck, MapPin } from "lucide-react";
+import { Mail, Clock, MessageSquare, ShieldCheck } from "lucide-react";
 
 export default function ContactContent() {
   return (
@@ -176,21 +176,7 @@ export default function ContactContent() {
           </motion.div>
         </div>
 
-        {/* Studio Address Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="border-t border-[#c5a880]/15 pt-12 text-center flex flex-col items-center space-y-4"
-        >
-          <MapPin size={24} className="text-[#aa9775]" strokeWidth={1.2} />
-          <h3 className="font-editorial text-xl text-[#1c1813] font-semibold">Our Studio</h3>
-          <p className="text-xs sm:text-sm font-light text-[#1c1813]/75 max-w-sm leading-relaxed">
-            A-87, A Block, Sector 70, <br />
-            Noida 201301 Delhi (NCR) India
-          </p>
-        </motion.div>
+
       </div>
     </PageShell>
   );

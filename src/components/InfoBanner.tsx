@@ -49,7 +49,7 @@ export default function InfoBanner() {
                   <h4 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#aa9775] mb-0.5">
                     {item.title}
                   </h4>
-                  <p className="font-editorial text-[11px] sm:text-xs text-[#1c1813]/70 font-light tracking-wide">
+                  <p className="font-editorial text-[11px] sm:text-xs text-[#1c1813] font-semibold tracking-wide">
                     {item.description}
                   </p>
                 </div>

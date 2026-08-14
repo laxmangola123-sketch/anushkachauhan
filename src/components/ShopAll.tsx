@@ -12,10 +12,7 @@ export default function ShopAll() {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    const filtered =
-        activeCategory === "All"
-            ? allProducts
-            : allProducts.filter((p) => p.category === activeCategory);
+    const filtered: Product[] = [];
 
     return (
         <>
