@@ -38,60 +38,65 @@ export default function Header() {
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Mobile Menu Icon */}
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
-            }`}
-            aria-label="Open menu"
-          >
-            <Menu size={22} />
-          </button>
+          {/* Left Navigation Wrapper */}
+          <div className="flex-1 flex items-center justify-start">
+            {/* Mobile Menu Icon */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className={`md:hidden transition-colors duration-300 ${
+                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+              }`}
+              aria-label="Open menu"
+            >
+              <Menu size={22} />
+            </button>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-10 lg:space-x-14">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`text-[11px] uppercase tracking-[0.25em] transition-colors duration-500 relative group py-2 font-bold ${
-                  isScrolled ? "text-[#1c1813]/85 hover:text-[#aa9775]" : "text-white/95 hover:text-[#e8d6b3]"
-                }`}
-              >
-                {link.name}
-                <span className={`absolute bottom-0 left-0 w-0 h-[1px] transition-all duration-500 group-hover:w-full ${
-                  isScrolled ? "bg-[#aa9775]" : "bg-[#e8d6b3]"
-                }`} />
-              </a>
-            ))}
-          </nav>
+            {/* Desktop Navigation Links */}
+            <nav className="hidden md:flex items-center space-x-10 lg:space-x-14">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`text-[11px] uppercase tracking-[0.25em] transition-colors duration-500 relative group py-2 font-bold ${
+                    isScrolled ? "text-[#1c1813]/85 hover:text-[#aa9775]" : "text-white/95 hover:text-[#e8d6b3]"
+                  }`}
+                >
+                  {link.name}
+                  <span className={`absolute bottom-0 left-0 w-0 h-[1px] transition-all duration-500 group-hover:w-full ${
+                    isScrolled ? "bg-[#aa9775]" : "bg-[#e8d6b3]"
+                  }`} />
+                </a>
+              ))}
+            </nav>
+          </div>
 
           {/* Luxury Logo */}
-          <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-            <a href="/" className="flex flex-col items-center group py-1 justify-center">
+          <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none">
+            <a href="/" className="flex items-center group py-1 justify-center">
               <img
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
-                className={`rounded-full border border-[#aa9775]/25 object-cover mb-2 transition-all duration-700 group-hover:scale-105 ${
-                  isScrolled ? "h-14 w-14 md:h-16 md:w-16" : "h-20 w-20 md:h-28 md:w-28"
+                className={`rounded-full border border-[#aa9775]/25 object-cover transition-all duration-700 group-hover:scale-105 ${
+                  isScrolled ? "h-16 w-16 md:h-20 md:w-20" : "h-24 w-24 md:h-32 md:w-32"
                 }`}
               />
-              <span className={`font-editorial text-base md:text-xl tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-tight ${
-                isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
-              }`}>
-                ANUSHKA CHAUHAN
-              </span>
-              <span className={`text-[8px] md:text-[10px] tracking-[0.45em] font-bold mt-1.5 uppercase transition-colors duration-700 ${
-                isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
-              }`}>
-                HERITAGE COUTURE
-              </span>
+              <div className="flex flex-col items-start ml-4 text-left">
+                <span className={`font-editorial text-sm md:text-xl tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-none ${
+                  isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
+                }`}>
+                  ANUSHKA CHAUHAN
+                </span>
+                <span className={`text-[8px] md:text-[10px] tracking-[0.35em] font-bold mt-1.5 uppercase transition-colors duration-700 ${
+                  isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
+                }`}>
+                  HERITAGE COUTURE
+                </span>
+              </div>
             </a>
           </div>
 
-          {/* Icons Bar */}
-          <div className="flex items-center space-x-6 md:space-x-8">
+          {/* Right Icons Bar Wrapper */}
+          <div className="flex-grow flex-1 flex items-center justify-end space-x-6 md:space-x-8">
             <button
               className={`transition-colors duration-300 hidden sm:block ${
                 isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"

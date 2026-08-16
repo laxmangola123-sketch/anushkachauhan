@@ -10,7 +10,9 @@ All tasks have been successfully completed. The website visual theme and layout 
 
 ### 2. Header Update ([Header.tsx](file:///c:/Users/Asus/OneDrive/Desktop/anushka%20chauhan%20handcrafed/src/components/Header.tsx))
 - Updated left menu navigation links to: **SHOP**, **COLLECTIONS**, and **ABOUT US**.
-- Redesigned the center brand text logo: **ANUSHKA CHAUHAN** (large serif text) & **HERITAGE COUTURE** (spaced out sans-serif).
+- Repositioned the brand name (**ANUSHKA CHAUHAN** and **HERITAGE COUTURE**) to the right side of the circular logo image (horizontal layout), vertically centering the text block with the circular logo for a refined, modern header design.
+- Centered the entire logo+text lockup horizontally on desktop by wrapping the left navigation menu and right icons bar in `flex-1` containers.
+- Enlarged the circular logo image and brand name sizes: logo image increased from `16` to `20` units scrolled and `24` to `32` units non-scrolled; brand name increased from `lg` to `xl` text size.
 - Updated the right icons to display Search, User (Profile), and Shopping Bag with a count represented in parentheses (e.g. `(0)`).
 
 ### 3. Hero Section Update ([Hero.tsx](file:///c:/Users/Asus/OneDrive/Desktop/anushka%20chauhan%20handcrafed/src/components/Hero.tsx))
