@@ -14,7 +14,7 @@ export default function ContactContent() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-[10px] uppercase tracking-[0.4em] text-[#aa9775] font-semibold mb-3 block"
+            className="text-[10px] uppercase tracking-[0.4em] text-[#9c6d68] font-semibold mb-3 block"
           >
             Customer Support
           </motion.span>
@@ -30,15 +30,15 @@ export default function ContactContent() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.3 }}
-            className="font-editorial italic text-lg sm:text-xl text-[#aa9775] tracking-wide"
+            className="font-editorial italic text-lg sm:text-xl text-[#9c6d68] tracking-wide"
           >
             We&apos;d Love to Hear From You
           </motion.p>
           
           <div className="flex items-center justify-center gap-2 w-full mt-6">
-            <div className="h-[1px] bg-[#c5a880]/30 w-16" />
-            <span className="text-[#c5a880] text-[8px]">&#10047;</span>
-            <div className="h-[1px] bg-[#c5a880]/30 w-16" />
+            <div className="h-[1px] bg-[#cca09d]/30 w-16" />
+            <span className="text-[#cca09d] text-[8px]">&#10047;</span>
+            <div className="h-[1px] bg-[#cca09d]/30 w-16" />
           </div>
         </div>
 
@@ -62,18 +62,18 @@ export default function ContactContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="border border-[#c5a880]/20 bg-[#ece2ce]/20 p-8 rounded-sm flex flex-col justify-between space-y-8 shadow-sm"
+            className="border border-[#cca09d]/20 bg-[#ece2ce]/20 p-8 rounded-sm flex flex-col justify-between space-y-8 shadow-sm"
           >
             <div className="space-y-6">
-              <div className="flex items-center gap-3 border-b border-[#c5a880]/15 pb-4">
-                <div className="w-10 h-10 rounded-full border border-[#aa9775]/35 flex items-center justify-center text-[#aa9775]">
+              <div className="flex items-center gap-3 border-b border-[#cca09d]/15 pb-4">
+                <div className="w-10 h-10 rounded-full border border-[#9c6d68]/35 flex items-center justify-center text-[#9c6d68]">
                   <ShieldCheck size={18} strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-editorial text-lg text-[#1c1813] font-semibold">
                     Customer Care
                   </h3>
-                  <p className="text-[8px] uppercase tracking-widest text-[#aa9775] font-light">
+                  <p className="text-[8px] uppercase tracking-widest text-[#9c6d68] font-light">
                     Sizing, Orders & Operations
                   </p>
                 </div>
@@ -82,10 +82,10 @@ export default function ContactContent() {
               <div className="space-y-4 text-xs sm:text-sm font-light text-[#1c1813]/85">
                 {/* Email */}
                 <div className="flex items-start gap-3">
-                  <Mail size={16} className="text-[#aa9775] mt-0.5 shrink-0" strokeWidth={1.5} />
+                  <Mail size={16} className="text-[#9c6d68] mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#aa9775] font-semibold block mb-0.5">Email</span>
-                    <a href="mailto:care@anushkachauhan.in" className="hover:text-[#aa9775] transition-colors break-all">
+                    <span className="text-[10px] uppercase tracking-wider text-[#9c6d68] font-semibold block mb-0.5">Email</span>
+                    <a href="mailto:care@anushkachauhan.in" className="hover:text-[#9c6d68] transition-colors break-all">
                       care@anushkachauhan.in
                     </a>
                   </div>
@@ -93,26 +93,26 @@ export default function ContactContent() {
 
                 {/* WhatsApp */}
                 <div className="flex items-start gap-3">
-                  <MessageSquare size={16} className="text-[#aa9775] mt-0.5 shrink-0" strokeWidth={1.5} />
+                  <MessageSquare size={16} className="text-[#9c6d68] mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#aa9775] font-semibold block mb-0.5">WhatsApp Chat</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#9c6d68] font-semibold block mb-0.5">WhatsApp Chat</span>
                     <a
                       href="https://wa.me/919041588678"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#aa9775] transition-colors flex items-center gap-1.5"
+                      className="hover:text-[#9c6d68] transition-colors flex items-center gap-1.5"
                     >
                       +91 90415 88678
-                      <span className="text-[9px] bg-[#aa9775]/10 text-[#aa9775] border border-[#aa9775]/20 rounded-full px-2 py-0.2 uppercase tracking-widest">Chat Now</span>
+                      <span className="text-[9px] bg-[#9c6d68]/10 text-[#9c6d68] border border-[#9c6d68]/20 rounded-full px-2 py-0.2 uppercase tracking-widest">Chat Now</span>
                     </a>
                   </div>
                 </div>
 
                 {/* Hours */}
                 <div className="flex items-start gap-3">
-                  <Clock size={16} className="text-[#aa9775] mt-0.5 shrink-0" strokeWidth={1.5} />
+                  <Clock size={16} className="text-[#9c6d68] mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#aa9775] font-semibold block mb-0.5">Operating Hours</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#9c6d68] font-semibold block mb-0.5">Operating Hours</span>
                     <span>Monday – Saturday</span>
                     <span className="block text-[11px] text-[#1c1813]/70 mt-0.5">10:00 AM – 07:00 PM IST</span>
                   </div>
@@ -127,18 +127,18 @@ export default function ContactContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="border border-[#c5a880]/20 bg-[#ece2ce]/20 p-8 rounded-sm flex flex-col justify-between space-y-8 shadow-sm"
+            className="border border-[#cca09d]/20 bg-[#ece2ce]/20 p-8 rounded-sm flex flex-col justify-between space-y-8 shadow-sm"
           >
             <div className="space-y-6">
-              <div className="flex items-center gap-3 border-b border-[#c5a880]/15 pb-4">
-                <div className="w-10 h-10 rounded-full border border-[#aa9775]/35 flex items-center justify-center text-[#aa9775]">
+              <div className="flex items-center gap-3 border-b border-[#cca09d]/15 pb-4">
+                <div className="w-10 h-10 rounded-full border border-[#9c6d68]/35 flex items-center justify-center text-[#9c6d68]">
                   <Mail size={18} strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-editorial text-lg text-[#1c1813] font-semibold">
                     Couture Enquiries
                   </h3>
-                  <p className="text-[8px] uppercase tracking-widest text-[#aa9775] font-light">
+                  <p className="text-[8px] uppercase tracking-widest text-[#9c6d68] font-light">
                     Bridal Appointments & Bespoke
                   </p>
                 </div>
@@ -152,10 +152,10 @@ export default function ContactContent() {
 
                 {/* Email */}
                 <div className="flex items-start gap-3 pt-2">
-                  <Mail size={16} className="text-[#aa9775] mt-0.5 shrink-0" strokeWidth={1.5} />
+                  <Mail size={16} className="text-[#9c6d68] mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#aa9775] font-semibold block mb-0.5">Direct Consultation</span>
-                    <a href="mailto:business@anushkachauhan.com" className="hover:text-[#aa9775] transition-colors break-all">
+                    <span className="text-[10px] uppercase tracking-wider text-[#9c6d68] font-semibold block mb-0.5">Direct Consultation</span>
+                    <a href="mailto:business@anushkachauhan.com" className="hover:text-[#9c6d68] transition-colors break-all">
                       business@anushkachauhan.com
                     </a>
                   </div>
@@ -163,10 +163,10 @@ export default function ContactContent() {
 
                 {/* Private appointments note */}
                 <div className="flex items-start gap-3">
-                  <Clock size={16} className="text-[#aa9775] mt-0.5 shrink-0" strokeWidth={1.5} />
+                  <Clock size={16} className="text-[#9c6d68] mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#aa9775] font-semibold block mb-0.5">Availability</span>
-                    <span className="font-editorial italic font-semibold text-[#aa9775]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#9c6d68] font-semibold block mb-0.5">Availability</span>
+                    <span className="font-editorial italic font-semibold text-[#9c6d68]">
                       Private appointments available by prior consultation.
                     </span>
                   </div>

@@ -47,7 +47,7 @@ export default function LehengasSection() {
   return (
     <section
       id="lehengas"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#c5a880]/10 scroll-mt-20"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#cca09d]/10 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -73,7 +73,7 @@ export default function LehengasSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               key={item.id}
-              className="group flex flex-col bg-[#ece2ce]/15 border border-[#c5a880]/10 overflow-hidden relative"
+              className="group flex flex-col bg-[#ece2ce]/15 border border-[#cca09d]/10 overflow-hidden relative"
             >
               {/* Product Frame Image */}
               <div className="relative aspect-[3/4] overflow-hidden cursor-pointer">
@@ -84,7 +84,7 @@ export default function LehengasSection() {
                 />
                 
                 {/* Gold Frame overlay */}
-                <div className="absolute inset-4 border border-[#c5a880]/10 group-hover:border-[#c5a880]/30 transition-all duration-[1s] pointer-events-none" />
+                <div className="absolute inset-4 border border-[#cca09d]/10 group-hover:border-[#cca09d]/30 transition-all duration-[1s] pointer-events-none" />
 
                 {/* Handcrafted Tag */}
                 <div className="absolute top-6 left-6 flex items-center gap-1.5 bg-[#f5ebd9]/80 backdrop-blur-sm border border-gold/20 px-3 py-1 text-[8px] uppercase tracking-widest text-gold">
@@ -94,7 +94,7 @@ export default function LehengasSection() {
               </div>
 
               {/* Product Content Details */}
-              <div className="p-6 md:p-8 flex-grow flex flex-col justify-between border-t border-[#c5a880]/15">
+              <div className="p-6 md:p-8 flex-grow flex flex-col justify-between border-t border-[#cca09d]/15">
                 <div>
                   <div className="flex items-center gap-2 mb-2 text-gold">
                     <Hourglass size={12} className="opacity-85" />
@@ -115,7 +115,7 @@ export default function LehengasSection() {
                   </p>
                 </div>
 
-                <div className="border-t border-[#c5a880]/10 pt-5 mt-4 flex items-center justify-between">
+                <div className="border-t border-[#cca09d]/10 pt-5 mt-4 flex items-center justify-between">
                   <div className="flex flex-col">
                     <span className="text-[8px] uppercase tracking-widest text-cream/40 mb-0.5">
                       Acquisition Value
@@ -132,7 +132,7 @@ export default function LehengasSection() {
               </div>
 
               {/* Subtle outer gold glow border */}
-              <div className="absolute inset-2 border border-[#c5a880]/0 group-hover:border-[#c5a880]/5 transition-all duration-[1s] pointer-events-none" />
+              <div className="absolute inset-2 border border-[#cca09d]/0 group-hover:border-[#cca09d]/5 transition-all duration-[1s] pointer-events-none" />
             </motion.div>
           ))}
         </div>

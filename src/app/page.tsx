@@ -16,7 +16,7 @@ export default function Home() {
   const { openAIStylist } = useCart();
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#f5ebd9] text-[#1c1813] font-sans selection:bg-[#aa9775] selection:text-[#f5ebd9]">
+    <div className="flex flex-col min-h-screen bg-[#f5ebd9] text-[#1c1813] font-sans selection:bg-[#9c6d68] selection:text-[#f5ebd9]">
       {/* Floating Global Header */}
       <Header />
 
@@ -43,7 +43,7 @@ export default function Home() {
       {/* Floating Anushka's Atelier Button */}
       <button
         onClick={() => openAIStylist(null)}
-        className="fixed bottom-6 left-6 z-[99] bg-[#aa9775] text-[#f5ebd9] hover:bg-[#1c1813] hover:text-[#f5ebd9] hover:scale-105 transition-all duration-500 rounded-full shadow-2xl px-2.5 py-1.5 flex items-center gap-2 border border-[#aa9775] group cursor-pointer text-left"
+        className="fixed bottom-6 left-6 z-[99] bg-[#9c6d68] text-[#f5ebd9] hover:bg-[#1c1813] hover:text-[#f5ebd9] hover:scale-105 transition-all duration-500 rounded-full shadow-2xl px-2.5 py-1.5 flex items-center gap-2 border border-[#9c6d68] group cursor-pointer text-left"
       >
         <div className="relative w-9 h-9 rounded-full border border-[#1c1813]/25 overflow-hidden shrink-0 shadow-md">
           <img
@@ -52,7 +52,7 @@ export default function Home() {
             className="w-full h-full object-cover scale-105"
           />
           {/* Green active dot */}
-          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#aa9775] rounded-full" />
+          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#9c6d68] rounded-full" />
         </div>
         <div className="flex flex-col">
           <div className="flex items-center gap-1 font-bold tracking-[0.18em] text-[8px] uppercase text-[#1c1813] group-hover:text-[#f5ebd9] transition-colors duration-500">

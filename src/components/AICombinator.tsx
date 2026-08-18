@@ -386,7 +386,7 @@ export default function AICombinator() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeAIStylist}
-            className="fixed inset-0 bg-[#12011b]/80 backdrop-blur-md z-[150]"
+            className="fixed inset-0 bg-[#1c0d0e]/80 backdrop-blur-md z-[150]"
           />
 
           {/* Drawer Panel */}
@@ -395,44 +395,44 @@ export default function AICombinator() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 180 }}
-            className="fixed top-0 right-0 h-full w-full max-w-xl bg-[#1d032e] border-l border-[#d4af37]/20 z-[151] flex flex-col shadow-2xl overflow-hidden"
+            className="fixed top-0 right-0 h-full w-full max-w-xl bg-[#2c1619] border-l border-[#d59f9b]/20 z-[151] flex flex-col shadow-2xl overflow-hidden"
           >
             {/* Header */}
-            <div className="p-6 md:p-8 border-b border-[#d4af37]/15 flex items-center justify-between bg-[#12011b]/50">
+            <div className="p-6 md:p-8 border-b border-[#d59f9b]/15 flex items-center justify-between bg-[#1c0d0e]/50">
               <div className="flex items-center gap-3">
-                <div className="relative w-11 h-11 rounded-full border border-[#d4af37]/35 overflow-hidden shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.15)] bg-[#1d032e]">
+                <div className="relative w-11 h-11 rounded-full border border-[#d59f9b]/35 overflow-hidden shrink-0 shadow-[0_0_15px_rgba(212,175,55,0.15)] bg-[#2c1619]">
                   <img
                     src="/couture-assistant.jpg"
                     alt="Anushka's Atelier Stylist Avatar"
                     className="w-full h-full object-cover scale-105"
                   />
                   {/* Green active dot */}
-                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border border-[#1d032e] rounded-full" />
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border border-[#2c1619] rounded-full" />
                 </div>
                 <div>
                   <h3 className="font-editorial text-lg tracking-[0.1em] text-[#f5ebd9] uppercase font-bold">
                     Anushka&apos;s Atelier
                   </h3>
-                  <p className="text-[8px] tracking-[0.15em] text-[#d4af37]/80 uppercase font-light">
+                  <p className="text-[8px] tracking-[0.15em] text-[#d59f9b]/80 uppercase font-light">
                     Your Personal Couture Assistant
                   </p>
                 </div>
               </div>
               <button
                 onClick={closeAIStylist}
-                className="w-8 h-8 rounded-full border border-[#d4af37]/20 hover:border-[#d4af37] flex items-center justify-center text-[#f5ebd9] transition-all duration-300 hover:bg-[#d4af37]/10 cursor-pointer"
+                className="w-8 h-8 rounded-full border border-[#d59f9b]/20 hover:border-[#d59f9b] flex items-center justify-center text-[#f5ebd9] transition-all duration-300 hover:bg-[#d59f9b]/10 cursor-pointer"
               >
                 <X size={15} />
               </button>
             </div>
 
             {/* Mode Selector Tabs */}
-            <div className="flex border-b border-[#d4af37]/10 bg-[#12011b]/20">
+            <div className="flex border-b border-[#d59f9b]/10 bg-[#1c0d0e]/20">
               <button
                 onClick={() => setActiveTab("matchmaker")}
                 className={`flex-1 py-3 text-[9px] uppercase tracking-[0.25em] font-light transition-all duration-300 cursor-pointer ${
                   activeTab === "matchmaker"
-                    ? "text-[#d4af37] border-b border-[#d4af37] bg-[#d4af37]/5 font-semibold"
+                    ? "text-[#d59f9b] border-b border-[#d59f9b] bg-[#d59f9b]/5 font-semibold"
                     : "text-[#f5ebd9]/50 hover:text-[#f5ebd9]"
                 }`}
               >
@@ -442,7 +442,7 @@ export default function AICombinator() {
                 onClick={() => setActiveTab("chat")}
                 className={`flex-1 py-3 text-[9px] uppercase tracking-[0.25em] font-light transition-all duration-300 cursor-pointer ${
                   activeTab === "chat"
-                    ? "text-[#d4af37] border-b border-[#d4af37] bg-[#d4af37]/5 font-semibold"
+                    ? "text-[#d59f9b] border-b border-[#d59f9b] bg-[#d59f9b]/5 font-semibold"
                     : "text-[#f5ebd9]/50 hover:text-[#f5ebd9]"
                 }`}
               >
@@ -456,7 +456,7 @@ export default function AICombinator() {
                 <div className="flex-1 overflow-y-auto p-6 md:p-8 space-y-8 custom-scrollbar">
                   {/* Occasion / Vibe Selector */}
                   <div>
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37] font-semibold mb-3">
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-[#d59f9b] font-semibold mb-3">
                       Select Style Vibe
                     </p>
                     <div className="grid grid-cols-2 gap-2">
@@ -466,8 +466,8 @@ export default function AICombinator() {
                           onClick={() => setSelectedVibe(v.name)}
                           className={`p-3 text-left border rounded-sm transition-all duration-500 cursor-pointer flex flex-col justify-between ${
                             selectedVibe === v.name
-                              ? "border-[#d4af37] bg-[#d4af37]/10 shadow-[0_0_10px_rgba(212,175,55,0.05)]"
-                              : "border-[#d4af37]/15 hover:border-[#d4af37]/45 bg-[#2b063f]/30"
+                              ? "border-[#d59f9b] bg-[#d59f9b]/10 shadow-[0_0_10px_rgba(212,175,55,0.05)]"
+                              : "border-[#d59f9b]/15 hover:border-[#d59f9b]/45 bg-[#3d2124]/30"
                           }`}
                         >
                           <span className="text-[10px] uppercase tracking-widest font-semibold text-[#f5ebd9]">
@@ -483,7 +483,7 @@ export default function AICombinator() {
 
                   {/* Outfit Combinator Visualizer */}
                   <div className="space-y-4">
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-[#d59f9b] font-semibold">
                       Couture Combination Match
                     </p>
 
@@ -491,28 +491,28 @@ export default function AICombinator() {
                       <div className="grid grid-cols-2 gap-4 relative">
                         {/* Golden sparkles connection line */}
                         <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
-                          <div className="w-[1px] h-8 bg-gradient-to-b from-transparent via-[#d4af37] to-transparent animate-pulse" />
-                          <div className="bg-[#1d032e] border border-[#d4af37]/45 rounded-full px-2 py-1 flex items-center gap-1 shadow-lg backdrop-blur-sm">
-                            <Sparkles size={8} className="text-[#d4af37]" />
-                            <span className="text-[6px] tracking-widest uppercase font-light text-[#d4af37]">curated</span>
+                          <div className="w-[1px] h-8 bg-gradient-to-b from-transparent via-[#d59f9b] to-transparent animate-pulse" />
+                          <div className="bg-[#2c1619] border border-[#d59f9b]/45 rounded-full px-2 py-1 flex items-center gap-1 shadow-lg backdrop-blur-sm">
+                            <Sparkles size={8} className="text-[#d59f9b]" />
+                            <span className="text-[6px] tracking-widest uppercase font-light text-[#d59f9b]">curated</span>
                           </div>
-                          <div className="w-[1px] h-8 bg-gradient-to-b from-transparent via-[#d4af37] to-transparent animate-pulse" />
+                          <div className="w-[1px] h-8 bg-gradient-to-b from-transparent via-[#d59f9b] to-transparent animate-pulse" />
                         </div>
 
                         {/* Primary Garment Card */}
-                        <div className="border border-[#d4af37]/15 bg-[#2b063f]/20 p-3 rounded-sm flex flex-col justify-between group">
+                        <div className="border border-[#d59f9b]/15 bg-[#3d2124]/20 p-3 rounded-sm flex flex-col justify-between group">
                           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm mb-3">
                             <img
                               src={baseProduct.imageUrl}
                               alt={baseProduct.name}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
-                            <span className="absolute bottom-2 left-2 text-[6px] uppercase tracking-widest bg-[#1d032e]/90 text-[#d4af37] px-2 py-0.5 border border-[#d4af37]/20 rounded-sm">
+                            <span className="absolute bottom-2 left-2 text-[6px] uppercase tracking-widest bg-[#2c1619]/90 text-[#d59f9b] px-2 py-0.5 border border-[#d59f9b]/20 rounded-sm">
                               Base Piece
                             </span>
                           </div>
                           <div>
-                            <span className="text-[7px] uppercase tracking-widest text-[#d4af37]/75 font-light">
+                            <span className="text-[7px] uppercase tracking-widest text-[#d59f9b]/75 font-light">
                               {baseProduct.category}
                             </span>
                             <h4 className="font-editorial text-xs text-[#f5ebd9] uppercase tracking-wide truncate mt-0.5">
@@ -520,12 +520,12 @@ export default function AICombinator() {
                             </h4>
                             <p className="text-[10px] text-[#f5ebd9]/90 mt-1 font-light">{baseProduct.price}</p>
                           </div>
-                          <div className="mt-3 pt-3 border-t border-[#d4af37]/10 flex items-center justify-between">
+                          <div className="mt-3 pt-3 border-t border-[#d59f9b]/10 flex items-center justify-between">
                             <span className="text-[8px] uppercase tracking-widest text-[#f5ebd9]/50 font-light">Size</span>
                             <select
                               value={baseSize}
                               onChange={(e) => setBaseSize(e.target.value)}
-                              className="bg-[#1d032e] text-[#f5ebd9] text-[8px] uppercase tracking-widest font-light border border-[#d4af37]/30 rounded-sm px-1.5 py-0.5 focus:outline-none focus:border-[#d4af37]"
+                              className="bg-[#2c1619] text-[#f5ebd9] text-[8px] uppercase tracking-widest font-light border border-[#d59f9b]/30 rounded-sm px-1.5 py-0.5 focus:outline-none focus:border-[#d59f9b]"
                             >
                               {baseProduct.sizes.map(s => (
                                 <option key={s} value={s}>{s}</option>
@@ -535,19 +535,19 @@ export default function AICombinator() {
                         </div>
 
                         {/* Recommended Coordinate Card */}
-                        <div className="border border-[#d4af37]/15 bg-[#2b063f]/20 p-3 rounded-sm flex flex-col justify-between group">
+                        <div className="border border-[#d59f9b]/15 bg-[#3d2124]/20 p-3 rounded-sm flex flex-col justify-between group">
                           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm mb-3">
                             <img
                               src={combination.recommendedProduct.imageUrl}
                               alt={combination.recommendedProduct.name}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
-                            <span className="absolute bottom-2 left-2 text-[6px] uppercase tracking-widest bg-[#d4af37] text-[#1d032e] px-2 py-0.5 rounded-sm font-semibold">
+                            <span className="absolute bottom-2 left-2 text-[6px] uppercase tracking-widest bg-[#d59f9b] text-[#2c1619] px-2 py-0.5 rounded-sm font-semibold">
                               Recommended Match
                             </span>
                           </div>
                           <div>
-                            <span className="text-[7px] uppercase tracking-widest text-[#d4af37]/75 font-light">
+                            <span className="text-[7px] uppercase tracking-widest text-[#d59f9b]/75 font-light">
                               {combination.recommendedProduct.category}
                             </span>
                             <h4 className="font-editorial text-xs text-[#f5ebd9] uppercase tracking-wide truncate mt-0.5">
@@ -555,12 +555,12 @@ export default function AICombinator() {
                             </h4>
                             <p className="text-[10px] text-[#f5ebd9]/90 mt-1 font-light">{combination.recommendedProduct.price}</p>
                           </div>
-                          <div className="mt-3 pt-3 border-t border-[#d4af37]/10 flex items-center justify-between">
+                          <div className="mt-3 pt-3 border-t border-[#d59f9b]/10 flex items-center justify-between">
                             <span className="text-[8px] uppercase tracking-widest text-[#f5ebd9]/50 font-light">Size</span>
                             <select
                               value={recSize}
                               onChange={(e) => setRecSize(e.target.value)}
-                              className="bg-[#1d032e] text-[#f5ebd9] text-[8px] uppercase tracking-widest font-light border border-[#d4af37]/30 rounded-sm px-1.5 py-0.5 focus:outline-none focus:border-[#d4af37]"
+                              className="bg-[#2c1619] text-[#f5ebd9] text-[8px] uppercase tracking-widest font-light border border-[#d59f9b]/30 rounded-sm px-1.5 py-0.5 focus:outline-none focus:border-[#d59f9b]"
                             >
                               {combination.recommendedProduct.sizes.map(s => (
                                 <option key={s} value={s}>{s}</option>
@@ -574,24 +574,24 @@ export default function AICombinator() {
 
                   {/* AI Stylist Analysis Panel */}
                   {combination && (
-                    <div className="bg-[#2b063f]/40 border border-[#d4af37]/25 p-5 md:p-6 relative rounded-sm shadow-inner min-h-[140px] flex flex-col justify-between">
-                      <div className="absolute -top-3 left-4 bg-[#1d032e] px-2.5 py-0.5 border border-[#d4af37]/20 flex items-center gap-1.5 rounded-sm">
-                        <Sparkles size={10} className="text-[#d4af37]" />
-                        <span className="text-[8px] tracking-[0.2em] uppercase font-light text-[#d4af37]">Atelier Styling Advice</span>
+                    <div className="bg-[#3d2124]/40 border border-[#d59f9b]/25 p-5 md:p-6 relative rounded-sm shadow-inner min-h-[140px] flex flex-col justify-between">
+                      <div className="absolute -top-3 left-4 bg-[#2c1619] px-2.5 py-0.5 border border-[#d59f9b]/20 flex items-center gap-1.5 rounded-sm">
+                        <Sparkles size={10} className="text-[#d59f9b]" />
+                        <span className="text-[8px] tracking-[0.2em] uppercase font-light text-[#d59f9b]">Atelier Styling Advice</span>
                       </div>
                       
                       <div className="text-xs text-[#f5ebd9]/90 leading-relaxed font-light mt-2 min-h-[80px]">
                         {typingText}
-                        {isTyping && <span className="inline-block w-1.5 h-3 bg-[#d4af37] ml-0.5 animate-pulse" />}
+                        {isTyping && <span className="inline-block w-1.5 h-3 bg-[#d59f9b] ml-0.5 animate-pulse" />}
                       </div>
 
                       {/* Curated accessories */}
                       {combination.accessories.length > 0 && (
-                        <div className="mt-4 pt-4 border-t border-[#d4af37]/15">
-                          <p className="text-[8px] uppercase tracking-[0.25em] text-[#d4af37] font-semibold mb-2">Recommended Accents</p>
+                        <div className="mt-4 pt-4 border-t border-[#d59f9b]/15">
+                          <p className="text-[8px] uppercase tracking-[0.25em] text-[#d59f9b] font-semibold mb-2">Recommended Accents</p>
                           <div className="flex flex-wrap gap-1.5">
                             {combination.accessories.map((acc, index) => (
-                              <span key={index} className="text-[8px] uppercase tracking-wider text-[#f5ebd9]/75 bg-[#1d032e] border border-[#d4af37]/15 px-2 py-0.5 rounded-sm">
+                              <span key={index} className="text-[8px] uppercase tracking-wider text-[#f5ebd9]/75 bg-[#2c1619] border border-[#d59f9b]/15 px-2 py-0.5 rounded-sm">
                                 {acc}
                               </span>
                             ))}
@@ -603,8 +603,8 @@ export default function AICombinator() {
 
                   {/* Change Base Product list */}
                   <div>
-                    <div className="flex items-center justify-between mb-3 border-b border-[#d4af37]/10 pb-2">
-                      <p className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
+                    <div className="flex items-center justify-between mb-3 border-b border-[#d59f9b]/10 pb-2">
+                      <p className="text-[9px] uppercase tracking-[0.3em] text-[#d59f9b] font-semibold">
                         Change Primary Garment
                       </p>
                       <span className="text-[8px] text-[#f5ebd9]/55 font-light">
@@ -621,8 +621,8 @@ export default function AICombinator() {
                           }}
                           className={`flex-shrink-0 w-24 p-1.5 border rounded-sm transition-all duration-300 ${
                             baseProduct?.id === p.id 
-                              ? "border-[#d4af37] bg-[#d4af37]/5" 
-                              : "border-transparent hover:border-[#d4af37]/30 bg-[#2b063f]/10"
+                              ? "border-[#d59f9b] bg-[#d59f9b]/5" 
+                              : "border-transparent hover:border-[#d59f9b]/30 bg-[#3d2124]/10"
                           }`}
                         >
                           <div className="aspect-[3/4] w-full overflow-hidden rounded-sm mb-1.5">
@@ -639,13 +639,13 @@ export default function AICombinator() {
 
                 {/* Sticky Drawer Footer Bundle Checkout */}
                 {baseProduct && combination && (
-                  <div className="p-6 md:p-8 border-t border-[#d4af37]/15 bg-[#12011b]/80 backdrop-blur-md space-y-4">
+                  <div className="p-6 md:p-8 border-t border-[#d59f9b]/15 bg-[#1c0d0e]/80 backdrop-blur-md space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
                         <span className="text-[8px] tracking-[0.2em] uppercase text-[#f5ebd9]/50 font-light block">
                           Ensemble Bundle ({baseProduct.name} + {combination.recommendedProduct.name})
                         </span>
-                        <span className="text-[10px] uppercase text-[#d4af37] font-semibold tracking-wider">
+                        <span className="text-[10px] uppercase text-[#d59f9b] font-semibold tracking-wider">
                           Special Outfit Curation
                         </span>
                       </div>
@@ -662,7 +662,7 @@ export default function AICombinator() {
                       className={`w-full py-4 text-[10px] uppercase tracking-[0.5em] font-light flex items-center justify-center gap-3 transition-all duration-500 rounded-sm cursor-pointer shadow-lg ${
                         addedBundle
                           ? "bg-[#5a7a5a] text-white border border-[#5a7a5a]"
-                          : "bg-[#d4af37] text-[#1d032e] hover:bg-[#f5ebd9] hover:text-[#1d032e]"
+                          : "bg-[#d59f9b] text-[#2c1619] hover:bg-[#f5ebd9] hover:text-[#2c1619]"
                       }`}
                     >
                       <ShoppingBag size={14} />
@@ -677,7 +677,7 @@ export default function AICombinator() {
             {activeTab === "chat" && (
               <div className="flex-grow flex flex-col justify-between overflow-hidden">
                 {/* Messages Feed */}
-                <div className="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-thin bg-[#12011b]/20">
+                <div className="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-thin bg-[#1c0d0e]/20">
                   {chatMessages.map((msg, index) => {
                     const isAssistant = msg.role === "assistant";
                     const mentionedProducts = isAssistant ? getProductsMentioned(msg.content) : [];
@@ -691,20 +691,20 @@ export default function AICombinator() {
                         <div
                           className={`max-w-[85%] rounded-sm p-4 text-xs leading-relaxed font-light ${
                             isAssistant
-                              ? "bg-[#2b063f]/30 border border-[#d4af37]/20 text-[#f5ebd9] relative"
-                              : "bg-[#d4af37] text-[#1d032e] rounded-tr-none font-normal"
+                              ? "bg-[#3d2124]/30 border border-[#d59f9b]/20 text-[#f5ebd9] relative"
+                              : "bg-[#d59f9b] text-[#2c1619] rounded-tr-none font-normal"
                           }`}
                         >
                           {/* Sparkle icon for AI */}
                           {isAssistant && (
-                            <div className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-[#1d032e] border border-[#d4af37]/30 flex items-center justify-center text-[#d4af37]">
+                            <div className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-[#2c1619] border border-[#d59f9b]/30 flex items-center justify-center text-[#d59f9b]">
                               <Sparkles size={8} />
                             </div>
                           )}
 
                           {/* Image rendering inside chat bubble */}
                           {msg.image && (
-                            <div className="mb-3 max-w-[200px] overflow-hidden rounded-sm border border-[#d4af37]/20">
+                            <div className="mb-3 max-w-[200px] overflow-hidden rounded-sm border border-[#d59f9b]/20">
                               <img
                                 src={msg.image}
                                 alt="User Uploaded Preference"
@@ -716,18 +716,18 @@ export default function AICombinator() {
                           {/* Parse markdown bold and newlines simply */}
                           <div className="whitespace-pre-line">
                             {msg.content.split("**").map((part, i) => 
-                              i % 2 === 1 ? <strong key={i} className="font-semibold text-[#d4af37]">{part}</strong> : part
+                              i % 2 === 1 ? <strong key={i} className="font-semibold text-[#d59f9b]">{part}</strong> : part
                             )}
                           </div>
                         </div>
 
                         {/* FAQs Accordion under initial welcome message */}
                         {index === 0 && isAssistant && (
-                          <div className="w-full max-w-[85%] mt-3 border border-[#d4af37]/20 bg-[#2b063f]/30 rounded-sm p-4 text-[#f5ebd9] relative">
-                            <h4 className="font-editorial text-xs tracking-[0.1em] text-[#d4af37] uppercase mb-3 flex items-center gap-2 font-bold">
-                              <Sparkles className="text-[#d4af37]" size={10} /> Why Choose Anushka Chauhan?
+                          <div className="w-full max-w-[85%] mt-3 border border-[#d59f9b]/20 bg-[#3d2124]/30 rounded-sm p-4 text-[#f5ebd9] relative">
+                            <h4 className="font-editorial text-xs tracking-[0.1em] text-[#d59f9b] uppercase mb-3 flex items-center gap-2 font-bold">
+                              <Sparkles className="text-[#d59f9b]" size={10} /> Why Choose Anushka Chauhan?
                             </h4>
-                            <div className="space-y-3 divide-y divide-[#d4af37]/10">
+                            <div className="space-y-3 divide-y divide-[#d59f9b]/10">
                               {faqs.map((faq, faqIdx) => {
                                 const isOpen = openFaqIndex === faqIdx;
                                 return (
@@ -735,12 +735,12 @@ export default function AICombinator() {
                                     <button
                                       type="button"
                                       onClick={() => setOpenFaqIndex(isOpen ? null : faqIdx)}
-                                      className="w-full flex items-center justify-between text-left text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#f5ebd9] hover:text-[#d4af37] transition-colors gap-2 cursor-pointer"
+                                      className="w-full flex items-center justify-between text-left text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#f5ebd9] hover:text-[#d59f9b] transition-colors gap-2 cursor-pointer"
                                     >
                                       <span>{faq.q}</span>
                                       <ChevronDown
                                         size={12}
-                                        className={`text-[#d4af37] shrink-0 transition-transform duration-300 ${
+                                        className={`text-[#d59f9b] shrink-0 transition-transform duration-300 ${
                                           isOpen ? "rotate-180" : ""
                                         }`}
                                       />
@@ -754,7 +754,7 @@ export default function AICombinator() {
                                           transition={{ duration: 0.3 }}
                                           className="overflow-hidden"
                                         >
-                                          <p className="text-[10.5px] sm:text-xs text-[#f5ebd9]/75 font-light leading-relaxed mt-2 pl-2 border-l border-[#d4af37]/35 normal-case tracking-normal">
+                                          <p className="text-[10.5px] sm:text-xs text-[#f5ebd9]/75 font-light leading-relaxed mt-2 pl-2 border-l border-[#d59f9b]/35 normal-case tracking-normal">
                                             {faq.a}
                                           </p>
                                         </motion.div>
@@ -770,7 +770,7 @@ export default function AICombinator() {
                         {/* Inline Product Cards */}
                         {mentionedProducts.length > 0 && (
                           <div className="w-[85%] mt-3 space-y-2">
-                            <p className="text-[7px] uppercase tracking-widest text-[#d4af37] font-semibold flex items-center gap-1">
+                            <p className="text-[7px] uppercase tracking-widest text-[#d59f9b] font-semibold flex items-center gap-1">
                               <Sparkles size={8} /> Products mentioned:
                             </p>
                             <div className="grid grid-cols-1 gap-2">
@@ -779,18 +779,18 @@ export default function AICombinator() {
                                 return (
                                   <div
                                     key={p.id}
-                                    className="flex items-center gap-3 p-2 bg-[#2b063f]/60 border border-[#d4af37]/15 rounded-sm"
+                                    className="flex items-center gap-3 p-2 bg-[#3d2124]/60 border border-[#d59f9b]/15 rounded-sm"
                                   >
                                     <img
                                       src={p.imageUrl}
                                       alt={p.name}
-                                      className="w-12 h-16 object-cover rounded-sm border border-[#d4af37]/10"
+                                      className="w-12 h-16 object-cover rounded-sm border border-[#d59f9b]/10"
                                     />
                                     <div className="flex-1 min-w-0">
                                       <h5 className="text-[10px] uppercase text-[#f5ebd9] font-editorial tracking-wide truncate">
                                         {p.name}
                                       </h5>
-                                      <p className="text-[9px] text-[#d4af37] font-light mt-0.5">{p.price}</p>
+                                      <p className="text-[9px] text-[#d59f9b] font-light mt-0.5">{p.price}</p>
                                       
                                       <div className="flex items-center gap-2 mt-1.5">
                                         <select
@@ -798,7 +798,7 @@ export default function AICombinator() {
                                           onChange={(e) => 
                                             setSelectedProductSizes(prev => ({ ...prev, [p.id]: e.target.value }))
                                           }
-                                          className="bg-[#1d032e] text-[#f5ebd9] text-[7px] uppercase tracking-widest border border-[#d4af37]/20 rounded-sm px-1 py-0.5 focus:outline-none"
+                                          className="bg-[#2c1619] text-[#f5ebd9] text-[7px] uppercase tracking-widest border border-[#d59f9b]/20 rounded-sm px-1 py-0.5 focus:outline-none"
                                         >
                                           {p.sizes.map(sz => (
                                             <option key={sz} value={sz}>{sz}</option>
@@ -808,7 +808,7 @@ export default function AICombinator() {
                                           onClick={() => {
                                             addItem(p, selectedSize);
                                           }}
-                                          className="px-2 py-1 bg-[#d4af37] text-[#1d032e] text-[7px] uppercase tracking-widest hover:bg-[#f5ebd9] transition-all duration-300 rounded-sm flex items-center gap-1"
+                                          className="px-2 py-1 bg-[#d59f9b] text-[#2c1619] text-[7px] uppercase tracking-widest hover:bg-[#f5ebd9] transition-all duration-300 rounded-sm flex items-center gap-1"
                                         >
                                           <ShoppingBag size={8} /> Add
                                         </button>
@@ -827,11 +827,11 @@ export default function AICombinator() {
                   {/* Loading Indicator */}
                   {isChatLoading && (
                     <div className="flex items-start">
-                      <div className="bg-[#2b063f]/30 border border-[#d4af37]/20 text-[#f5ebd9] rounded-sm p-4 text-xs font-light max-w-[80%] flex items-center gap-2 relative">
-                        <div className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-[#1d032e] border border-[#d4af37]/30 flex items-center justify-center text-[#d4af37]">
+                      <div className="bg-[#3d2124]/30 border border-[#d59f9b]/20 text-[#f5ebd9] rounded-sm p-4 text-xs font-light max-w-[80%] flex items-center gap-2 relative">
+                        <div className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-[#2c1619] border border-[#d59f9b]/30 flex items-center justify-center text-[#d59f9b]">
                           <Sparkles size={8} className="animate-spin" />
                         </div>
-                        <Loader2 className="animate-spin text-[#d4af37]" size={12} />
+                        <Loader2 className="animate-spin text-[#d59f9b]" size={12} />
                         <span>Atelier stylist is curating recommendations...</span>
                       </div>
                     </div>
@@ -848,17 +848,17 @@ export default function AICombinator() {
                 </div>
 
                 {/* Quick Prompts & Chat Input Area */}
-                <div className="p-4 border-t border-[#d4af37]/15 bg-[#12011b]/80 space-y-4">
+                <div className="p-4 border-t border-[#d59f9b]/15 bg-[#1c0d0e]/80 space-y-4">
                   {/* Preset chips - only visible when chat is short */}
                   {chatMessages.length <= 2 && !isChatLoading && (
                     <div className="space-y-1.5">
-                      <p className="text-[7px] uppercase tracking-widest text-[#d4af37] font-semibold">Suggested Questions</p>
+                      <p className="text-[7px] uppercase tracking-widest text-[#d59f9b] font-semibold">Suggested Questions</p>
                       <div className="flex flex-wrap gap-1.5">
                         {presetPrompts.map((p, idx) => (
                           <button
                             key={idx}
                             onClick={() => handleChatSend(p, null)}
-                            className="text-[8px] uppercase tracking-wider text-[#f5ebd9]/75 bg-[#2b063f]/40 border border-[#d4af37]/15 hover:border-[#d4af37] px-2 py-1 rounded-sm text-left transition-all duration-300"
+                            className="text-[8px] uppercase tracking-wider text-[#f5ebd9]/75 bg-[#3d2124]/40 border border-[#d59f9b]/15 hover:border-[#d59f9b] px-2 py-1 rounded-sm text-left transition-all duration-300"
                           >
                             {p}
                           </button>
@@ -869,7 +869,7 @@ export default function AICombinator() {
 
                    {/* Image Preview Box */}
                   {selectedImage && (
-                    <div className="relative inline-block bg-[#2b063f]/50 p-1.5 border border-[#d4af37]/30 rounded-sm">
+                    <div className="relative inline-block bg-[#3d2124]/50 p-1.5 border border-[#d59f9b]/30 rounded-sm">
                       <img src={selectedImage} alt="Preview" className="h-16 w-auto object-contain rounded-sm" />
                       <button
                         type="button"
@@ -877,7 +877,7 @@ export default function AICombinator() {
                           setSelectedImage(null);
                           if (fileInputRef.current) fileInputRef.current.value = "";
                         }}
-                        className="absolute -top-1.5 -right-1.5 bg-[#1d032e] border border-[#d4af37]/45 text-[#d4af37] hover:text-[#f5ebd9] rounded-full p-0.5 shadow-md cursor-pointer transition-colors"
+                        className="absolute -top-1.5 -right-1.5 bg-[#2c1619] border border-[#d59f9b]/45 text-[#d59f9b] hover:text-[#f5ebd9] rounded-full p-0.5 shadow-md cursor-pointer transition-colors"
                       >
                         <X size={10} />
                       </button>
@@ -905,7 +905,7 @@ export default function AICombinator() {
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="w-12 border border-[#d4af37]/30 hover:border-[#d4af37] text-[#d4af37] flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer bg-transparent hover:bg-[#d4af37]/10"
+                      className="w-12 border border-[#d59f9b]/30 hover:border-[#d59f9b] text-[#d59f9b] flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer bg-transparent hover:bg-[#d59f9b]/10"
                       title="Upload photo"
                     >
                       <Camera size={16} />
@@ -916,12 +916,12 @@ export default function AICombinator() {
                       value={chatInput}
                       onChange={(e) => setChatInput(e.target.value)}
                       placeholder="Ask styling questions, or upload a photo to analyze..."
-                      className="flex-1 bg-[#1d032e] text-[#f5ebd9] border border-[#d4af37]/20 rounded-sm px-3.5 py-3 text-xs placeholder-[#f5ebd9]/30 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+                      className="flex-1 bg-[#2c1619] text-[#f5ebd9] border border-[#d59f9b]/20 rounded-sm px-3.5 py-3 text-xs placeholder-[#f5ebd9]/30 focus:outline-none focus:border-[#d59f9b] focus:ring-1 focus:ring-[#d59f9b]"
                     />
                     <button
                       type="submit"
                       disabled={isChatLoading || (!chatInput.trim() && !selectedImage)}
-                      className="w-12 bg-[#d4af37] hover:bg-[#f5ebd9] disabled:bg-[#d4af37]/30 text-[#1d032e] disabled:text-[#1d032e]/40 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer"
+                      className="w-12 bg-[#d59f9b] hover:bg-[#f5ebd9] disabled:bg-[#d59f9b]/30 text-[#2c1619] disabled:text-[#2c1619]/40 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer"
                     >
                       <Send size={14} />
                     </button>

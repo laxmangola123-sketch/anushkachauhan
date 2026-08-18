@@ -17,7 +17,7 @@ export default function Newsletter() {
   return (
     <section
       id="newsletter"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#c5a880]/10 flex items-center justify-center"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#cca09d]/10 flex items-center justify-center"
     >
       <div className="max-w-xl w-full text-center">
         <AnimatePresence mode="wait">
@@ -47,7 +47,7 @@ export default function Newsletter() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ENTER YOUR EMAIL ADDRESS"
                   required
-                  className="flex-grow bg-transparent border-b border-[#c5a880]/30 py-3 text-cream placeholder-cream/30 text-xs uppercase tracking-widest focus:outline-none focus:border-[#c5a880] transition-colors duration-500 rounded-none"
+                  className="flex-grow bg-transparent border-b border-[#cca09d]/30 py-3 text-cream placeholder-cream/30 text-xs uppercase tracking-widest focus:outline-none focus:border-[#cca09d] transition-colors duration-500 rounded-none"
                 />
                 <button
                   type="submit"

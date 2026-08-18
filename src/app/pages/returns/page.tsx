@@ -12,13 +12,13 @@ export default function ReturnsPage() {
       <div className="max-w-3xl mx-auto px-6 py-12 md:py-20 text-[#1c1813]">
         {/* Header */}
         <div className="text-center mb-16 relative">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-[#aa9775] font-semibold mb-3 block">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-[#9c6d68] font-semibold mb-3 block">
             Customer Care
           </span>
           <h1 className="font-editorial text-4xl sm:text-5xl tracking-wide uppercase text-[#1c1813] mb-4">
             Returns & Exchanges
           </h1>
-          <div className="w-16 h-[1px] bg-[#c5a880]/30 mx-auto mt-4" />
+          <div className="w-16 h-[1px] bg-[#cca09d]/30 mx-auto mt-4" />
         </div>
 
         {/* Content */}
@@ -32,8 +32,8 @@ export default function ReturnsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Exceptions
             </h2>
             <p>
@@ -46,8 +46,8 @@ export default function ReturnsPage() {
             </ul>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               How to Raise a Request
             </h2>
             <p>
@@ -60,7 +60,7 @@ export default function ReturnsPage() {
             </ul>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15 bg-[#eedec8]/10 p-5 rounded-sm">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15 bg-[#eedec8]/10 p-5 rounded-sm">
             <h2 className="font-editorial text-base tracking-widest uppercase text-[#1c1813] font-bold">
               Important Terms
             </h2>
@@ -73,8 +73,8 @@ export default function ReturnsPage() {
             </ul>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Order Cancellations
             </h2>
             <p>
@@ -85,16 +85,16 @@ export default function ReturnsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Need Assistance?
             </h2>
             <p>
               For any queries regarding your order, returns, exchanges, or cancellations, our Client Services team is happy to assist you.
             </p>
             <div className="space-y-1 font-semibold">
-              <p>Email: <a href="mailto:business@anushkachauhan.com" className="underline hover:text-[#aa9775] transition-colors">business@anushkachauhan.com</a></p>
-              <p>Phone: <a href="tel:+919041588678" className="underline hover:text-[#aa9775] transition-colors">+91 9041588678</a></p>
+              <p>Email: <a href="mailto:business@anushkachauhan.com" className="underline hover:text-[#9c6d68] transition-colors">business@anushkachauhan.com</a></p>
+              <p>Phone: <a href="tel:+919041588678" className="underline hover:text-[#9c6d68] transition-colors">+91 9041588678</a></p>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function Heritage() {
     <section
       id="heritage"
       ref={containerRef}
-      className="relative min-h-screen py-24 md:py-36 bg-[#f5ebd9] flex flex-col justify-center overflow-hidden border-b border-[#c5a880]/10"
+      className="relative min-h-screen py-24 md:py-36 bg-[#f5ebd9] flex flex-col justify-center overflow-hidden border-b border-[#cca09d]/10"
     >
       {/* Editorial Watermark background */}
       <div className="absolute top-10 left-10 text-[10vw] font-editorial text-[#1a1713]/10 pointer-events-none select-none uppercase tracking-widest leading-none">
@@ -66,7 +66,7 @@ export default function Heritage() {
         {/* Right Asymmetrical Parallax Image Column */}
         <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
           {/* Main Editorial Image Card */}
-          <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden border border-[#c5a880]/20 shadow-2xl group">
+          <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden border border-[#cca09d]/20 shadow-2xl group">
             <motion.div style={{ y: imageY }} className="absolute -inset-y-16 inset-x-0">
               <img
                 src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1200&auto=format&fit=crop"
@@ -84,7 +84,7 @@ export default function Heritage() {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 0.4 }}
-            className="absolute -bottom-8 -left-4 sm:left-4 md:-left-8 w-2/5 aspect-[3/4] overflow-hidden border border-[#c5a880]/30 shadow-2xl hidden sm:block bg-[#ece2ce]"
+            className="absolute -bottom-8 -left-4 sm:left-4 md:-left-8 w-2/5 aspect-[3/4] overflow-hidden border border-[#cca09d]/30 shadow-2xl hidden sm:block bg-[#ece2ce]"
           >
             <img
               src="https://images.unsplash.com/photo-1590736969955-71cc94801759?q=80&w=1200&auto=format&fit=crop"

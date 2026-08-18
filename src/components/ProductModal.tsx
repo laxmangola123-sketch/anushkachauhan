@@ -271,9 +271,9 @@ Please let me know how to proceed. Thank you!`;
     };
 
     const inputClass = (field: keyof OrderForm) =>
-        `w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border ${
-            errors[field] ? "border-red-400" : "border-[#c5a880]/40"
-        } text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors duration-300 font-semibold tracking-wide`;
+        `w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border ${
+            errors[field] ? "border-red-400" : "border-[#cca09d]/40"
+        } text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] transition-colors duration-300 font-semibold tracking-wide`;
 
     if (!product) return null;
 
@@ -302,7 +302,7 @@ Please let me know how to proceed. Thank you!`;
                         {/* Close Button */}
                         <button
                             onClick={handleCloseModal}
-                            className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center border border-[#c5a880]/30 hover:border-[#c5a880] transition-all duration-300 bg-[#f5ebd9]"
+                            className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center border border-[#cca09d]/30 hover:border-[#cca09d] transition-all duration-300 bg-[#f5ebd9]"
                         >
                             <X size={16} className="text-[#1c1813]" />
                         </button>
@@ -317,7 +317,7 @@ Please let me know how to proceed. Thank you!`;
                                     style={{ minHeight: "300px" }}
                                 />
                                 {product.tag && (
-                                    <div className="absolute top-6 left-6 text-[8px] uppercase tracking-[0.4em] px-3 py-1.5 bg-[#c5a880] text-[#f5ebd9] font-bold">
+                                    <div className="absolute top-6 left-6 text-[8px] uppercase tracking-[0.4em] px-3 py-1.5 bg-[#cca09d] text-[#f5ebd9] font-bold">
                                         {product.tag}
                                     </div>
                                 )}
@@ -343,7 +343,7 @@ Please let me know how to proceed. Thank you!`;
                                 {step === "product" && (
                                     <div className="flex-grow flex flex-col justify-between">
                                         <div>
-                                            <p className="text-[9px] uppercase tracking-[0.6em] text-[#aa9775] font-bold mb-3">
+                                            <p className="text-[9px] uppercase tracking-[0.6em] text-[#9c6d68] font-bold mb-3">
                                                 Anushka Chauhan — {product.category}
                                             </p>
 
@@ -351,7 +351,7 @@ Please let me know how to proceed. Thank you!`;
                                                 {product.name}
                                             </h2>
 
-                                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#aa9775] font-semibold mb-4">
+                                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#9c6d68] font-semibold mb-4">
                                                 {product.type} · {product.fabric}
                                             </p>
 
@@ -361,7 +361,7 @@ Please let me know how to proceed. Thank you!`;
                                                         <Star
                                                             key={i}
                                                             size={11}
-                                                            className={i < Math.floor(product.rating!) ? "fill-[#aa9775] text-[#aa9775]" : "text-[#aa9775]/30"}
+                                                            className={i < Math.floor(product.rating!) ? "fill-[#9c6d68] text-[#9c6d68]" : "text-[#9c6d68]/30"}
                                                         />
                                                     ))}
                                                     <span className="text-[9px] text-[#1c1813]/80 uppercase tracking-widest font-semibold">
@@ -379,7 +379,7 @@ Please let me know how to proceed. Thank you!`;
                                                 )}
                                             </div>
 
-                                            <div className="w-12 h-[1px] bg-[#c5a880]/40 mb-6" />
+                                            <div className="w-12 h-[1px] bg-[#cca09d]/40 mb-6" />
 
                                             <p className="text-[#1c1813]/80 text-xs leading-relaxed font-medium mb-7">
                                                 {product.description}
@@ -388,7 +388,7 @@ Please let me know how to proceed. Thank you!`;
                                             <ul className="space-y-2 mb-8">
                                                 {product.details.map((d, i) => (
                                                     <li key={i} className="flex items-start gap-2 text-[9.5px] uppercase tracking-[0.2em] text-[#1c1813]/85 font-semibold">
-                                                        <span className="text-[#aa9775] mt-[2px]">—</span>
+                                                        <span className="text-[#9c6d68] mt-[2px]">—</span>
                                                         {d}
                                                     </li>
                                                 ))}
@@ -399,7 +399,7 @@ Please let me know how to proceed. Thank you!`;
                                                     <p className="text-[9px] uppercase tracking-[0.4em] text-[#1c1813]/75 font-semibold">
                                                         Select Size
                                                     </p>
-                                                    <button className="flex items-center gap-1 text-[9px] uppercase tracking-widest text-[#aa9775] font-semibold">
+                                                    <button className="flex items-center gap-1 text-[9px] uppercase tracking-widest text-[#9c6d68] font-semibold">
                                                         <Ruler size={10} /> Size Guide
                                                     </button>
                                                 </div>
@@ -409,8 +409,8 @@ Please let me know how to proceed. Thank you!`;
                                                             key={size}
                                                             onClick={() => setSelectedSize(size)}
                                                             className={`px-4 py-2 text-[9px] uppercase tracking-[0.3em] border transition-all duration-300 font-semibold cursor-pointer ${selectedSize === size
-                                                                ? "border-[#aa9775] bg-[#aa9775]/10 text-[#1c1813]"
-                                                                : "border-[#c5a880]/25 text-[#1c1813]/70 hover:border-[#aa9775]/60"
+                                                                ? "border-[#9c6d68] bg-[#9c6d68]/10 text-[#1c1813]"
+                                                                : "border-[#cca09d]/25 text-[#1c1813]/70 hover:border-[#9c6d68]/60"
                                                                 }`}
                                                         >
                                                             {size}
@@ -453,7 +453,7 @@ Please let me know how to proceed. Thank you!`;
                                                 onClick={handleAddToCart}
                                                 className={`w-full py-4 text-[9.5px] uppercase tracking-[0.3em] font-bold flex items-center justify-center gap-2 transition-all duration-500 border cursor-pointer ${added
                                                     ? "bg-[#5a7a5a] text-white border-[#5a7a5a]"
-                                                    : "bg-[#1c1813] text-[#f5ebd9] border-[#1c1813] hover:bg-[#aa9775] hover:text-[#1c1813]"
+                                                    : "bg-[#1c1813] text-[#f5ebd9] border-[#1c1813] hover:bg-[#9c6d68] hover:text-[#1c1813]"
                                                 }`}
                                             >
                                                 <ShoppingBag size={13} />
@@ -487,7 +487,7 @@ Please let me know how to proceed. Thank you!`;
                                                 <motion.button
                                                     whileTap={{ scale: 0.98 }}
                                                     onClick={handleProceedToOrder}
-                                                    className="flex-grow py-3 border border-[#1c1813]/25 text-[#1c1813]/85 hover:bg-[#c5a880]/10 text-[9px] uppercase tracking-[0.25em] font-bold cursor-pointer transition-all duration-300"
+                                                    className="flex-grow py-3 border border-[#1c1813]/25 text-[#1c1813]/85 hover:bg-[#cca09d]/10 text-[9px] uppercase tracking-[0.25em] font-bold cursor-pointer transition-all duration-300"
                                                 >
                                                     Direct Checkout
                                                 </motion.button>
@@ -498,13 +498,13 @@ Please let me know how to proceed. Thank you!`;
                                                         onClose();
                                                         openAIStylist(product);
                                                     }}
-                                                    className="flex-grow py-3 border border-[#aa9775] text-[#aa9775] text-[9px] uppercase tracking-[0.25em] font-bold hover:bg-[#aa9775] hover:text-[#1c1813] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer"
+                                                    className="flex-grow py-3 border border-[#9c6d68] text-[#9c6d68] text-[9px] uppercase tracking-[0.25em] font-bold hover:bg-[#9c6d68] hover:text-[#1c1813] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer"
                                                 >
                                                     ✨ Anushka&apos;s Atelier
                                                 </motion.button>
 
-                                                <button className="px-4 py-3 border border-[#c5a880]/30 flex items-center justify-center hover:border-[#c5a880] hover:bg-[#c5a880]/10 transition-all duration-300">
-                                                    <Heart size={13} className="text-[#aa9775]" />
+                                                <button className="px-4 py-3 border border-[#cca09d]/30 flex items-center justify-center hover:border-[#cca09d] hover:bg-[#cca09d]/10 transition-all duration-300">
+                                                    <Heart size={13} className="text-[#9c6d68]" />
                                                 </button>
                                             </div>
                                         </div>
@@ -520,11 +520,11 @@ Please let me know how to proceed. Thank you!`;
                                     <form onSubmit={handlePlaceDirectOrder} className="flex-grow flex flex-col justify-between">
                                         <div>
                                             {/* Subheader */}
-                                            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#c5a880]/20">
+                                            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#cca09d]/20">
                                                 <button 
                                                     type="button"
                                                     onClick={() => setStep("product")}
-                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#aa9775] hover:text-[#1c1813] transition-colors font-bold"
+                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#9c6d68] hover:text-[#1c1813] transition-colors font-bold"
                                                 >
                                                     &larr; Back to Details
                                                 </button>
@@ -653,7 +653,7 @@ Please let me know how to proceed. Thank you!`;
                                                 <div>
                                                     <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Customization Requests / Notes</label>
                                                     <textarea 
-                                                        className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/30 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] transition-colors resize-none font-medium tracking-wide" 
+                                                        className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/30 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] transition-colors resize-none font-medium tracking-wide" 
                                                         rows={2} 
                                                         placeholder="Specify height adjustments, custom necklines or sleeve requests..." 
                                                         value={form.note} 
@@ -663,10 +663,10 @@ Please let me know how to proceed. Thank you!`;
                                             </div>
                                         </div>
 
-                                        <div className="pt-6 border-t border-[#c5a880]/15 mt-4">
+                                        <div className="pt-6 border-t border-[#cca09d]/15 mt-4">
                                             <button
                                                 type="submit"
-                                                className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg"
+                                                className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#9c6d68] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg"
                                             >
                                                 Confirm Royal Order
                                             </button>
@@ -682,34 +682,34 @@ Please let me know how to proceed. Thank you!`;
                                             animate={{ scale: 1 }} 
                                             transition={{ type: "spring", stiffness: 200, damping: 15 }}
                                         >
-                                            <CheckCircle size={56} className="text-[#aa9775] mb-6" />
+                                            <CheckCircle size={56} className="text-[#9c6d68] mb-6" />
                                         </motion.div>
 
-                                        <p className="text-[8.5px] uppercase tracking-[0.6em] text-[#aa9775] font-bold mb-3">Order Received</p>
+                                        <p className="text-[8.5px] uppercase tracking-[0.6em] text-[#9c6d68] font-bold mb-3">Order Received</p>
                                         
                                         <h3 className="font-editorial text-xl sm:text-2xl text-[#1c1813] uppercase tracking-wider mb-4 font-bold">
                                             Thank You, {form.name.split(" ")[0]}!
                                         </h3>
                                         
-                                        <div className="w-10 h-[1px] bg-[#c5a880]/50 mb-5" />
+                                        <div className="w-10 h-[1px] bg-[#cca09d]/50 mb-5" />
                                         
                                         <p className="text-[10px] uppercase tracking-[0.2em] text-[#1c1813]/70 font-semibold leading-relaxed mb-4 max-w-sm">
-                                            Your bespoke order for **{product.name}** (Size **{selectedSize}**) has been successfully placed. Order ID is <strong className="text-[#aa9775] font-bold tracking-wider">{orderId}</strong>.
+                                            Your bespoke order for **{product.name}** (Size **{selectedSize}**) has been successfully placed. Order ID is <strong className="text-[#9c6d68] font-bold tracking-wider">{orderId}</strong>.
                                         </p>
                                         
                                         <p className="text-[9.5px] text-[#1c1813]/70 font-medium mb-1.5">
                                             Our concierge team will call you at <strong className="text-[#1c1813] font-bold">{form.phone}</strong> within 24 hours to confirm your custom measurements and delivery schedule.
                                         </p>
                                         
-                                        <div className="bg-[#aa9775]/10 border border-[#aa9775]/35 rounded-sm p-4 w-full text-center space-y-1 my-5">
-                                            <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#aa9775] font-bold">Important Notice</p>
+                                        <div className="bg-[#9c6d68]/10 border border-[#9c6d68]/35 rounded-sm p-4 w-full text-center space-y-1 my-5">
+                                            <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#9c6d68] font-bold">Important Notice</p>
                                             <p className="text-[11px] text-[#1c1813] font-medium leading-relaxed">
                                                 Every Anushka Chauhan piece is handcrafted with exceptional care. Your order will take approximately <strong className="font-bold">45 days</strong> for delivery.
                                             </p>
                                         </div>
                                         
-                                        <div className="bg-[#ece2ce]/40 border border-[#c5a880]/15 p-4 rounded-sm text-left w-full mt-6 space-y-1.5">
-                                            <p className="text-[8px] uppercase tracking-[0.3em] text-[#aa9775] font-bold">Delivery Address</p>
+                                        <div className="bg-[#ece2ce]/40 border border-[#cca09d]/15 p-4 rounded-sm text-left w-full mt-6 space-y-1.5">
+                                            <p className="text-[8px] uppercase tracking-[0.3em] text-[#9c6d68] font-bold">Delivery Address</p>
                                             <p className="text-[10px] text-[#1c1813] font-semibold leading-relaxed">
                                                 {form.houseNo}, {form.address}<br />
                                                 {form.landmark && `Landmark: ${form.landmark}`}<br />
@@ -721,7 +721,7 @@ Please let me know how to proceed. Thank you!`;
                                             <a
                                                 href={`/pages/track-order?id=${orderId}`}
                                                 onClick={handleCloseModal}
-                                                className="w-full py-4 bg-[#aa9775] text-[#1c1813] hover:bg-[#1c1813] hover:text-[#f5ebd9] text-[9.5px] uppercase tracking-[0.4em] font-bold transition-all duration-500 shadow-md text-center inline-block"
+                                                className="w-full py-4 bg-[#9c6d68] text-[#1c1813] hover:bg-[#1c1813] hover:text-[#f5ebd9] text-[9.5px] uppercase tracking-[0.4em] font-bold transition-all duration-500 shadow-md text-center inline-block"
                                             >
                                                 Track Your Live Order
                                             </a>
@@ -740,17 +740,17 @@ Please let me know how to proceed. Thank you!`;
                                     <div className="flex-grow flex-col justify-between flex">
                                         <div>
                                             {/* Subheader */}
-                                            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#c5a880]/20">
+                                            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#cca09d]/20">
                                                 <button 
                                                     type="button"
                                                     onClick={() => setStep("form")}
-                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#aa9775] hover:text-[#1c1813] transition-colors font-bold bg-transparent border-none cursor-pointer"
+                                                    className="text-[9px] uppercase tracking-[0.2em] text-[#9c6d68] hover:text-[#1c1813] transition-colors font-bold bg-transparent border-none cursor-pointer"
                                                 >
                                                     &larr; Back to Shipping
                                                 </button>
                                                 <div className="text-right">
                                                     <span className="text-[7.5px] uppercase tracking-widest text-[#1c1813]/60 block font-semibold">Total Price</span>
-                                                    <span className="text-xs font-bold text-[#aa9775] tracking-widest">{product.price}</span>
+                                                    <span className="text-xs font-bold text-[#9c6d68] tracking-widest">{product.price}</span>
                                                 </div>
                                             </div>
 
@@ -768,8 +768,8 @@ Please let me know how to proceed. Thank you!`;
                                                         }}
                                                         className={`py-2 px-1 text-[8px] sm:text-[9px] uppercase tracking-wider border font-bold transition-all duration-300 cursor-pointer ${
                                                             paymentMethod === method
-                                                                ? "border-[#aa9775] bg-[#aa9775]/10 text-[#1c1813]"
-                                                                : "border-[#c5a880]/25 text-[#1c1813]/70 hover:border-[#aa9775]/50 bg-transparent"
+                                                                ? "border-[#9c6d68] bg-[#9c6d68]/10 text-[#1c1813]"
+                                                                : "border-[#cca09d]/25 text-[#1c1813]/70 hover:border-[#9c6d68]/50 bg-transparent"
                                                         }`}
                                                     >
                                                         {method === "card" && "Card"}
@@ -787,7 +787,7 @@ Please let me know how to proceed. Thank you!`;
                                                         <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Cardholder Name</label>
                                                         <input
                                                             required
-                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                             placeholder="Anushka Chauhan"
                                                             value={cardName}
                                                             onChange={(e) => setCardName(e.target.value)}
@@ -797,7 +797,7 @@ Please let me know how to proceed. Thank you!`;
                                                         <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Card Number</label>
                                                         <input
                                                             required
-                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                             placeholder="1234 5678 1234 5678"
                                                             value={cardNumber}
                                                             onChange={(e) => setCardNumber(e.target.value.replace(/\D/g, "").slice(0, 16))}
@@ -808,7 +808,7 @@ Please let me know how to proceed. Thank you!`;
                                                             <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Expiry Date</label>
                                                             <input
                                                                 required
-                                                                className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                                className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                                 placeholder="MM/YY"
                                                                 value={cardExpiry}
                                                                 onChange={(e) => setCardExpiry(e.target.value.slice(0, 5))}
@@ -819,7 +819,7 @@ Please let me know how to proceed. Thank you!`;
                                                             <input
                                                                 required
                                                                 type="password"
-                                                                className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                                className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                                 placeholder="123"
                                                                 value={cardCvv}
                                                                 onChange={(e) => setCardCvv(e.target.value.replace(/\D/g, "").slice(0, 3))}
@@ -829,7 +829,7 @@ Please let me know how to proceed. Thank you!`;
                                                     <button
                                                         type="submit"
                                                         disabled={isPaymentProcessing}
-                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
+                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#9c6d68] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
                                                     >
                                                         {isPaymentProcessing ? "Processing..." : `Pay ${product.price}`}
                                                     </button>
@@ -843,7 +843,7 @@ Please let me know how to proceed. Thank you!`;
                                                         <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Enter Virtual Payment Address (UPI ID)</label>
                                                         <input
                                                             required
-                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] placeholder:text-[#f5ebd9]/30 focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                             placeholder="username@upi"
                                                             value={upiId}
                                                             onChange={(e) => setUpiId(e.target.value)}
@@ -852,7 +852,7 @@ Please let me know how to proceed. Thank you!`;
                                                     <button
                                                         type="submit"
                                                         disabled={isPaymentProcessing}
-                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
+                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#9c6d68] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
                                                     >
                                                         {isPaymentProcessing ? "Processing..." : `Pay ${product.price} via UPI`}
                                                     </button>
@@ -866,7 +866,7 @@ Please let me know how to proceed. Thank you!`;
                                                         <label className="text-[8.5px] uppercase tracking-[0.3em] text-[#1c1813]/80 font-bold block mb-1.5">Select Bank</label>
                                                         <select
                                                             required
-                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#1d032e]/40 border border-[#c5a880]/40 text-[#f5ebd9] focus:outline-none focus:border-[#c5a880] font-semibold tracking-wide"
+                                                            className="w-full px-3.5 py-2.5 text-xs bg-[#2c1619]/40 border border-[#cca09d]/40 text-[#f5ebd9] focus:outline-none focus:border-[#cca09d] font-semibold tracking-wide"
                                                             value={selectedBank}
                                                             onChange={(e) => setSelectedBank(e.target.value)}
                                                         >
@@ -881,7 +881,7 @@ Please let me know how to proceed. Thank you!`;
                                                     <button
                                                         type="submit"
                                                         disabled={isPaymentProcessing}
-                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#aa9775] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
+                                                        className="w-full mt-6 py-4 bg-[#1c1813] text-[#f5ebd9] hover:bg-[#9c6d68] hover:text-[#1c1813] text-[9.5px] uppercase tracking-[0.5em] font-bold transition-all duration-500 cursor-pointer shadow-lg disabled:opacity-50"
                                                     >
                                                         {isPaymentProcessing ? "Processing..." : `Pay ${product.price} via Net Banking`}
                                                     </button>
@@ -895,14 +895,14 @@ Please let me know how to proceed. Thank you!`;
                                                         Scan this QR code with your phone using any UPI app (GPay, PhonePe, Paytm) to complete payment.
                                                     </p>
                                                     {/* Mock QR Code UI */}
-                                                    <div className="w-40 h-40 border border-[#c5a880]/40 bg-white p-3 flex items-center justify-center rounded-sm relative shadow-md">
+                                                    <div className="w-40 h-40 border border-[#cca09d]/40 bg-white p-3 flex items-center justify-center rounded-sm relative shadow-md">
                                                         <img
                                                             src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=business@anushkachauhan%26pn=Anushka%20Chauhan%20Couture%26am=${product.price.replace(/[^0-9.]/g, "")}`}
                                                             alt="Payment QR Code Mockup"
                                                             className="w-full h-full object-contain"
                                                         />
                                                     </div>
-                                                    <div className="text-[10px] uppercase tracking-widest text-[#aa9775] font-bold flex items-center gap-2 animate-pulse mt-2">
+                                                    <div className="text-[10px] uppercase tracking-widest text-[#9c6d68] font-bold flex items-center gap-2 animate-pulse mt-2">
                                                         <span className="w-2.5 h-2.5 bg-green-500 rounded-full inline-block animate-ping" />
                                                         Detecting payment automatically... {qrCountdown}s
                                                     </div>

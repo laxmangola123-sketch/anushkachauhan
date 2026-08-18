@@ -148,7 +148,7 @@ export default function CartDrawer() {
     };
 
     const inputClass = (field: keyof OrderDetails) =>
-        `w-full px-3 py-2.5 text-xs bg-white border ${errors[field] ? "border-red-400" : "border-[#c5a880]/30"} text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#c5a880] transition-colors duration-300 font-light tracking-wide`;
+        `w-full px-3 py-2.5 text-xs bg-white border ${errors[field] ? "border-red-400" : "border-[#cca09d]/30"} text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#cca09d] transition-colors duration-300 font-light tracking-wide`;
 
     return (
         <AnimatePresence>
@@ -168,9 +168,9 @@ export default function CartDrawer() {
                         className="fixed top-0 right-0 h-full w-full max-w-md bg-[#f5ebd9] z-[201] flex flex-col shadow-2xl"
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between px-6 py-5 border-b border-[#c5a880]/20 flex-shrink-0">
+                        <div className="flex items-center justify-between px-6 py-5 border-b border-[#cca09d]/20 flex-shrink-0">
                             <div>
-                                <p className="text-[8px] uppercase tracking-[0.5em] text-[#c5a880] font-light">Anushka Chauhan</p>
+                                <p className="text-[8px] uppercase tracking-[0.5em] text-[#cca09d] font-light">Anushka Chauhan</p>
                                 <h2 className="text-[#1c1813] text-sm font-light tracking-widest uppercase mt-0.5">
                                     {step === "cart" 
                                         ? `Your Selection (${totalItems})` 
@@ -181,7 +181,7 @@ export default function CartDrawer() {
                                                 : "Order Confirmed"}
                                 </h2>
                             </div>
-                            <button onClick={handleClose} className="w-8 h-8 flex items-center justify-center border border-[#c5a880]/30 hover:border-[#c5a880] transition-colors duration-300 cursor-pointer">
+                            <button onClick={handleClose} className="w-8 h-8 flex items-center justify-center border border-[#cca09d]/30 hover:border-[#cca09d] transition-colors duration-300 cursor-pointer">
                                 <X size={14} className="text-[#1c1813]" />
                             </button>
                         </div>
@@ -192,31 +192,31 @@ export default function CartDrawer() {
                                 <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
                                     {items.length === 0 ? (
                                         <div className="flex flex-col items-center justify-center h-full text-center py-20">
-                                            <ShoppingBag size={36} className="text-[#c5a880]/40 mb-4" />
+                                            <ShoppingBag size={36} className="text-[#cca09d]/40 mb-4" />
                                             <p className="text-[10px] uppercase tracking-[0.4em] text-[#1c1813]/40 font-light">Your cart is empty</p>
                                             <p className="text-[9px] text-[#1c1813]/30 mt-2 font-light">Browse our collections and add pieces</p>
                                         </div>
                                     ) : (
                                         items.map((item) => (
-                                            <div key={`${item.product.id}-${item.size}`} className="flex gap-4 pb-5 border-b border-[#c5a880]/15 last:border-0">
-                                                <div className="w-20 h-24 flex-shrink-0 overflow-hidden border border-[#c5a880]/10 rounded-sm">
+                                            <div key={`${item.product.id}-${item.size}`} className="flex gap-4 pb-5 border-b border-[#cca09d]/15 last:border-0">
+                                                <div className="w-20 h-24 flex-shrink-0 overflow-hidden border border-[#cca09d]/10 rounded-sm">
                                                     <img src={item.product.imageUrl} alt={item.product.name} className="w-full h-full object-cover filter brightness-90" />
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <p className="text-[8px] uppercase tracking-[0.3em] text-[#c5a880] font-light mb-1">{item.product.type}</p>
+                                                    <p className="text-[8px] uppercase tracking-[0.3em] text-[#cca09d] font-light mb-1">{item.product.type}</p>
                                                     <h4 className="text-[#1c1813] text-xs font-light tracking-wide leading-snug mb-1 line-clamp-2">{item.product.name}</h4>
                                                     <p className="text-[8px] uppercase tracking-[0.2em] text-[#1c1813]/45 font-light mb-2">Size: {item.size}</p>
                                                     <div className="flex items-center justify-between">
                                                         <span className="text-[#1c1813] text-xs font-light tracking-wide">{item.product.price}</span>
                                                         <div className="flex items-center gap-2">
-                                                            <button onClick={() => updateQty(item.product.id, item.size, item.quantity - 1)} className="w-6 h-6 border border-[#c5a880]/30 flex items-center justify-center hover:border-[#c5a880] transition-colors cursor-pointer">
+                                                            <button onClick={() => updateQty(item.product.id, item.size, item.quantity - 1)} className="w-6 h-6 border border-[#cca09d]/30 flex items-center justify-center hover:border-[#cca09d] transition-colors cursor-pointer">
                                                                 <Minus size={8} className="text-[#1c1813]" />
                                                             </button>
                                                             <span className="text-[10px] text-[#1c1813] w-4 text-center font-light">{item.quantity}</span>
-                                                            <button onClick={() => updateQty(item.product.id, item.size, item.quantity + 1)} className="w-6 h-6 border border-[#c5a880]/30 flex items-center justify-center hover:border-[#c5a880] transition-colors cursor-pointer">
+                                                            <button onClick={() => updateQty(item.product.id, item.size, item.quantity + 1)} className="w-6 h-6 border border-[#cca09d]/30 flex items-center justify-center hover:border-[#cca09d] transition-colors cursor-pointer">
                                                                 <Plus size={8} className="text-[#1c1813]" />
                                                             </button>
-                                                            <button onClick={() => removeItem(item.product.id, item.size)} className="w-6 h-6 flex items-center justify-center text-[#c5a880]/50 hover:text-red-400 transition-colors ml-1 cursor-pointer">
+                                                            <button onClick={() => removeItem(item.product.id, item.size)} className="w-6 h-6 flex items-center justify-center text-[#cca09d]/50 hover:text-red-400 transition-colors ml-1 cursor-pointer">
                                                                 <Trash2 size={11} />
                                                             </button>
                                                         </div>
@@ -228,23 +228,23 @@ export default function CartDrawer() {
                                 </div>
 
                                 {items.length > 0 && (
-                                    <div className="px-6 py-5 border-t border-[#c5a880]/20 flex-shrink-0 space-y-3">
+                                    <div className="px-6 py-5 border-t border-[#cca09d]/20 flex-shrink-0 space-y-3">
                                         <div className="flex justify-between text-xs font-light tracking-wide">
                                             <span className="text-[#1c1813]/60 uppercase tracking-widest text-[9px]">Subtotal</span>
                                             <span className="text-[#1c1813]">{formatPrice(totalPrice)}</span>
                                         </div>
                                         <div className="flex justify-between text-xs font-light tracking-wide">
                                             <span className="text-[#1c1813]/60 uppercase tracking-widest text-[9px]">Shipping</span>
-                                            <span className="text-[#c5a880] text-[9px] uppercase tracking-widest font-semibold">Free</span>
+                                            <span className="text-[#cca09d] text-[9px] uppercase tracking-widest font-semibold">Free</span>
                                         </div>
-                                        <div className="w-full h-[1px] bg-[#c5a880]/20" />
+                                        <div className="w-full h-[1px] bg-[#cca09d]/20" />
                                         <div className="flex justify-between">
                                             <span className="text-[10px] uppercase tracking-[0.4em] text-[#1c1813] font-light">Total</span>
                                             <span className="text-[#1c1813] text-sm font-light tracking-wide">{formatPrice(totalPrice)}</span>
                                         </div>
                                         <button
                                             onClick={() => setStep("details")}
-                                            className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500 mt-2 cursor-pointer"
+                                            className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#cca09d] hover:text-[#1c1813] transition-all duration-500 mt-2 cursor-pointer"
                                         >
                                             Proceed to Order
                                         </button>
@@ -258,22 +258,22 @@ export default function CartDrawer() {
                             <>
                                 <div className="flex-1 overflow-y-auto px-6 py-5">
                                     {/* Order summary */}
-                                    <div className="bg-[#ece2ce]/40 border border-[#c5a880]/15 p-4 mb-6 space-y-1.5 rounded-sm">
-                                        <p className="text-[8px] uppercase tracking-[0.4em] text-[#c5a880] font-bold mb-2">Order Summary</p>
+                                    <div className="bg-[#ece2ce]/40 border border-[#cca09d]/15 p-4 mb-6 space-y-1.5 rounded-sm">
+                                        <p className="text-[8px] uppercase tracking-[0.4em] text-[#cca09d] font-bold mb-2">Order Summary</p>
                                         {items.map((item) => (
                                             <div key={`${item.product.id}-${item.size}`} className="flex justify-between text-[9px] text-[#1c1813]/70 font-light">
-                                                <span className="truncate mr-2">{item.product.name} × {item.quantity} <span className="text-[#aa9775]">({item.size})</span></span>
+                                                <span className="truncate mr-2">{item.product.name} × {item.quantity} <span className="text-[#9c6d68]">({item.size})</span></span>
                                                 <span className="flex-shrink-0">{item.product.price}</span>
                                             </div>
                                         ))}
-                                        <div className="border-t border-[#c5a880]/20 pt-1.5 flex justify-between text-[10px] text-[#1c1813] font-semibold tracking-wide">
+                                        <div className="border-t border-[#cca09d]/20 pt-1.5 flex justify-between text-[10px] text-[#1c1813] font-semibold tracking-wide">
                                             <span>Total</span><span>{formatPrice(totalPrice)}</span>
                                         </div>
                                     </div>
 
                                     {/* Form */}
                                     <div className="space-y-4">
-                                        <p className="text-[8px] uppercase tracking-[0.5em] text-[#c5a880] font-bold">Personal Details</p>
+                                        <p className="text-[8px] uppercase tracking-[0.5em] text-[#cca09d] font-bold">Personal Details</p>
 
                                         <div>
                                             <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/55 font-semibold block mb-1.5">Full Name *</label>
@@ -294,8 +294,8 @@ export default function CartDrawer() {
                                             </div>
                                         </div>
 
-                                        <div className="border-t border-[#c5a880]/15 pt-4">
-                                            <p className="text-[8px] uppercase tracking-[0.5em] text-[#c5a880] font-bold mb-3">Delivery Address</p>
+                                        <div className="border-t border-[#cca09d]/15 pt-4">
+                                            <p className="text-[8px] uppercase tracking-[0.5em] text-[#cca09d] font-bold mb-3">Delivery Address</p>
                                             <div>
                                                 <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/55 font-semibold block mb-1.5">Address *</label>
                                                 <textarea className={`${inputClass("address")} resize-none`} rows={3} placeholder="House / Flat No., Street, Area, Landmark" value={details.address} onChange={(e) => setDetails({ ...details, address: e.target.value })} />
@@ -327,16 +327,16 @@ export default function CartDrawer() {
 
                                         <div>
                                             <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/55 font-semibold block mb-1.5">Special Note</label>
-                                            <textarea className="w-full px-3 py-2.5 text-xs bg-white border border-[#c5a880]/30 text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#c5a880] transition-colors resize-none font-light tracking-wide" rows={2} placeholder="Customisation requests, measurements..." value={details.note} onChange={(e) => setDetails({ ...details, note: e.target.value })} />
+                                            <textarea className="w-full px-3 py-2.5 text-xs bg-white border border-[#cca09d]/30 text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#cca09d] transition-colors resize-none font-light tracking-wide" rows={2} placeholder="Customisation requests, measurements..." value={details.note} onChange={(e) => setDetails({ ...details, note: e.target.value })} />
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="px-6 py-5 border-t border-[#c5a880]/20 flex-shrink-0 space-y-3">
-                                    <button onClick={handleProceedToPayment} className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500 cursor-pointer">
+                                <div className="px-6 py-5 border-t border-[#cca09d]/20 flex-shrink-0 space-y-3">
+                                    <button onClick={handleProceedToPayment} className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#cca09d] hover:text-[#1c1813] transition-all duration-500 cursor-pointer">
                                         Proceed to Payment
                                     </button>
-                                    <button onClick={() => setStep("cart")} className="w-full py-2.5 border border-[#c5a880]/30 text-[#1c1813]/60 text-[8px] uppercase tracking-[0.4em] font-light hover:border-[#c5a880] transition-colors duration-300 cursor-pointer">
+                                    <button onClick={() => setStep("cart")} className="w-full py-2.5 border border-[#cca09d]/30 text-[#1c1813]/60 text-[8px] uppercase tracking-[0.4em] font-light hover:border-[#cca09d] transition-colors duration-300 cursor-pointer">
                                         ← Back to Cart
                                     </button>
                                 </div>
@@ -348,11 +348,11 @@ export default function CartDrawer() {
                             <>
                                 <div className="flex-1 overflow-y-auto px-6 py-5 space-y-6">
                                     {/* Header for Payment Mode */}
-                                    <div className="pb-3 border-b border-[#c5a880]/15">
+                                    <div className="pb-3 border-b border-[#cca09d]/15">
                                         <h3 className="font-editorial text-lg text-[#1c1813] tracking-wide uppercase font-bold text-center">
                                             Online Payment
                                         </h3>
-                                        <p className="text-[9px] uppercase tracking-[0.25em] text-[#aa9775] text-center mt-1">
+                                        <p className="text-[9px] uppercase tracking-[0.25em] text-[#9c6d68] text-center mt-1">
                                             UPI Secure Transfer
                                         </p>
                                     </div>
@@ -360,22 +360,22 @@ export default function CartDrawer() {
                                     {/* Online Payment Content */}
                                     <div className="space-y-5">
                                         {/* QR Code Container */}
-                                        <div className="border border-[#c5a880]/25 rounded-sm p-4 bg-[#fcf9f2] flex flex-col items-center">
-                                            <p className="text-[8px] uppercase tracking-[0.25em] text-[#aa9775] font-bold mb-3">Scan QR Code to Pay</p>
-                                            <div className="w-48 h-auto border border-[#c5a880]/20 p-2 bg-white shadow-sm mb-3">
+                                        <div className="border border-[#cca09d]/25 rounded-sm p-4 bg-[#fcf9f2] flex flex-col items-center">
+                                            <p className="text-[8px] uppercase tracking-[0.25em] text-[#9c6d68] font-bold mb-3">Scan QR Code to Pay</p>
+                                            <div className="w-48 h-auto border border-[#cca09d]/20 p-2 bg-white shadow-sm mb-3">
                                                 <img src="/payment_qr.jpg" alt="Payment QR Code" className="w-full h-full object-contain" />
                                             </div>
                                             
                                             {/* Copyable UPI ID */}
-                                            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#eedec8]/30 border border-[#c5a880]/15 w-full justify-between rounded-sm">
+                                            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#eedec8]/30 border border-[#cca09d]/15 w-full justify-between rounded-sm">
                                                 <div className="flex flex-col">
-                                                    <span className="text-[7px] uppercase tracking-wider text-[#aa9775] font-bold">UPI ID</span>
+                                                    <span className="text-[7px] uppercase tracking-wider text-[#9c6d68] font-bold">UPI ID</span>
                                                     <span className="text-[10px] font-mono text-[#1c1813]">sandysahu1111-3@oksbi</span>
                                                 </div>
                                                 <button
                                                     type="button"
                                                     onClick={() => handleCopy("sandysahu1111-3@oksbi", "upi")}
-                                                    className="p-1 hover:bg-[#c5a880]/10 rounded-sm text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
+                                                    className="p-1 hover:bg-[#cca09d]/10 rounded-sm text-[#9c6d68] hover:text-[#1c1813] transition-colors cursor-pointer"
                                                 >
                                                     {copiedField === "upi" ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
                                                 </button>
@@ -393,11 +393,11 @@ export default function CartDrawer() {
                                                 onChange={(e) => { setTransactionId(e.target.value); setTransactionError(""); }}
                                                 placeholder="Enter 12-digit UTR or Txn Ref ID"
                                                 className={`w-full px-3 py-2.5 text-xs bg-white border ${
-                                                    transactionError ? "border-red-400" : "border-[#c5a880]/30"
-                                                } text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#c5a880] transition-colors font-light tracking-wide`}
+                                                    transactionError ? "border-red-400" : "border-[#cca09d]/30"
+                                                } text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#cca09d] transition-colors font-light tracking-wide`}
                                             />
                                             {transactionError && <p className="text-[8px] text-red-400 mt-1">{transactionError}</p>}
-                                            <p className="text-[8.5px] text-[#aa9775] italic leading-relaxed pt-1">
+                                            <p className="text-[8.5px] text-[#9c6d68] italic leading-relaxed pt-1">
                                                 Scan the QR code and pay via UPI, then input your UTR/Reference number to help us confirm your payment.
                                             </p>
                                         </div>
@@ -405,16 +405,16 @@ export default function CartDrawer() {
                                 </div>
 
                                 {/* Bottom controls */}
-                                <div className="px-6 py-5 border-t border-[#c5a880]/20 flex-shrink-0 space-y-3">
+                                <div className="px-6 py-5 border-t border-[#cca09d]/20 flex-shrink-0 space-y-3">
                                     <button
                                         onClick={handlePlaceOrder}
-                                        className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500 cursor-pointer"
+                                        className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#cca09d] hover:text-[#1c1813] transition-all duration-500 cursor-pointer"
                                     >
                                         Submit Payment & Confirm
                                     </button>
                                     <button
                                         onClick={() => setStep("details")}
-                                        className="w-full py-2.5 border border-[#c5a880]/30 text-[#1c1813]/60 text-[8px] uppercase tracking-[0.4em] font-light hover:border-[#c5a880] transition-colors duration-300 cursor-pointer"
+                                        className="w-full py-2.5 border border-[#cca09d]/30 text-[#1c1813]/60 text-[8px] uppercase tracking-[0.4em] font-light hover:border-[#cca09d] transition-colors duration-300 cursor-pointer"
                                     >
                                         ← Edit Delivery Details
                                     </button>
@@ -426,29 +426,29 @@ export default function CartDrawer() {
                         {step === "success" && (
                             <div className="flex-1 flex flex-col items-center justify-center px-8 text-center overflow-y-auto py-8">
                                 <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 15 }}>
-                                    <CheckCircle size={56} className="text-[#c5a880] mb-6" />
+                                    <CheckCircle size={56} className="text-[#cca09d] mb-6" />
                                 </motion.div>
-                                <p className="text-[8px] uppercase tracking-[0.6em] text-[#c5a880] font-light mb-3">Order Received</p>
+                                <p className="text-[8px] uppercase tracking-[0.6em] text-[#cca09d] font-light mb-3">Order Received</p>
                                 <h3 className="font-editorial text-2xl text-[#1c1813] uppercase tracking-wider mb-4">Thank You, {details.name.split(" ")[0]}!</h3>
-                                <div className="w-10 h-[1px] bg-[#c5a880]/50 mb-5" />
+                                <div className="w-10 h-[1px] bg-[#cca09d]/50 mb-5" />
                                 
                                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#1c1813]/55 font-light leading-relaxed mb-4">
                                     Your order for {totalItems} piece{totalItems > 1 ? "s" : ""} totalling {formatPrice(totalPrice)} has been placed.
                                 </p>
 
-                                <div className="border border-[#c5a880]/20 rounded-sm p-4 bg-[#eedec8]/5 w-full space-y-2 text-left mb-6 text-[10px]">
-                                    <p className="text-[8px] uppercase tracking-wider text-[#aa9775] font-bold pb-1 border-b border-[#c5a880]/10">Order & Payment Info</p>
+                                <div className="border border-[#cca09d]/20 rounded-sm p-4 bg-[#eedec8]/5 w-full space-y-2 text-left mb-6 text-[10px]">
+                                    <p className="text-[8px] uppercase tracking-wider text-[#9c6d68] font-bold pb-1 border-b border-[#cca09d]/10">Order & Payment Info</p>
                                     
                                     {placedOrderId && (
-                                        <div className="flex items-center justify-between bg-[#eedec8]/20 border border-[#c5a880]/15 p-2 rounded-sm mb-3">
+                                        <div className="flex items-center justify-between bg-[#eedec8]/20 border border-[#cca09d]/15 p-2 rounded-sm mb-3">
                                             <div className="flex flex-col">
-                                                <span className="text-[7.5px] uppercase tracking-wider text-[#aa9775] font-bold">Your Tracking ID</span>
+                                                <span className="text-[7.5px] uppercase tracking-wider text-[#9c6d68] font-bold">Your Tracking ID</span>
                                                 <span className="text-xs font-mono font-bold text-[#1c1813]">{placedOrderId}</span>
                                             </div>
                                             <button
                                                 type="button"
                                                 onClick={() => handleCopy(placedOrderId, "tracking")}
-                                                className="p-1 hover:bg-[#c5a880]/10 rounded-sm text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
+                                                className="p-1 hover:bg-[#cca09d]/10 rounded-sm text-[#9c6d68] hover:text-[#1c1813] transition-colors cursor-pointer"
                                             >
                                                 {copiedField === "tracking" ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
                                             </button>
@@ -461,8 +461,8 @@ export default function CartDrawer() {
                                     <p className="text-[#1c1813]/60">Verification Number: <strong className="text-[#1c1813]/90">{details.phone}</strong></p>
                                 </div>
 
-                                <div className="bg-[#aa9775]/10 border border-[#aa9775]/35 rounded-sm p-4 w-full text-center space-y-1 mb-6">
-                                    <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#aa9775] font-bold">Important Notice</p>
+                                <div className="bg-[#9c6d68]/10 border border-[#9c6d68]/35 rounded-sm p-4 w-full text-center space-y-1 mb-6">
+                                    <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#9c6d68] font-bold">Important Notice</p>
                                     <p className="text-[11px] text-[#1c1813] font-medium leading-relaxed">
                                         Every Anushka Chauhan piece is handcrafted with exceptional care. Your order will take approximately <strong className="font-bold">45 days</strong> for delivery.
                                     </p>
@@ -476,13 +476,13 @@ export default function CartDrawer() {
                                     <a
                                         href={`/pages/track-order?id=${placedOrderId}`}
                                         onClick={handleClose}
-                                        className="w-full py-3.5 mb-3.5 bg-[#aa9775] text-[#f5ebd9] text-[9px] uppercase tracking-[0.4em] font-bold hover:bg-[#1c1813] hover:text-[#f5ebd9] transition-all duration-500 rounded-sm text-center shadow-md cursor-pointer"
+                                        className="w-full py-3.5 mb-3.5 bg-[#9c6d68] text-[#f5ebd9] text-[9px] uppercase tracking-[0.4em] font-bold hover:bg-[#1c1813] hover:text-[#f5ebd9] transition-all duration-500 rounded-sm text-center shadow-md cursor-pointer"
                                     >
                                         Track Lehenga Journey Live
                                     </a>
                                 )}
 
-                                <button onClick={handleClose} className="px-8 py-3 bg-[#1c1813]/90 text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-light hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500">
+                                <button onClick={handleClose} className="px-8 py-3 bg-[#1c1813]/90 text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-light hover:bg-[#cca09d] hover:text-[#1c1813] transition-all duration-500">
                                     Continue Shopping
                                 </button>
                             </div>

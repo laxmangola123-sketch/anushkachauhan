@@ -61,12 +61,12 @@ export default function Collections() {
   return (
     <section
       id="collections"
-      className="bg-[#f5ebd9] py-20 md:py-28 px-6 md:px-12 border-b border-[#c5a880]/10 text-[#1c1813]"
+      className="bg-[#f5ebd9] py-20 md:py-28 px-6 md:px-12 border-b border-[#cca09d]/10 text-[#1c1813]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title Block */}
         <div className="text-center mb-14 md:mb-18 flex flex-col items-center">
-          <h2 className="text-xs uppercase tracking-[0.4em] text-[#aa9775] font-semibold mb-2">
+          <h2 className="text-xs uppercase tracking-[0.4em] text-[#9c6d68] font-semibold mb-2">
             OUR COLLECTIONS
           </h2>
           <p className="font-editorial text-lg md:text-xl text-[#1c1813]/70 italic font-light">
@@ -87,7 +87,7 @@ export default function Collections() {
               href={item.href}
               variants={cardVariants}
               key={item.title}
-              className="group flex flex-col relative aspect-[2/3] overflow-hidden bg-[#e8d6b3]/10 shadow-sm border border-[#c5a880]/15"
+              className="group flex flex-col relative aspect-[2/3] overflow-hidden bg-[#e8d6b3]/10 shadow-sm border border-[#cca09d]/15"
             >
               {/* Category Image */}
               <div className="w-full h-full overflow-hidden relative">
@@ -98,7 +98,7 @@ export default function Collections() {
                 />
                 
                 {/* Subtle border framing on hover */}
-                <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/20 transition-all duration-700 pointer-events-none" />
+                <div className="absolute inset-3 border border-[#cca09d]/0 group-hover:border-[#cca09d]/20 transition-all duration-700 pointer-events-none" />
 
                 {/* Dark Vignette Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c1813]/60 via-transparent to-transparent opacity-80" />
@@ -118,7 +118,7 @@ export default function Collections() {
         <div className="text-center">
           <a
             href="#collections"
-            className="inline-block px-8 py-3.5 border border-[#1c1813]/40 hover:border-[#1c1813] text-[#1c1813] hover:text-[#aa9775] text-[9px] uppercase tracking-[0.3em] font-medium transition-all duration-500 bg-transparent"
+            className="inline-block px-8 py-3.5 border border-[#1c1813]/40 hover:border-[#1c1813] text-[#1c1813] hover:text-[#9c6d68] text-[9px] uppercase tracking-[0.3em] font-medium transition-all duration-500 bg-transparent"
           >
             View All Collections
           </a>

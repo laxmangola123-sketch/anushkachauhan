@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const LotusIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#aa9775] mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#9c6d68] mb-4">
     <path d="M12 3c-1.5 3-4.5 4.5-4.5 7.5 0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5c0-3-3-4.5-4.5-7.5z" />
     <path d="M12 7c-1 2-2.5 3-2.5 5 0 1.5 1 2.5 2.5 2.5s2.5-1 2.5-2.5c0-2-1.5-3-2.5-5z" />
     <path d="M7.5 10.5c-2 1-3.5 2.5-3.5 4.5 0 2 1.5 3.5 3.5 3.5.8 0 1.5-.2 2.1-.6" />
@@ -14,7 +14,7 @@ const LotusIcon = () => (
 );
 
 const HandHeartIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#aa9775] mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#9c6d68] mb-4">
     <path d="M12 13c-1-1.5-2-1.5-3-1-1 1-1 2 0 3l3 3 3-3c1-1 1-2 0-3-1-.5-2-.5-3 1z" />
     <path d="M6 18c-1.5-1.5-3-1-3 0s1.5 2 3.5 1.5c1.5-.4 2.5-1.5 4-1.5s2 1.5 3.5 1.5 2.5-1.5 3-2.5c.5-1-1-2.5-2-2" />
     <path d="M12 13V8" />
@@ -22,7 +22,7 @@ const HandHeartIcon = () => (
 );
 
 const FlowerStarIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#aa9775] mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#9c6d68] mb-4">
     <circle cx="12" cy="12" r="3" />
     <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3" />
     <circle cx="12" cy="12" r="7" strokeDasharray="2,2" />
@@ -30,7 +30,7 @@ const FlowerStarIcon = () => (
 );
 
 const DomeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#aa9775] mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-[#9c6d68] mb-4">
     <path d="M6 20V12c0-3.3 2.7-6 6-6s6 2.7 6 6v8" />
     <path d="M12 2v4" />
     <path d="M4 20h16" />
@@ -65,18 +65,18 @@ export default function OurWorld() {
   return (
     <section
       id="our-world"
-      className="bg-[#f5ebd9] py-20 md:py-28 px-6 md:px-12 border-b border-[#c5a880]/10 text-[#1c1813]"
+      className="bg-[#f5ebd9] py-20 md:py-28 px-6 md:px-12 border-b border-[#cca09d]/10 text-[#1c1813]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title Block */}
         <div className="text-center mb-16 flex flex-col items-center">
-          <h2 className="text-xs uppercase tracking-[0.4em] text-[#aa9775] font-semibold mb-3">
+          <h2 className="text-xs uppercase tracking-[0.4em] text-[#9c6d68] font-semibold mb-3">
             OUR WORLD
           </h2>
           <div className="flex items-center gap-2 w-full max-w-[120px]">
-            <div className="h-[1px] bg-[#c5a880]/40 flex-1" />
-            <span className="text-[#c5a880] text-[8px]">&#10047;</span>
-            <div className="h-[1px] bg-[#c5a880]/40 flex-1" />
+            <div className="h-[1px] bg-[#cca09d]/40 flex-1" />
+            <span className="text-[#cca09d] text-[8px]">&#10047;</span>
+            <div className="h-[1px] bg-[#cca09d]/40 flex-1" />
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default function OurWorld() {
                 className="flex flex-col items-center px-4"
               >
                 <Icon />
-                <h3 className="text-sm sm:text-base uppercase tracking-[0.25em] text-[#aa9775] font-bold mb-3">
+                <h3 className="text-sm sm:text-base uppercase tracking-[0.25em] text-[#9c6d68] font-bold mb-3">
                   {pillar.title}
                 </h3>
                 <p className="font-editorial text-sm sm:text-base md:text-lg text-[#1c1813] leading-relaxed font-semibold">

@@ -28,13 +28,13 @@ export default function ShopAll() {
                         transition={{ duration: 1 }}
                         className="text-center mb-14"
                     >
-                        <span className="text-[9px] uppercase tracking-[0.6em] text-[#c5a880] font-light mb-4 block">
+                        <span className="text-[9px] uppercase tracking-[0.6em] text-[#cca09d] font-light mb-4 block">
                             Anushka Chauhan
                         </span>
                         <h2 className="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#1c1813] tracking-wider uppercase mb-4">
                             Shop All Pieces
                         </h2>
-                        <div className="w-16 h-[1px] bg-[#c5a880]/50 mx-auto mb-5" />
+                        <div className="w-16 h-[1px] bg-[#cca09d]/50 mx-auto mb-5" />
                         <p className="text-[#1c1813]/50 text-xs uppercase tracking-[0.3em] font-light max-w-md mx-auto">
                             Click any piece to explore full details and place your order
                         </p>
@@ -48,7 +48,7 @@ export default function ShopAll() {
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-6 py-2.5 text-[9px] uppercase tracking-[0.4em] border transition-all duration-400 font-semibold ${activeCategory === cat
                                         ? "border-[#1c1813] bg-[#1c1813] text-[#f5ebd9]"
-                                        : "border-[#c5a880]/30 text-[#1c1813]/80 hover:border-[#c5a880] hover:text-[#1c1813]"
+                                        : "border-[#cca09d]/30 text-[#1c1813]/80 hover:border-[#cca09d] hover:text-[#1c1813]"
                                     }`}
                             >
                                 {cat}
@@ -69,17 +69,17 @@ export default function ShopAll() {
                                 className="group cursor-pointer"
                             >
                                 {/* Image */}
-                                <div className="relative aspect-[3/4] overflow-hidden mb-4 border border-[#c5a880]/15">
+                                <div className="relative aspect-[3/4] overflow-hidden mb-4 border border-[#cca09d]/15">
                                     <img
                                         src={product.imageUrl}
                                         alt={product.name}
                                         className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-[0.75]"
                                     />
                                     {/* Gold frame */}
-                                    <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/30 transition-all duration-700 pointer-events-none" />
+                                    <div className="absolute inset-3 border border-[#cca09d]/0 group-hover:border-[#cca09d]/30 transition-all duration-700 pointer-events-none" />
                                     {/* Tag */}
                                     {product.tag && (
-                                        <div className="absolute top-3 left-3 text-[7.5px] uppercase tracking-[0.3em] px-2 py-1 bg-[#f5ebd9]/95 text-[#aa9775] border border-[#c5a880]/30 font-semibold">
+                                        <div className="absolute top-3 left-3 text-[7.5px] uppercase tracking-[0.3em] px-2 py-1 bg-[#f5ebd9]/95 text-[#9c6d68] border border-[#cca09d]/30 font-semibold">
                                             {product.tag}
                                         </div>
                                     )}
@@ -94,8 +94,8 @@ export default function ShopAll() {
 
                                 {/* Info */}
                                 <div>
-                                    <p className="text-[8.5px] uppercase tracking-[0.3em] text-[#aa9775] font-semibold mb-1">{product.type}</p>
-                                    <h3 className="text-[#1c1813] text-xs md:text-sm font-bold tracking-wide mb-1 leading-snug group-hover:text-[#aa9775] transition-colors duration-300">
+                                    <p className="text-[8.5px] uppercase tracking-[0.3em] text-[#9c6d68] font-semibold mb-1">{product.type}</p>
+                                    <h3 className="text-[#1c1813] text-xs md:text-sm font-bold tracking-wide mb-1 leading-snug group-hover:text-[#9c6d68] transition-colors duration-300">
                                         {product.name}
                                     </h3>
                                     {/* Rating */}
@@ -105,7 +105,7 @@ export default function ShopAll() {
                                                 <Star
                                                     key={i}
                                                     size={8}
-                                                    className={i < product.rating! ? "fill-[#aa9775] text-[#aa9775]" : "text-[#aa9775]/25"}
+                                                    className={i < product.rating! ? "fill-[#9c6d68] text-[#9c6d68]" : "text-[#9c6d68]/25"}
                                                 />
                                             ))}
                                         </div>

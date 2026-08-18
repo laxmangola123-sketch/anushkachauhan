@@ -28,9 +28,9 @@ export default function InfoBanner() {
   ];
 
   return (
-    <section className="bg-[#f5ebd9] border-t border-b border-[#c5a880]/15 py-10 text-[#1c1813]">
+    <section className="bg-[#f5ebd9] border-t border-b border-[#cca09d]/15 py-10 text-[#1c1813]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-[#c5a880]/20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-[#cca09d]/20">
           {items.map((item, idx) => {
             const Icon = item.Icon;
             return (
@@ -42,11 +42,11 @@ export default function InfoBanner() {
                 key={item.title}
                 className="flex items-center gap-4 lg:justify-center lg:px-6"
               >
-                <div className="w-10 h-10 rounded-full border border-[#c5a880]/30 flex items-center justify-center text-[#aa9775] shrink-0">
+                <div className="w-10 h-10 rounded-full border border-[#cca09d]/30 flex items-center justify-center text-[#9c6d68] shrink-0">
                   <Icon size={18} strokeWidth={1.2} />
                 </div>
                 <div className="flex flex-col text-left">
-                  <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#aa9775] mb-1">
+                  <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#9c6d68] mb-1">
                     {item.title}
                   </h4>
                   <p className="font-editorial text-sm sm:text-base text-[#1c1813] font-bold tracking-wide">

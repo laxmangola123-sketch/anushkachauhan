@@ -12,7 +12,7 @@ export default function TrackOrderPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-[#1c1813] text-[#f5ebd9] flex items-center justify-center pt-32">
-        <p className="text-xs uppercase tracking-widest text-[#aa9775] font-bold animate-pulse">Loading Tracking Systems...</p>
+        <p className="text-xs uppercase tracking-widest text-[#9c6d68] font-bold animate-pulse">Loading Tracking Systems...</p>
       </div>
     }>
       <TrackOrderContent />

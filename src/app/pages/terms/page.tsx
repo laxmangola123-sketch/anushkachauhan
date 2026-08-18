@@ -12,13 +12,13 @@ export default function TermsPage() {
       <div className="max-w-3xl mx-auto px-6 py-12 md:py-20 text-[#1c1813]">
         {/* Header */}
         <div className="text-center mb-16 relative">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-[#aa9775] font-semibold mb-3 block">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-[#9c6d68] font-semibold mb-3 block">
             Agreement & terms
           </span>
           <h1 className="font-editorial text-4xl sm:text-5xl tracking-wide uppercase text-[#1c1813] mb-4">
             Terms & Conditions
           </h1>
-          <div className="w-16 h-[1px] bg-[#c5a880]/30 mx-auto mt-4" />
+          <div className="w-16 h-[1px] bg-[#cca09d]/30 mx-auto mt-4" />
         </div>
 
         {/* Content */}
@@ -34,8 +34,8 @@ export default function TermsPage() {
             Throughout these Terms & Conditions, “Anushka Chauhan”, “we”, “us”, and “our” refer to Anushka Chauhan. “You” and “your” refer to any user, visitor, or customer accessing this website.
           </p>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Your Information
             </h2>
             <p>
@@ -46,8 +46,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Payments
             </h2>
             <p>
@@ -58,8 +58,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Intellectual Property
             </h2>
             <p>
@@ -70,8 +70,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Product Information
             </h2>
             <p>
@@ -85,8 +85,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Limitation of Liability
             </h2>
             <p>
@@ -106,8 +106,8 @@ export default function TermsPage() {
             </ul>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Third-Party Links
             </h2>
             <p>
@@ -115,8 +115,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Unauthorised Use
             </h2>
             <p>
@@ -124,8 +124,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Linking to our Website
             </h2>
             <p>
@@ -133,8 +133,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Changes to these Terms
             </h2>
             <p>
@@ -142,8 +142,8 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-4 border-t border-[#c5a880]/15">
-            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#aa9775] font-bold">
+          <div className="space-y-4 pt-4 border-t border-[#cca09d]/15">
+            <h2 className="font-editorial text-lg tracking-wide uppercase text-[#9c6d68] font-bold">
               Governing Law
             </h2>
             <p>
@@ -154,12 +154,12 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-6 border-t-2 border-[#c5a880]/30 font-semibold text-xs uppercase tracking-wider">
+          <div className="space-y-4 pt-6 border-t-2 border-[#cca09d]/30 font-semibold text-xs uppercase tracking-wider">
             <h2 className="font-editorial text-lg tracking-wide uppercase text-[#1c1813] font-bold normal-case mb-2">
               Contact Details
             </h2>
-            <p>Email: <a href="mailto:business@anushkachauhan.com" className="underline hover:text-[#aa9775] transition-colors">business@anushkachauhan.com</a></p>
-            <p>Phone: <a href="tel:+919041588678" className="underline hover:text-[#aa9775] transition-colors">+91 9041588678</a></p>
+            <p>Email: <a href="mailto:business@anushkachauhan.com" className="underline hover:text-[#9c6d68] transition-colors">business@anushkachauhan.com</a></p>
+            <p>Phone: <a href="tel:+919041588678" className="underline hover:text-[#9c6d68] transition-colors">+91 9041588678</a></p>
           </div>
         </div>
       </div>

@@ -79,7 +79,7 @@ export default function Instagram() {
   return (
     <section
       id="instagram"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#c5a880]/10"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#cca09d]/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -107,7 +107,7 @@ export default function Instagram() {
               href="https://www.instagram.com/anushkachauhanlabel?igsh=dmZuNGU2bml0eWNq"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${post.gridClass} group relative overflow-hidden border border-[#c5a880]/10`}
+              className={`${post.gridClass} group relative overflow-hidden border border-[#cca09d]/10`}
             >
               {/* Image */}
               <img
@@ -133,7 +133,7 @@ export default function Instagram() {
               </div>
 
               {/* Gold borders on hover */}
-              <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/20 transition-all duration-[1s] pointer-events-none z-20" />
+              <div className="absolute inset-3 border border-[#cca09d]/0 group-hover:border-[#cca09d]/20 transition-all duration-[1s] pointer-events-none z-20" />
             </motion.a>
           ))}
         </div>

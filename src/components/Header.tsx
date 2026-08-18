@@ -33,7 +33,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isScrolled
-          ? "bg-[#f5ebd9]/90 backdrop-blur-md py-4 border-b border-[#c5a880]/15 shadow-sm"
+          ? "bg-[#f5ebd9]/90 backdrop-blur-md py-4 border-b border-[#cca09d]/15 shadow-sm"
           : "bg-transparent py-6"
           }`}
       >
@@ -44,7 +44,7 @@ export default function Header() {
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className={`md:hidden transition-colors duration-300 ${
-                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+                isScrolled ? "text-[#1c1813] hover:text-[#9c6d68]" : "text-white hover:text-[#e8d6b3]"
               }`}
               aria-label="Open menu"
             >
@@ -58,12 +58,12 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   className={`text-[11px] uppercase tracking-[0.25em] transition-colors duration-500 relative group py-2 font-bold ${
-                    isScrolled ? "text-[#1c1813]/85 hover:text-[#aa9775]" : "text-white/95 hover:text-[#e8d6b3]"
+                    isScrolled ? "text-[#1c1813]/85 hover:text-[#9c6d68]" : "text-white/95 hover:text-[#e8d6b3]"
                   }`}
                 >
                   {link.name}
                   <span className={`absolute bottom-0 left-0 w-0 h-[1px] transition-all duration-500 group-hover:w-full ${
-                    isScrolled ? "bg-[#aa9775]" : "bg-[#e8d6b3]"
+                    isScrolled ? "bg-[#9c6d68]" : "bg-[#e8d6b3]"
                   }`} />
                 </a>
               ))}
@@ -76,18 +76,18 @@ export default function Header() {
               <img
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
-                className={`rounded-full border border-[#aa9775]/25 object-cover transition-all duration-700 group-hover:scale-105 ${
+                className={`rounded-full border border-[#9c6d68]/25 object-cover transition-all duration-700 group-hover:scale-105 ${
                   isScrolled ? "h-11 w-11 md:h-14 md:w-14" : "h-16 w-16 md:h-20 md:w-20"
                 }`}
               />
               <div className="flex flex-col items-center text-center mt-2">
                 <span className={`font-editorial text-[9px] md:text-[13px] tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-none ${
-                  isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
+                  isScrolled ? "text-[#1c1813] group-hover:text-[#9c6d68]" : "text-white group-hover:text-[#e8d6b3]"
                 }`}>
                   ANUSHKA CHAUHAN
                 </span>
                 <span className={`text-[5px] md:text-[7.5px] tracking-[0.35em] font-bold mt-1 uppercase transition-colors duration-700 ${
-                  isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
+                  isScrolled ? "text-[#9c6d68] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
                 }`}>
                   HERITAGE COUTURE
                 </span>
@@ -99,7 +99,7 @@ export default function Header() {
           <div className="flex-grow flex-1 flex items-center justify-end space-x-6 md:space-x-8">
             <button
               className={`transition-colors duration-300 hidden sm:block ${
-                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+                isScrolled ? "text-[#1c1813] hover:text-[#9c6d68]" : "text-white hover:text-[#e8d6b3]"
               }`}
               aria-label="Search collection"
             >
@@ -107,7 +107,7 @@ export default function Header() {
             </button>
             <button
               className={`transition-colors duration-300 relative hidden sm:block ${
-                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+                isScrolled ? "text-[#1c1813] hover:text-[#9c6d68]" : "text-white hover:text-[#e8d6b3]"
               }`}
               aria-label="Profile"
             >
@@ -115,7 +115,7 @@ export default function Header() {
             </button>
             <button
               className={`transition-colors duration-300 flex items-center relative ${
-                isScrolled ? "text-[#1c1813] hover:text-[#aa9775]" : "text-white hover:text-[#e8d6b3]"
+                isScrolled ? "text-[#1c1813] hover:text-[#9c6d68]" : "text-white hover:text-[#e8d6b3]"
               }`}
               aria-label="Shopping Bag"
               onClick={openCart}
@@ -142,12 +142,12 @@ export default function Header() {
             className="fixed inset-0 bg-[#f5ebd9] z-50 flex flex-col justify-between p-8 md:hidden"
           >
             {/* Header in Overlay */}
-            <div className="flex items-center justify-between border-b border-[#c5a880]/15 pb-4 w-full">
+            <div className="flex items-center justify-between border-b border-[#cca09d]/15 pb-4 w-full">
               <div className="flex items-center gap-3">
                 <img
                   src="/logo.jpg"
                   alt="Anushka Chauhan Logo"
-                  className="h-12 w-12 rounded-full border border-[#aa9775]/20 object-cover"
+                  className="h-12 w-12 rounded-full border border-[#9c6d68]/20 object-cover"
                 />
                 <span className="font-editorial text-base tracking-[0.2em] text-[#1c1813] uppercase font-semibold">
                   ANUSHKA CHAUHAN
@@ -155,7 +155,7 @@ export default function Header() {
               </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[#1c1813] hover:text-[#aa9775] transition-colors"
+                className="text-[#1c1813] hover:text-[#9c6d68] transition-colors"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -172,7 +172,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg uppercase tracking-[0.3em] font-editorial text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300"
+                  className="text-lg uppercase tracking-[0.3em] font-editorial text-[#1c1813] hover:text-[#9c6d68] transition-colors duration-300"
                 >
                   {link.name}
                 </motion.a>
@@ -180,11 +180,11 @@ export default function Header() {
             </nav>
 
             {/* Footer in Overlay */}
-            <div className="text-center border-t border-[#c5a880]/15 pt-6 flex flex-col items-center">
+            <div className="text-center border-t border-[#cca09d]/15 pt-6 flex flex-col items-center">
               <p className="text-[9px] uppercase tracking-[0.3em] text-[#1c1813]/60 mb-1">
                 Anushka Chauhan Couture
               </p>
-              <p className="text-[8px] uppercase tracking-[0.5em] text-[#aa9775]">
+              <p className="text-[8px] uppercase tracking-[0.5em] text-[#9c6d68]">
                 Handcrafted in India
               </p>
             </div>

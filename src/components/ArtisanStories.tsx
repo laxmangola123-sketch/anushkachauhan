@@ -37,7 +37,7 @@ export default function ArtisanStories() {
   return (
     <section
       id="stories"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#c5a880]/10"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#cca09d]/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
@@ -65,7 +65,7 @@ export default function ArtisanStories() {
               key={artisan.name}
               className={`flex flex-col ${
                 idx % 2 === 1 ? "lg:mt-16" : ""
-              } bg-[#ece2ce]/20 border border-[#c5a880]/10 p-6 md:p-10 relative overflow-hidden group`}
+              } bg-[#ece2ce]/20 border border-[#cca09d]/10 p-6 md:p-10 relative overflow-hidden group`}
             >
               {/* Gold light effect on hover */}
               <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
@@ -73,13 +73,13 @@ export default function ArtisanStories() {
               {/* Top Details */}
               <div className="flex flex-col md:flex-row md:items-start gap-8 mb-8">
                 {/* Portrait Image */}
-                <div className="w-full md:w-44 aspect-[3/4] overflow-hidden border border-[#c5a880]/20 flex-shrink-0 relative">
+                <div className="w-full md:w-44 aspect-[3/4] overflow-hidden border border-[#cca09d]/20 flex-shrink-0 relative">
                   <img
                     src={artisan.imageUrl}
                     alt={artisan.name}
                     className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-[1.5s]"
                   />
-                  <div className="absolute inset-0 bg-[#c5a880]/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-1000" />
+                  <div className="absolute inset-0 bg-[#cca09d]/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-1000" />
                 </div>
 
                 {/* Artisan Identity */}
@@ -106,7 +106,7 @@ export default function ArtisanStories() {
                   {artisan.story}
                 </p>
                 
-                <div className="border-t border-[#c5a880]/15 pt-6 mt-4">
+                <div className="border-t border-[#cca09d]/15 pt-6 mt-4">
                   <p className="font-editorial italic text-gold text-base md:text-lg leading-relaxed pl-4 border-l border-gold/30">
                     &quot;{artisan.quote}&quot;
                   </p>
@@ -114,7 +114,7 @@ export default function ArtisanStories() {
               </div>
 
               {/* Editorial Frame Border */}
-              <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/10 transition-all duration-1000 pointer-events-none" />
+              <div className="absolute inset-3 border border-[#cca09d]/0 group-hover:border-[#cca09d]/10 transition-all duration-1000 pointer-events-none" />
             </motion.div>
           ))}
         </div>

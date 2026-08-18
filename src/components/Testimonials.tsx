@@ -45,7 +45,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 overflow-hidden border-b border-[#c5a880]/10 relative"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 overflow-hidden border-b border-[#cca09d]/10 relative"
     >
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <Quote size={40} strokeWidth={1} className="text-gold/45 mx-auto mb-10" />

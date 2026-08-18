@@ -65,7 +65,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center bg-[#12011b]">
+    <section className="relative h-screen w-full overflow-hidden flex items-center bg-[#1c0d0e]">
       {/* Background Slides */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence initial={false} custom={direction}>

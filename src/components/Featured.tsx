@@ -59,7 +59,7 @@ export default function Featured() {
   return (
     <section
       id="featured-collection"
-      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#c5a880]/10"
+      className="bg-[#f5ebd9] py-24 md:py-36 px-6 md:px-12 border-b border-[#cca09d]/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -85,7 +85,7 @@ export default function Featured() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8 }}
               key={product.id}
-              className="group flex flex-col bg-[#ece2ce]/30 border border-[#c5a880]/10 overflow-hidden relative"
+              className="group flex flex-col bg-[#ece2ce]/30 border border-[#cca09d]/10 overflow-hidden relative"
               onMouseEnter={() => setHoveredCard(product.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -134,7 +134,7 @@ export default function Featured() {
               </div>
 
               {/* Product Info */}
-              <div className="p-6 flex flex-col flex-grow justify-between border-t border-[#c5a880]/15">
+              <div className="p-6 flex flex-col flex-grow justify-between border-t border-[#cca09d]/15">
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-light mb-1 block">
                     {product.category}
@@ -153,7 +153,7 @@ export default function Featured() {
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between border-t border-[#c5a880]/10 pt-4 mt-2">
+                <div className="flex items-center justify-between border-t border-[#cca09d]/10 pt-4 mt-2">
                   <span className="font-editorial text-cream/90 text-md tracking-wider font-semibold">
                     {product.price}
                   </span>

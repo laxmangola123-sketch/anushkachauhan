@@ -59,7 +59,7 @@ export default function Craftsmanship() {
       </div>
 
       {/* Minimal Gold Border framing */}
-      <div className="absolute inset-6 border border-[#c5a880]/15 pointer-events-none z-10" />
+      <div className="absolute inset-6 border border-[#cca09d]/15 pointer-events-none z-10" />
     </section>
   );
 }

@@ -34,7 +34,7 @@ const collections: CollectionSection[] = [
         subtitle: "Midnight Luxury",
         description: "Draped in obsidian darkness — where every thread whispers of forbidden elegance and timeless power.",
         icon: <Gem size={18} />,
-        accentColor: "#c5a880",
+        accentColor: "#cca09d",
         bgColor: "#0d0a07",
         items: [
             { id: "sar-2", name: "Midnight Velvet Saree", type: "Saree", fabric: "Black Silk Velvet", price: "₹1,85,000", imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop" },
@@ -152,11 +152,11 @@ export default function RoyalCollections() {
                 {/* Top gold border */}
                 <div
                     className="absolute top-0 left-0 right-0 h-[1px]"
-                    style={{ background: "linear-gradient(90deg, transparent, #c5a880 30%, #c5a88080 70%, transparent)" }}
+                    style={{ background: "linear-gradient(90deg, transparent, #cca09d 30%, #cca09d80 70%, transparent)" }}
                 />
                 <div
                     className="absolute bottom-0 left-0 right-0 h-[1px]"
-                    style={{ background: "linear-gradient(90deg, transparent, #c5a880 30%, #c5a88080 70%, transparent)" }}
+                    style={{ background: "linear-gradient(90deg, transparent, #cca09d 30%, #cca09d80 70%, transparent)" }}
                 />
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -168,7 +168,7 @@ export default function RoyalCollections() {
                         transition={{ duration: 1 }}
                         className="text-center mb-16 md:mb-20"
                     >
-                        <span className="text-[10px] uppercase tracking-[0.6em] text-[#c5a880] font-light mb-4 block">
+                        <span className="text-[10px] uppercase tracking-[0.6em] text-[#cca09d] font-light mb-4 block">
                             The Royal Edit
                         </span>
                         <h2
@@ -177,8 +177,8 @@ export default function RoyalCollections() {
                         >
                             Explore Collections
                         </h2>
-                        <div className="w-20 h-[1px] mx-auto mb-6" style={{ background: "#c5a880" }} />
-                        <p className="text-[#c5a880]/60 text-xs uppercase tracking-[0.3em] max-w-xl mx-auto font-light">
+                        <div className="w-20 h-[1px] mx-auto mb-6" style={{ background: "#cca09d" }} />
+                        <p className="text-[#cca09d]/60 text-xs uppercase tracking-[0.3em] max-w-xl mx-auto font-light">
                             Four worlds of couture — each a universe of heritage, craft, and uncompromising luxury
                         </p>
                     </motion.div>
@@ -194,8 +194,8 @@ export default function RoyalCollections() {
                                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                                 onClick={() => setActiveCollection(col.id)}
                                 className={`group relative px-5 md:px-8 py-3 md:py-4 text-[9px] md:text-[10px] uppercase tracking-[0.35em] font-light transition-all duration-500 flex items-center gap-2 border ${activeCollection === col.id
-                                    ? "border-[#c5a880] text-[#f0e6d3] bg-[#c5a880]/10"
-                                    : "border-[#c5a880]/20 text-[#c5a880]/50 hover:border-[#c5a880]/50 hover:text-[#c5a880]/80"
+                                    ? "border-[#cca09d] text-[#f0e6d3] bg-[#cca09d]/10"
+                                    : "border-[#cca09d]/20 text-[#cca09d]/50 hover:border-[#cca09d]/50 hover:text-[#cca09d]/80"
                                     }`}
                             >
                                 <span
@@ -235,7 +235,7 @@ export default function RoyalCollections() {
                                     {active.title}
                                 </h3>
                             </div>
-                            <p className="text-[#c5a880]/50 text-xs uppercase tracking-[0.2em] font-light max-w-sm leading-relaxed">
+                            <p className="text-[#cca09d]/50 text-xs uppercase tracking-[0.2em] font-light max-w-sm leading-relaxed">
                                 {active.description}
                             </p>
                         </div>
@@ -297,7 +297,7 @@ export default function RoyalCollections() {
                                         <h4 className="text-[#f0e6d3]/80 text-xs md:text-sm font-light tracking-wide mb-2 leading-snug">
                                             {item.name}
                                         </h4>
-                                        <p className="text-[8px] text-[#c5a880]/40 uppercase tracking-[0.2em] mb-3 font-light">
+                                        <p className="text-[8px] text-[#cca09d]/40 uppercase tracking-[0.2em] mb-3 font-light">
                                             {item.fabric}
                                         </p>
                                         <div className="flex items-center justify-between">

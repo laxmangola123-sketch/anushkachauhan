@@ -95,7 +95,7 @@ export default function NewArrivals() {
       <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       <section
         id="new-arrivals"
-        className="bg-[#f5ebd9] py-24 md:py-36 pl-6 md:pl-12 overflow-hidden border-b border-[#c5a880]/10"
+        className="bg-[#f5ebd9] py-24 md:py-36 pl-6 md:pl-12 overflow-hidden border-b border-[#cca09d]/10"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between pr-6 md:pr-12 mb-16">
           {/* Title details */}
@@ -112,14 +112,14 @@ export default function NewArrivals() {
           <div className="flex space-x-4 mt-6 md:mt-0">
             <button
               onClick={() => scroll("left")}
-              className="w-12 h-12 rounded-full border border-[#c5a880]/20 flex items-center justify-center text-cream hover:bg-gold hover:text-[#f5ebd9] hover:border-gold transition-all duration-500"
+              className="w-12 h-12 rounded-full border border-[#cca09d]/20 flex items-center justify-center text-cream hover:bg-gold hover:text-[#f5ebd9] hover:border-gold transition-all duration-500"
               aria-label="Previous items"
             >
               <ArrowLeft size={16} strokeWidth={1.5} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-12 h-12 rounded-full border border-[#c5a880]/20 flex items-center justify-center text-cream hover:bg-gold hover:text-[#f5ebd9] hover:border-gold transition-all duration-500"
+              className="w-12 h-12 rounded-full border border-[#cca09d]/20 flex items-center justify-center text-cream hover:bg-gold hover:text-[#f5ebd9] hover:border-gold transition-all duration-500"
               aria-label="Next items"
             >
               <ArrowRight size={16} strokeWidth={1.5} />
@@ -140,7 +140,7 @@ export default function NewArrivals() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               key={product.id}
-              className="w-72 sm:w-80 flex-shrink-0 bg-[#ece2ce]/20 border border-[#c5a880]/10 overflow-hidden relative group cursor-pointer"
+              className="w-72 sm:w-80 flex-shrink-0 bg-[#ece2ce]/20 border border-[#cca09d]/10 overflow-hidden relative group cursor-pointer"
               onClick={() => handleClick(product.id)}
             >
               {/* Image Box */}
@@ -158,7 +158,7 @@ export default function NewArrivals() {
               </div>
 
               {/* Product Meta */}
-              <div className="p-6 border-t border-[#c5a880]/15 flex flex-col justify-between">
+              <div className="p-6 border-t border-[#cca09d]/15 flex flex-col justify-between">
                 <div>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-gold font-light mb-1 block">
                     {product.category}
@@ -167,7 +167,7 @@ export default function NewArrivals() {
                     {product.name}
                   </h3>
                 </div>
-                <div className="flex items-center justify-between border-t border-[#c5a880]/10 pt-4 mt-2">
+                <div className="flex items-center justify-between border-t border-[#cca09d]/10 pt-4 mt-2">
                   <span className="font-editorial text-cream/90 text-sm tracking-wider font-semibold">
                     {product.price}
                   </span>
@@ -178,7 +178,7 @@ export default function NewArrivals() {
               </div>
 
               {/* Luxury overlay borders */}
-              <div className="absolute inset-3 border border-[#c5a880]/0 group-hover:border-[#c5a880]/15 transition-all duration-[0.8s] pointer-events-none" />
+              <div className="absolute inset-3 border border-[#cca09d]/0 group-hover:border-[#cca09d]/15 transition-all duration-[0.8s] pointer-events-none" />
             </motion.div>
           ))}
         </div>

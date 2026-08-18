@@ -8,10 +8,10 @@ import { ArrowRight } from "lucide-react";
 
 // Elegant Floral Divider Component
 const FloralDivider = () => (
-  <div className="flex items-center justify-center gap-3 w-full my-6 text-[#aa9775]">
-    <div className="h-[0.5px] bg-[#aa9775]/40 w-16" />
+  <div className="flex items-center justify-center gap-3 w-full my-6 text-[#9c6d68]">
+    <div className="h-[0.5px] bg-[#9c6d68]/40 w-16" />
     <span className="text-[10px]">&#10048;</span>
-    <div className="h-[0.5px] bg-[#aa9775]/40 w-16" />
+    <div className="h-[0.5px] bg-[#9c6d68]/40 w-16" />
   </div>
 );
 
@@ -65,7 +65,7 @@ export default function AboutContent() {
       answer: (
         <span>
           Email us at{" "}
-          <a href="mailto:care@anushkachauhan.in" className="underline hover:text-[#aa9775] transition-colors duration-300 font-semibold">
+          <a href="mailto:care@anushkachauhan.in" className="underline hover:text-[#9c6d68] transition-colors duration-300 font-semibold">
             care@anushkachauhan.in
           </a>{" "}
           or reach us on WhatsApp at{" "}
@@ -73,7 +73,7 @@ export default function AboutContent() {
             href="https://wa.me/919041588678"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-[#aa9775] transition-colors duration-300 font-semibold"
+            className="underline hover:text-[#9c6d68] transition-colors duration-300 font-semibold"
           >
             +91-9041588678
           </a>
@@ -88,9 +88,9 @@ export default function AboutContent() {
       <div className="max-w-6xl mx-auto px-6 py-8 md:py-16 text-[#1c1813]">
         
         {/* Section 1: ABOUT US (Header Card & Hero Portrait) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-[#c5a880]/20 bg-[#eedec8]/5 rounded-sm overflow-hidden mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-[#cca09d]/20 bg-[#eedec8]/5 rounded-sm overflow-hidden mb-24">
           {/* Brand Intro Card */}
-          <div className="flex flex-col justify-center items-center p-8 sm:p-12 md:p-16 text-center bg-[#fdfaf4]/30 relative border-b lg:border-b-0 lg:border-r border-[#c5a880]/10 min-h-[450px]">
+          <div className="flex flex-col justify-center items-center p-8 sm:p-12 md:p-16 text-center bg-[#fdfaf4]/30 relative border-b lg:border-b-0 lg:border-r border-[#cca09d]/10 min-h-[450px]">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,14 +101,14 @@ export default function AboutContent() {
               <img
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
-                className="w-28 h-28 rounded-full border border-[#aa9775]/25 object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
+                className="w-28 h-28 rounded-full border border-[#9c6d68]/25 object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
               />
               
               {/* Increased font sizes here */}
               <h2 className="font-editorial text-2xl tracking-[0.25em] text-[#1c1813] uppercase font-bold mt-3">
                 ANUSHKA CHAUHAN
               </h2>
-              <span className="text-[10px] tracking-[0.45em] text-[#aa9775] font-bold uppercase mt-1.5">
+              <span className="text-[10px] tracking-[0.45em] text-[#9c6d68] font-bold uppercase mt-1.5">
                 HERITAGE COUTURE
               </span>
 
@@ -121,10 +121,10 @@ export default function AboutContent() {
 
               {/* Increased Hindi poetical text size to text-xl / sm:text-2xl */}
               <div className="space-y-2 mt-2">
-                <p className="font-editorial text-xl sm:text-2xl text-[#aa9775] tracking-wide leading-relaxed font-semibold">
+                <p className="font-editorial text-xl sm:text-2xl text-[#9c6d68] tracking-wide leading-relaxed font-semibold">
                   भारत की विरासत से प्रेरित,
                 </p>
-                <p className="font-editorial text-xl sm:text-2xl text-[#aa9775] tracking-wide leading-relaxed font-semibold">
+                <p className="font-editorial text-xl sm:text-2xl text-[#9c6d68] tracking-wide leading-relaxed font-semibold">
                   आज की स्त्री के लिए रचा गया।
                 </p>
               </div>
@@ -140,7 +140,7 @@ export default function AboutContent() {
               alt="Model in Luxury Ivory Heritage Couture"
               className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-[2.5s] ease-out brightness-[0.98]"
             />
-            <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+            <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
           </div>
         </div>
 
@@ -189,7 +189,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 key={idx}
-                className="border border-[#c5a880]/15 p-1 sm:p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
+                className="border border-[#cca09d]/15 p-1 sm:p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
               >
                 <div className="w-full h-full overflow-hidden relative">
                   <img
@@ -197,7 +197,7 @@ export default function AboutContent() {
                     alt={img.alt}
                     className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.8s] ease-out brightness-95"
                   />
-                  <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+                  <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
                 </div>
               </motion.div>
             ))}
@@ -212,7 +212,7 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="md:col-span-4 border border-[#c5a880]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm flex flex-col aspect-[3/4] overflow-hidden group justify-between"
+            className="md:col-span-4 border border-[#cca09d]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm flex flex-col aspect-[3/4] overflow-hidden group justify-between"
           >
             <div className="w-full h-full overflow-hidden relative">
               <img
@@ -220,7 +220,7 @@ export default function AboutContent() {
                 alt="Bridal Lehenga Mannequin Setup"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.8s] ease-out brightness-95"
               />
-              <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
             </div>
           </motion.div>
 
@@ -230,7 +230,7 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="md:col-span-4 border border-[#c5a880]/15 p-8 flex flex-col justify-center items-center text-center bg-[#fdfbf7] shadow-sm rounded-sm relative"
+            className="md:col-span-4 border border-[#cca09d]/15 p-8 flex flex-col justify-center items-center text-center bg-[#fdfbf7] shadow-sm rounded-sm relative"
           >
             {/* Increased title to text-2xl */}
             <h3 className="font-editorial text-2xl text-[#1c1813] font-bold tracking-[0.15em] uppercase">
@@ -251,7 +251,7 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="md:col-span-4 border border-[#c5a880]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm flex flex-col aspect-[3/4] overflow-hidden group justify-between"
+            className="md:col-span-4 border border-[#cca09d]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm flex flex-col aspect-[3/4] overflow-hidden group justify-between"
           >
             <div className="w-full h-full overflow-hidden relative">
               <img
@@ -259,7 +259,7 @@ export default function AboutContent() {
                 alt="Luxury Couture Sketches and Swatches"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.8s] ease-out brightness-95"
               />
-              <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
             </div>
           </motion.div>
         </div>
@@ -272,7 +272,7 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="md:col-span-3 border border-[#c5a880]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
+            className="md:col-span-3 border border-[#cca09d]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
           >
             <div className="w-full h-full overflow-hidden relative">
               <img
@@ -280,7 +280,7 @@ export default function AboutContent() {
                 alt="Luxury Floral Gold Embroidery Close Up"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.8s] ease-out brightness-95"
               />
-              <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
             </div>
           </motion.div>
 
@@ -302,7 +302,7 @@ export default function AboutContent() {
 
               {/* Increased quote and paragraph text sizes */}
               <div className="space-y-4 max-w-md">
-                <p className="font-editorial text-base sm:text-lg italic text-[#aa9775] leading-relaxed">
+                <p className="font-editorial text-base sm:text-lg italic text-[#9c6d68] leading-relaxed">
                   Heritage is not something we simply preserve. It is something we continue to create.
                 </p>
                 <p className="text-sm sm:text-base font-light text-[#1c1813]/85 leading-relaxed">
@@ -313,7 +313,7 @@ export default function AboutContent() {
               <FloralDivider />
 
               {/* Increased footer note text to text-xs / sm:text-sm */}
-              <div className="text-xs sm:text-sm tracking-[0.3em] font-bold text-[#aa9775]/90 space-y-1.5 mt-2">
+              <div className="text-xs sm:text-sm tracking-[0.3em] font-bold text-[#9c6d68]/90 space-y-1.5 mt-2">
                 <p>MADE IN INDIA.</p>
                 <p>INSPIRED BY ITS HERITAGE.</p>
                 <p>CREATED FOR GENERATIONS TO COME.</p>
@@ -327,7 +327,7 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="md:col-span-3 border border-[#c5a880]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
+            className="md:col-span-3 border border-[#cca09d]/15 p-1.5 bg-[#fcf9f2] shadow-sm rounded-sm aspect-[3/4] overflow-hidden group"
           >
             <div className="w-full h-full overflow-hidden relative">
               <img
@@ -335,22 +335,22 @@ export default function AboutContent() {
                 alt="White Mogra Flowers in Brass Bowl next to Banarasi Silk"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[1.8s] ease-out brightness-95"
               />
-              <div className="absolute inset-0 bg-[#aa9775]/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#9c6d68]/5 pointer-events-none" />
             </div>
           </motion.div>
         </div>
 
         {/* Section 4.5: SHIPPING & PAYMENT */}
-        <div className="border-t border-[#c5a880]/20 pt-20 mt-20 max-w-6xl mx-auto">
+        <div className="border-t border-[#cca09d]/20 pt-20 mt-20 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-editorial text-4xl sm:text-5xl tracking-[0.15em] text-[#1c1813] font-bold uppercase">
               SHIPPING & PAYMENT
             </h2>
-            <span className="text-xs uppercase tracking-[0.35em] text-[#aa9775] font-bold mt-2 block">
+            <span className="text-xs uppercase tracking-[0.35em] text-[#9c6d68] font-bold mt-2 block">
               Policies, Timelines & Terms
             </span>
             <div className="flex justify-center mt-4">
-              <div className="h-[0.5px] bg-[#aa9775]/30 w-16" />
+              <div className="h-[0.5px] bg-[#9c6d68]/30 w-16" />
             </div>
             <p className="text-sm sm:text-base font-light text-[#1c1813]/85 leading-relaxed max-w-2xl mx-auto mt-6">
               We are pleased to offer complimentary worldwide shipping on all Anushka Chauhan orders.
@@ -364,11 +364,11 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+              className="border border-[#cca09d]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
             >
-              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#cca09d]/10 flex items-center justify-between">
                 <span>SHIPPING</span>
-                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Complimentary</span>
+                <span className="text-[10px] text-[#9c6d68] font-sans tracking-[0.2em] font-bold">Complimentary</span>
               </h3>
               <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
                 <p>
@@ -386,11 +386,11 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+              className="border border-[#cca09d]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
             >
-              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#cca09d]/10 flex items-center justify-between">
                 <span>TAXES & DUTIES</span>
-                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Information</span>
+                <span className="text-[10px] text-[#9c6d68] font-sans tracking-[0.2em] font-bold">Information</span>
               </h3>
               <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
                 <p>
@@ -411,15 +411,15 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+              className="border border-[#cca09d]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
             >
-              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#cca09d]/10 flex items-center justify-between">
                 <span>PAYMENTS</span>
                 <span className="text-[10px] text-red-700/80 font-sans tracking-[0.2em] font-bold">No COD</span>
               </h3>
               <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
                 <p>
-                  All payments made on <a href="https://anuskhachauhan.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#aa9775] font-medium">anuskhachauhan.com</a> are processed securely through trusted third-party payment providers.
+                  All payments made on <a href="https://anuskhachauhan.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#9c6d68] font-medium">anuskhachauhan.com</a> are processed securely through trusted third-party payment providers.
                 </p>
                 <p>
                   Anushka Chauhan may use payment gateways including Razorpay, PayPal, and other authorised payment providers. By completing a purchase, you agree to the terms and policies of the respective payment service provider.
@@ -442,11 +442,11 @@ export default function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+              className="border border-[#cca09d]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
             >
-              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#cca09d]/10 flex items-center justify-between">
                 <span>DELIVERY TIMELINES</span>
-                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Bespoke</span>
+                <span className="text-[10px] text-[#9c6d68] font-sans tracking-[0.2em] font-bold">Bespoke</span>
               </h3>
               <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
                 <p>
@@ -467,38 +467,38 @@ export default function AboutContent() {
         </div>
 
         {/* Section 5: FAQs (Frequently Asked Questions Accordion) */}
-        <div className="border-t border-[#c5a880]/20 pt-20 mt-20 max-w-4xl mx-auto">
+        <div className="border-t border-[#cca09d]/20 pt-20 mt-20 max-w-4xl mx-auto">
           <div className="text-center mb-12">
             {/* Increased FAQ main title size to text-4xl/5xl */}
             <h2 className="font-editorial text-4xl sm:text-5xl tracking-[0.15em] text-[#1c1813] font-bold uppercase">
               FAQs
             </h2>
             {/* Increased FAQ subtitle size to text-xs */}
-            <span className="text-xs uppercase tracking-[0.35em] text-[#aa9775] font-bold mt-2 block">
+            <span className="text-xs uppercase tracking-[0.35em] text-[#9c6d68] font-bold mt-2 block">
               Frequently Asked Questions
             </span>
             <div className="flex justify-center mt-4">
-              <div className="h-[0.5px] bg-[#aa9775]/30 w-16" />
+              <div className="h-[0.5px] bg-[#9c6d68]/30 w-16" />
             </div>
           </div>
 
-          <div className="border-t border-[#c5a880]/15">
+          <div className="border-t border-[#cca09d]/15">
             {faqData.map((faq, index) => {
               const isOpen = openFAQIndex === index;
               return (
-                <div key={index} className="border-b border-[#c5a880]/15 py-5">
+                <div key={index} className="border-b border-[#cca09d]/15 py-5">
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left group cursor-pointer focus:outline-none"
                   >
                     {/* Increased FAQ question size to text-lg/xl */}
-                    <span className="font-editorial text-lg sm:text-xl text-[#1c1813] group-hover:text-[#aa9775] transition-colors duration-300 pr-4 font-semibold">
+                    <span className="font-editorial text-lg sm:text-xl text-[#1c1813] group-hover:text-[#9c6d68] transition-colors duration-300 pr-4 font-semibold">
                       {faq.question}
                     </span>
                     <span className="relative w-4 h-4 flex items-center justify-center shrink-0">
-                      <span className="absolute w-4 h-[1px] bg-[#aa9775] transition-transform duration-300" />
+                      <span className="absolute w-4 h-[1px] bg-[#9c6d68] transition-transform duration-300" />
                       <span
-                        className={`absolute w-4 h-[1px] bg-[#aa9775] transition-transform duration-300 ${
+                        className={`absolute w-4 h-[1px] bg-[#9c6d68] transition-transform duration-300 ${
                           isOpen ? "rotate-0" : "rotate-90"
                         }`}
                       />
@@ -533,7 +533,7 @@ export default function AboutContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mt-24 p-8 md:p-12 border border-[#c5a880]/20 bg-[#eedec8]/10 text-center space-y-6 rounded-sm"
+          className="mt-24 p-8 md:p-12 border border-[#cca09d]/20 bg-[#eedec8]/10 text-center space-y-6 rounded-sm"
         >
           {/* Increased Consultation CTA title to text-3xl/4xl */}
           <h3 className="font-editorial text-3xl sm:text-4xl text-[#1c1813] tracking-wide font-bold">
@@ -547,7 +547,7 @@ export default function AboutContent() {
           <div className="pt-2">
             <Link
               href="/pages/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-[#1c1813] hover:border-[#aa9775] bg-[#1c1813] hover:bg-[#aa9775] text-[#f5ebd9] transition-all text-sm uppercase tracking-[0.25em] font-bold rounded-sm cursor-pointer shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[#1c1813] hover:border-[#9c6d68] bg-[#1c1813] hover:bg-[#9c6d68] text-[#f5ebd9] transition-all text-sm uppercase tracking-[0.25em] font-bold rounded-sm cursor-pointer shadow-md"
             >
               Contact Our Studio <ArrowRight size={14} />
             </Link>

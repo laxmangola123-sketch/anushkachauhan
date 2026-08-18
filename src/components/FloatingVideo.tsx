@@ -80,7 +80,7 @@ export default function FloatingVideo() {
             className="fixed inset-0 bg-[#f5ebd9]/98 z-[100] flex items-center justify-center p-6 md:p-12"
           >
             {/* Modal Container */}
-            <div className="relative w-full max-w-5xl aspect-video border border-[#c5a880]/30 shadow-2xl bg-black overflow-hidden flex items-center justify-center">
+            <div className="relative w-full max-w-5xl aspect-video border border-[#cca09d]/30 shadow-2xl bg-black overflow-hidden flex items-center justify-center">
               {/* Main Full Story Video */}
               <video
                 autoPlay
@@ -93,7 +93,7 @@ export default function FloatingVideo() {
               </video>
 
               {/* Gold border frame overlay */}
-              <div className="absolute inset-4 border border-[#c5a880]/15 pointer-events-none" />
+              <div className="absolute inset-4 border border-[#cca09d]/15 pointer-events-none" />
 
               {/* Close Button */}
               <button

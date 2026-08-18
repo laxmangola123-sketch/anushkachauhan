@@ -58,21 +58,21 @@ const Whatsapp = ({ size = 18, ...props }: { size?: number } & React.SVGProps<SV
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5ebd9] border-t border-[#c5a880]/15 pt-20 pb-10 px-6 md:px-12 text-[#1c1813]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#c5a880]/10">
+    <footer className="bg-[#f5ebd9] border-t border-[#cca09d]/15 pt-20 pb-10 px-6 md:px-12 text-[#1c1813]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#cca09d]/10">
         {/* Column 1: Brand Intro */}
         <div className="lg:col-span-4 flex flex-col space-y-6">
           <div className="flex items-center gap-4">
             <img
               src="/logo.jpg"
               alt="Anushka Chauhan Logo"
-              className="h-24 w-auto rounded-full border border-[#aa9775]/20 object-cover"
+              className="h-24 w-auto rounded-full border border-[#9c6d68]/20 object-cover"
             />
             <div className="flex flex-col">
               <span className="font-editorial text-xl tracking-[0.1em] text-[#1c1813] uppercase font-bold">
                 Anushka Chauhan
               </span>
-              <span className="text-[10px] tracking-[0.05em] text-[#aa9775] mt-1 font-bold">
+              <span className="text-[10px] tracking-[0.05em] text-[#9c6d68] mt-1 font-bold">
                 भारत की विरासत से प्रेरित
               </span>
             </div>
@@ -81,16 +81,16 @@ export default function Footer() {
             Preserving the legacy of Indian craftsmanship and ancestral handloom techniques, Anushka Chauhan Couture weaves royal history and gold threads into modern luxury.
           </p>
           <div className="flex items-center space-x-5 pt-2">
-            <a href="https://www.instagram.com/anushkachauhanlabel?igsh=dmZuNGU2bml0eWNq" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+            <a href="https://www.instagram.com/anushkachauhanlabel?igsh=dmZuNGU2bml0eWNq" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#9c6d68] transition-colors duration-300 animate-hover">
               <Instagram size={24} strokeWidth={1.8} />
             </a>
-            <a href="https://www.facebook.com/share/1K5D4RbUSt/" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+            <a href="https://www.facebook.com/share/1K5D4RbUSt/" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#9c6d68] transition-colors duration-300 animate-hover">
               <Facebook size={24} strokeWidth={1.8} />
             </a>
-            <a href="https://wa.me/919041588678" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+            <a href="https://wa.me/919041588678" target="_blank" rel="noopener noreferrer" className="text-[#1c1813] hover:text-[#9c6d68] transition-colors duration-300 animate-hover">
               <Whatsapp size={24} strokeWidth={1.8} />
             </a>
-            <a href="mailto:business@anushkachauhan.com" className="text-[#1c1813] hover:text-[#aa9775] transition-colors duration-300 animate-hover">
+            <a href="mailto:business@anushkachauhan.com" className="text-[#1c1813] hover:text-[#9c6d68] transition-colors duration-300 animate-hover">
               <Mail size={24} strokeWidth={1.8} />
             </a>
           </div>
@@ -98,32 +98,32 @@ export default function Footer() {
 
         {/* Column 2: Collections */}
         <div className="lg:col-span-2 flex flex-col space-y-4">
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#aa9775] font-bold mb-2">
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#9c6d68] font-bold mb-2">
             Collections
           </h4>
           <ul className="space-y-2 text-xs font-bold text-[#1c1813]">
             <li>
-              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Wedding Couture
               </a>
             </li>
             <li>
-              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Festive Edit
               </a>
             </li>
             <li>
-              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Luxury Sarees
               </a>
             </li>
             <li>
-              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Lehengas
               </a>
             </li>
             <li>
-              <a href="/#collections" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#collections" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Fine Jewellery
               </a>
             </li>
@@ -132,42 +132,42 @@ export default function Footer() {
 
         {/* Column 3: Brand */}
         <div className="lg:col-span-2 flex flex-col space-y-4">
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#aa9775] font-bold mb-2">
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#9c6d68] font-bold mb-2">
             The Brand
           </h4>
           <ul className="space-y-2 text-xs font-bold text-[#1c1813]">
             <li>
-              <a href="/pages/our-journey" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/pages/our-journey" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Heritage Story
               </a>
             </li>
             <li>
-              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Artisan Stories
               </a>
             </li>
             <li>
-              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Craftsmanship
               </a>
             </li>
             <li>
-              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Sustainability
               </a>
             </li>
             <li>
-              <a href="/#our-world" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/#our-world" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Atelier Careers
               </a>
             </li>
             <li>
-              <a href="/pages/track-order" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/pages/track-order" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Track Your Order
               </a>
             </li>
             <li>
-              <a href="/pages/staff-portal" className="hover:text-[#aa9775] transition-colors duration-300">
+              <a href="/pages/staff-portal" className="hover:text-[#9c6d68] transition-colors duration-300">
                 Former Employee
               </a>
             </li>
@@ -176,26 +176,26 @@ export default function Footer() {
 
         {/* Column 4: Contact & Appointments */}
         <div className="lg:col-span-4 flex flex-col space-y-4">
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#aa9775] font-bold mb-2">
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-[#9c6d68] font-bold mb-2">
             Contact & Service
           </h4>
           <ul className="space-y-3 text-xs font-bold text-[#1c1813]">
             <li className="flex items-start gap-2.5">
-              <Mail size={14} className="text-[#aa9775] mt-0.5" strokeWidth={2} />
+              <Mail size={14} className="text-[#9c6d68] mt-0.5" strokeWidth={2} />
               <div className="flex flex-col">
-                <span className="text-[9px] uppercase tracking-wider text-[#aa9775] font-semibold mb-0.5">Customer Care</span>
-                <a href="mailto:care@anushkachauhan.in" className="hover:text-[#aa9775] transition-colors mb-2 break-all">
+                <span className="text-[9px] uppercase tracking-wider text-[#9c6d68] font-semibold mb-0.5">Customer Care</span>
+                <a href="mailto:care@anushkachauhan.in" className="hover:text-[#9c6d68] transition-colors mb-2 break-all">
                   care@anushkachauhan.in
                 </a>
-                <span className="text-[9px] uppercase tracking-wider text-[#aa9775] font-semibold mb-0.5">Couture Enquiries</span>
-                <a href="mailto:business@anushkachauhan.com" className="hover:text-[#aa9775] transition-colors break-all">
+                <span className="text-[9px] uppercase tracking-wider text-[#9c6d68] font-semibold mb-0.5">Couture Enquiries</span>
+                <a href="mailto:business@anushkachauhan.com" className="hover:text-[#9c6d68] transition-colors break-all">
                   business@anushkachauhan.com
                 </a>
               </div>
             </li>
             <li className="flex items-center gap-2.5">
-              <Phone size={14} className="text-[#aa9775]" strokeWidth={2} />
-              <a href="tel:+919041588678" className="hover:text-[#aa9775] transition-colors">
+              <Phone size={14} className="text-[#9c6d68]" strokeWidth={2} />
+              <a href="tel:+919041588678" className="hover:text-[#9c6d68] transition-colors">
                 +91-9041588678
               </a>
             </li>
@@ -203,13 +203,13 @@ export default function Footer() {
           <div className="pt-2 flex flex-wrap gap-2">
             <a
               href="/pages/contact"
-              className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#aa9775] text-[#f5ebd9] bg-[#1c1813] hover:bg-[#aa9775] hover:text-[#f5ebd9] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
+              className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#9c6d68] text-[#f5ebd9] bg-[#1c1813] hover:bg-[#9c6d68] hover:text-[#f5ebd9] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
             >
               Contact Support
             </a>
             <a
               href="/pages/contact"
-              className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#aa9775] text-[#1c1813] hover:text-[#aa9775] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
+              className="inline-block px-5 py-2.5 border border-[#1c1813] hover:border-[#9c6d68] text-[#1c1813] hover:text-[#9c6d68] transition-all text-[9px] uppercase tracking-[0.25em] font-bold"
             >
               Request Private Fit
             </a>
@@ -223,16 +223,16 @@ export default function Footer() {
           <span>© 2026 Anushka Chauhan Couture. All rights reserved.</span>
         </div>
         <div className="flex flex-wrap justify-center space-x-6">
-          <a href="/pages/privacy" className="hover:text-[#aa9775] transition-colors">
+          <a href="/pages/privacy" className="hover:text-[#9c6d68] transition-colors">
             Privacy Policy
           </a>
-          <a href="/pages/terms" className="hover:text-[#aa9775] transition-colors">
+          <a href="/pages/terms" className="hover:text-[#9c6d68] transition-colors">
             Terms & Conditions
           </a>
-          <a href="/pages/returns" className="hover:text-[#aa9775] transition-colors">
+          <a href="/pages/returns" className="hover:text-[#9c6d68] transition-colors">
             Returns & Exchanges
           </a>
-          <a href="#sitemap" className="hover:text-[#aa9775] transition-colors">
+          <a href="#sitemap" className="hover:text-[#9c6d68] transition-colors">
             Sitemap
           </a>
         </div>
