@@ -168,7 +168,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="/pages/staff-portal" className="hover:text-[#aa9775] transition-colors duration-300">
-                Staff Portal
+                Former Employee
               </a>
             </li>
           </ul>

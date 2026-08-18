@@ -701,6 +701,13 @@ Please let me know how to proceed. Thank you!`;
                                             Our concierge team will call you at <strong className="text-[#1c1813] font-bold">{form.phone}</strong> within 24 hours to confirm your custom measurements and delivery schedule.
                                         </p>
                                         
+                                        <div className="bg-[#aa9775]/10 border border-[#aa9775]/35 rounded-sm p-4 w-full text-center space-y-1 my-5">
+                                            <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#aa9775] font-bold">Important Notice</p>
+                                            <p className="text-[11px] text-[#1c1813] font-medium leading-relaxed">
+                                                Every Anushka Chauhan piece is handcrafted with exceptional care. Your order will take approximately <strong className="font-bold">45 days</strong> for delivery.
+                                            </p>
+                                        </div>
+                                        
                                         <div className="bg-[#ece2ce]/40 border border-[#c5a880]/15 p-4 rounded-sm text-left w-full mt-6 space-y-1.5">
                                             <p className="text-[8px] uppercase tracking-[0.3em] text-[#aa9775] font-bold">Delivery Address</p>
                                             <p className="text-[10px] text-[#1c1813] font-semibold leading-relaxed">

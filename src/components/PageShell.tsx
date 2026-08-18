@@ -26,22 +26,22 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
       {/* Floating Anushka's Atelier Button */}
       <button
         onClick={() => openAIStylist(null)}
-        className="fixed bottom-6 right-6 z-[99] bg-[#aa9775] text-[#f5ebd9] hover:bg-[#1c1813] hover:text-[#f5ebd9] hover:scale-105 transition-all duration-500 rounded-full shadow-2xl px-3.5 py-2 flex items-center gap-2.5 border border-[#aa9775] group cursor-pointer text-left"
+        className="fixed bottom-6 left-6 z-[99] bg-[#aa9775] text-[#f5ebd9] hover:bg-[#1c1813] hover:text-[#f5ebd9] hover:scale-105 transition-all duration-500 rounded-full shadow-2xl px-2.5 py-1.5 flex items-center gap-2 border border-[#aa9775] group cursor-pointer text-left"
       >
-        <div className="relative w-12 h-12 rounded-full border border-[#1c1813]/25 overflow-hidden shrink-0 shadow-md">
+        <div className="relative w-9 h-9 rounded-full border border-[#1c1813]/25 overflow-hidden shrink-0 shadow-md">
           <img
             src="/couture-assistant.jpg"
             alt="Anushka's Atelier Stylist Avatar"
             className="w-full h-full object-cover scale-105"
           />
           {/* Green active dot */}
-          <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#aa9775] rounded-full" />
+          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#aa9775] rounded-full" />
         </div>
         <div className="flex flex-col">
-          <div className="flex items-center gap-1 font-bold tracking-[0.18em] text-[8.5px] uppercase text-[#1c1813] group-hover:text-[#f5ebd9] transition-colors duration-500">
+          <div className="flex items-center gap-1 font-bold tracking-[0.18em] text-[8px] uppercase text-[#1c1813] group-hover:text-[#f5ebd9] transition-colors duration-500">
             Anushka&apos;s Atelier
           </div>
-          <span className="text-[6.5px] tracking-[0.05em] text-[#1c1813]/70 group-hover:text-[#f5ebd9]/70 font-semibold uppercase font-sans mt-0.5 transition-colors duration-500">
+          <span className="text-[6px] tracking-[0.05em] text-[#1c1813]/70 group-hover:text-[#f5ebd9]/70 font-semibold uppercase font-sans mt-0.5 transition-colors duration-500">
             Couture Assistant
           </span>
         </div>

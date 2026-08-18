@@ -26,7 +26,7 @@ export default function Header() {
     { name: "Shop", href: "/#collections" },
     { name: "About Us", href: "/about-anushka-chauhan" },
     { name: "Track Order", href: "/pages/track-order" },
-    { name: "Staff Portal", href: "/pages/staff-portal" },
+    { name: "Former Employee", href: "/pages/staff-portal" },
   ];
 
   return (
@@ -72,21 +72,21 @@ export default function Header() {
 
           {/* Luxury Logo */}
           <div className="text-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none">
-            <a href="/" className="flex items-center group py-1 justify-center">
+            <a href="/" className="flex flex-col items-center group py-1 justify-center">
               <img
                 src="/logo.jpg"
                 alt="Anushka Chauhan Logo"
                 className={`rounded-full border border-[#aa9775]/25 object-cover transition-all duration-700 group-hover:scale-105 ${
-                  isScrolled ? "h-16 w-16 md:h-20 md:w-20" : "h-24 w-24 md:h-32 md:w-32"
+                  isScrolled ? "h-11 w-11 md:h-14 md:w-14" : "h-16 w-16 md:h-20 md:w-20"
                 }`}
               />
-              <div className="flex flex-col items-start ml-4 text-left">
-                <span className={`font-editorial text-sm md:text-xl tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-none ${
+              <div className="flex flex-col items-center text-center mt-2">
+                <span className={`font-editorial text-[9px] md:text-[13px] tracking-[0.22em] uppercase font-bold transition-colors duration-700 leading-none ${
                   isScrolled ? "text-[#1c1813] group-hover:text-[#aa9775]" : "text-white group-hover:text-[#e8d6b3]"
                 }`}>
                   ANUSHKA CHAUHAN
                 </span>
-                <span className={`text-[8px] md:text-[10px] tracking-[0.35em] font-bold mt-1.5 uppercase transition-colors duration-700 ${
+                <span className={`text-[5px] md:text-[7.5px] tracking-[0.35em] font-bold mt-1 uppercase transition-colors duration-700 ${
                   isScrolled ? "text-[#aa9775] group-hover:text-[#1c1813]" : "text-[#e8d6b3] group-hover:text-white"
                 }`}>
                   HERITAGE COUTURE

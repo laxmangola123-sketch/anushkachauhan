@@ -1,9 +1,45 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useCart } from "./CartContext";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0); // 0 = Video, 1 = Image
+  const [direction, setDirection] = useState(1); // 1 = forward, -1 = backward
+
+  const handleNext = () => {
+    setDirection(1);
+    setActiveSlide((prev) => (prev === 0 ? 1 : 0));
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setActiveSlide((prev) => (prev === 0 ? 1 : 0));
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNext();
+    }, 8000); // Auto slide every 8s
+    return () => clearInterval(timer);
+  }, []);
+
+  const slideVariants = {
+    enter: (dir: number) => ({
+      x: dir > 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir: number) => ({
+      x: dir > 0 ? "-100%" : "100%",
+      opacity: 0,
+    }),
+  };
+
   const containerVariants = {
     hidden: { opacity: 0, x: -30 },
     visible: {
@@ -30,28 +66,52 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center bg-[#12011b]">
-      {/* Background Video */}
+      {/* Background Slides */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover scale-105 filter brightness-[0.45] contrast-[1.3] saturate-[0.85]"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={activeSlide}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 200, damping: 25 },
+              opacity: { duration: 0.6 }
+            }}
+            className="absolute inset-0 w-full h-full"
+          >
+            {activeSlide === 0 ? (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-105 filter brightness-[0.45] contrast-[1.3] saturate-[0.85]"
+              >
+                <source src="/hero-video.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src="/hero_veerangana.jpg"
+                alt="Veerangana Collection Background"
+                className="w-full h-full object-cover scale-105 filter brightness-[0.55] contrast-[1.1] saturate-[0.9]"
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
         {/* Deep dark elegant gradient overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent z-10 pointer-events-none" />
       </div>
 
       {/* Hero Text Box on the Left */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full mt-16 md:mt-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full mt-16 md:mt-24 pointer-events-none">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-md md:max-w-lg flex flex-col items-start text-left"
+          className="max-w-md md:max-w-lg flex flex-col items-start text-left pointer-events-auto"
         >
           {/* Chapter Header */}
           <motion.span
@@ -98,6 +158,39 @@ export default function Hero() {
             Explore Collection
           </motion.a>
         </motion.div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-[#e8d6b3]/30 hover:border-[#e8d6b3] text-[#e8d6b3] hover:text-white rounded-full flex items-center justify-center transition-all duration-500 cursor-pointer bg-black/20 backdrop-blur-xs hover:scale-105 shadow-lg"
+        aria-label="Previous Slide"
+      >
+        <ChevronLeft size={18} />
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-[#e8d6b3]/30 hover:border-[#e8d6b3] text-[#e8d6b3] hover:text-white rounded-full flex items-center justify-center transition-all duration-500 cursor-pointer bg-black/20 backdrop-blur-xs hover:scale-105 shadow-lg"
+        aria-label="Next Slide"
+      >
+        <ChevronRight size={18} />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {[0, 1].map((idx) => (
+          <button
+            key={idx}
+            onClick={() => {
+              setDirection(idx > activeSlide ? 1 : -1);
+              setActiveSlide(idx);
+            }}
+            className={`w-2 h-2 rounded-full transition-all duration-500 cursor-pointer ${
+              activeSlide === idx ? "bg-[#e8d6b3] scale-125" : "bg-[#e8d6b3]/30 hover:bg-[#e8d6b3]/60"
+            }`}
+            aria-label={`Slide ${idx + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

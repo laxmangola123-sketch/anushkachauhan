@@ -340,6 +340,132 @@ export default function AboutContent() {
           </motion.div>
         </div>
 
+        {/* Section 4.5: SHIPPING & PAYMENT */}
+        <div className="border-t border-[#c5a880]/20 pt-20 mt-20 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-editorial text-4xl sm:text-5xl tracking-[0.15em] text-[#1c1813] font-bold uppercase">
+              SHIPPING & PAYMENT
+            </h2>
+            <span className="text-xs uppercase tracking-[0.35em] text-[#aa9775] font-bold mt-2 block">
+              Policies, Timelines & Terms
+            </span>
+            <div className="flex justify-center mt-4">
+              <div className="h-[0.5px] bg-[#aa9775]/30 w-16" />
+            </div>
+            <p className="text-sm sm:text-base font-light text-[#1c1813]/85 leading-relaxed max-w-2xl mx-auto mt-6">
+              We are pleased to offer complimentary worldwide shipping on all Anushka Chauhan orders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1: Shipping */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+            >
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+                <span>SHIPPING</span>
+                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Complimentary</span>
+              </h3>
+              <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
+                <p>
+                  All orders within India are shipped free of charge for orders above the amount of 35,000.
+                </p>
+                <p>
+                  <strong>International Shipping:</strong> We offer complimentary worldwide shipping on all international orders.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 2: Taxes & Duties */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+            >
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+                <span>TAXES & DUTIES</span>
+                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Information</span>
+              </h3>
+              <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
+                <p>
+                  <strong>For Customers in India:</strong> All prices displayed on our website are inclusive of applicable taxes and duties.
+                </p>
+                <p>
+                  <strong>For International Customers:</strong> For most international destinations, orders are shipped on a Delivery Duty Unpaid (DDU) basis. This means that product prices displayed on our website do not include import duties, customs charges, or local taxes that may be levied by the destination country.
+                </p>
+                <p>
+                  Any applicable duties, taxes, or customs fees are the responsibility of the recipient and must be paid upon arrival to release the shipment from customs.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3: Payments */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+            >
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+                <span>PAYMENTS</span>
+                <span className="text-[10px] text-red-700/80 font-sans tracking-[0.2em] font-bold">No COD</span>
+              </h3>
+              <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
+                <p>
+                  All payments made on <a href="https://anuskhachauhan.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#aa9775] font-medium">anuskhachauhan.com</a> are processed securely through trusted third-party payment providers.
+                </p>
+                <p>
+                  Anushka Chauhan may use payment gateways including Razorpay, PayPal, and other authorised payment providers. By completing a purchase, you agree to the terms and policies of the respective payment service provider.
+                </p>
+                <p>
+                  To ensure a secure shopping experience, we may request additional verification documents, including government-issued identification or proof of address before processing certain orders.
+                </p>
+                <p>
+                  Anushka Chauhan shall not be liable for transaction failures, payment authorisation issues, banking restrictions, declined transactions, or technical errors arising from third-party payment providers.
+                </p>
+                <p className="text-red-700 font-semibold bg-red-50/50 p-2.5 rounded-sm border border-red-100/50 text-center">
+                  Please note that Cash on Delivery (COD) is not available for any orders.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 4: Delivery Timelines */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="border border-[#c5a880]/15 p-8 bg-[#fdfbf7] shadow-sm rounded-sm flex flex-col space-y-4"
+            >
+              <h3 className="font-editorial text-xl text-[#1c1813] font-bold tracking-[0.15em] uppercase pb-2 border-b border-[#c5a880]/10 flex items-center justify-between">
+                <span>DELIVERY TIMELINES</span>
+                <span className="text-[10px] text-[#aa9775] font-sans tracking-[0.2em] font-bold">Bespoke</span>
+              </h3>
+              <div className="text-sm sm:text-[13px] font-light text-[#1c1813]/80 leading-relaxed space-y-3">
+                <p>
+                  Every Anushka Chauhan piece is crafted with exceptional attention to detail. Estimated delivery timelines are specified on individual product pages and may vary depending on the style selected.
+                </p>
+                <p>
+                  While we make every effort to deliver orders within the estimated timeframe, delays may occasionally occur due to courier disruptions, customs procedures, weather conditions, public holidays, or other unforeseen circumstances beyond our control.
+                </p>
+                <p>
+                  Should there be any significant delay, our Client Services team will keep you informed throughout the process.
+                </p>
+                <p>
+                  In the event that a shipment is refused, remains unclaimed, or delivery cannot be completed due to customer-related circumstances, additional shipping charges may apply for re-dispatch of the order.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
         {/* Section 5: FAQs (Frequently Asked Questions Accordion) */}
         <div className="border-t border-[#c5a880]/20 pt-20 mt-20 max-w-4xl mx-auto">
           <div className="text-center mb-12">

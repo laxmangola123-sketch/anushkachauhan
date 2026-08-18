@@ -347,145 +347,61 @@ export default function CartDrawer() {
                         {step === "payment" && (
                             <>
                                 <div className="flex-1 overflow-y-auto px-6 py-5 space-y-6">
-                                    {/* Tabs for Payment Mode */}
-                                    <div className="grid grid-cols-2 gap-2">
-                                        <button
-                                            type="button"
-                                            onClick={() => { setPaymentMethod("online"); setTransactionError(""); }}
-                                            className={`py-2.5 px-3 border text-center transition-all cursor-pointer rounded-sm ${
-                                                paymentMethod === "online" 
-                                                    ? "border-[#aa9775] bg-[#eedec8]/20 text-[#1c1813] font-semibold" 
-                                                    : "border-[#c5a880]/20 text-[#1c1813]/60 bg-transparent hover:border-[#aa9775]/50"
-                                            }`}
-                                        >
-                                            <p className="text-[10px] uppercase tracking-wider">Online Pay</p>
-                                            <span className="text-[7.5px] text-[#aa9775] mt-0.5 block">UPI / Bank</span>
-                                        </button>
-                                        <button
-                                            type="button"
-                                            onClick={() => { setPaymentMethod("cod"); setTransactionError(""); }}
-                                            className={`py-2.5 px-3 border text-center transition-all cursor-pointer rounded-sm ${
-                                                paymentMethod === "cod" 
-                                                    ? "border-[#aa9775] bg-[#eedec8]/20 text-[#1c1813] font-semibold" 
-                                                    : "border-[#c5a880]/20 text-[#1c1813]/60 bg-transparent hover:border-[#aa9775]/50"
-                                            }`}
-                                        >
-                                            <p className="text-[10px] uppercase tracking-wider">COD</p>
-                                            <span className="text-[7.5px] text-[#aa9775] mt-0.5 block">Cash on Delivery</span>
-                                        </button>
+                                    {/* Header for Payment Mode */}
+                                    <div className="pb-3 border-b border-[#c5a880]/15">
+                                        <h3 className="font-editorial text-lg text-[#1c1813] tracking-wide uppercase font-bold text-center">
+                                            Online Payment
+                                        </h3>
+                                        <p className="text-[9px] uppercase tracking-[0.25em] text-[#aa9775] text-center mt-1">
+                                            UPI Secure Transfer
+                                        </p>
                                     </div>
 
                                     {/* Online Payment Content */}
-                                    {paymentMethod === "online" && (
-                                        <div className="space-y-5">
-                                            {/* QR Code Container */}
-                                            <div className="border border-[#c5a880]/25 rounded-sm p-4 bg-[#fcf9f2] flex flex-col items-center">
-                                                <p className="text-[8px] uppercase tracking-[0.25em] text-[#aa9775] font-bold mb-3">Scan QR Code to Pay</p>
-                                                <div className="w-48 h-auto border border-[#c5a880]/20 p-2 bg-white shadow-sm mb-3">
-                                                    <img src="/payment_qr.jpg" alt="Payment QR Code" className="w-full h-full object-contain" />
-                                                </div>
-                                                
-                                                {/* Copyable UPI ID */}
-                                                <div className="flex items-center gap-2 px-3 py-1.5 bg-[#eedec8]/30 border border-[#c5a880]/15 w-full justify-between rounded-sm">
-                                                    <div className="flex flex-col">
-                                                        <span className="text-[7px] uppercase tracking-wider text-[#aa9775] font-bold">UPI ID</span>
-                                                        <span className="text-[10px] font-mono text-[#1c1813]">sandysahu1111-3@oksbi</span>
-                                                    </div>
-                                                    <button
-                                                        type="button"
-                                                        onClick={() => handleCopy("sandysahu1111-3@oksbi", "upi")}
-                                                        className="p-1 hover:bg-[#c5a880]/10 rounded-sm text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
-                                                    >
-                                                        {copiedField === "upi" ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
-                                                    </button>
-                                                </div>
+                                    <div className="space-y-5">
+                                        {/* QR Code Container */}
+                                        <div className="border border-[#c5a880]/25 rounded-sm p-4 bg-[#fcf9f2] flex flex-col items-center">
+                                            <p className="text-[8px] uppercase tracking-[0.25em] text-[#aa9775] font-bold mb-3">Scan QR Code to Pay</p>
+                                            <div className="w-48 h-auto border border-[#c5a880]/20 p-2 bg-white shadow-sm mb-3">
+                                                <img src="/payment_qr.jpg" alt="Payment QR Code" className="w-full h-full object-contain" />
                                             </div>
-
-                                            {/* Bank Information Details */}
-                                            <div className="border border-[#c5a880]/25 rounded-sm p-4 bg-[#fdfaf4] space-y-2.5">
-                                                <p className="text-[8px] uppercase tracking-[0.25em] text-[#aa9775] font-bold pb-1.5 border-b border-[#c5a880]/10">Bank Transfer Details</p>
-                                                
-                                                <div className="space-y-2 text-[10px] text-[#1c1813]">
-                                                    <div className="flex justify-between items-center py-0.5">
-                                                        <span className="text-[#1c1813]/50">Beneficiary Name</span>
-                                                        <span className="font-semibold text-right">KYLR FASHION</span>
-                                                    </div>
-                                                    
-                                                    <div className="flex justify-between items-center py-0.5 border-t border-[#c5a880]/5">
-                                                        <span className="text-[#1c1813]/50">Account Number</span>
-                                                        <div className="flex items-center gap-1.5 font-mono">
-                                                            <span className="font-semibold">1514020000000538</span>
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => handleCopy("1514020000000538", "account")}
-                                                                className="text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
-                                                            >
-                                                                {copiedField === "account" ? <Check size={10} className="text-green-600" /> : <Copy size={10} />}
-                                                            </button>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="flex justify-between items-center py-0.5 border-t border-[#c5a880]/5">
-                                                        <span className="text-[#1c1813]/50">IFSC Code</span>
-                                                        <div className="flex items-center gap-1.5 font-mono">
-                                                            <span className="font-semibold">UTKS0001514</span>
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => handleCopy("UTKS0001514", "ifsc")}
-                                                                className="text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
-                                                            >
-                                                                {copiedField === "ifsc" ? <Check size={10} className="text-green-600" /> : <Copy size={10} />}
-                                                            </button>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="flex justify-between items-center py-0.5 border-t border-[#c5a880]/5">
-                                                        <span className="text-[#1c1813]/50">Bank Name</span>
-                                                        <span className="font-semibold text-right">Utkarsh Small Finance Bank</span>
-                                                    </div>
-
-                                                    <div className="flex justify-between items-center py-0.5 border-t border-[#c5a880]/5">
-                                                        <span className="text-[#1c1813]/50">Branch Name</span>
-                                                        <span className="font-semibold text-right">Noida</span>
-                                                    </div>
+                                            
+                                            {/* Copyable UPI ID */}
+                                            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#eedec8]/30 border border-[#c5a880]/15 w-full justify-between rounded-sm">
+                                                <div className="flex flex-col">
+                                                    <span className="text-[7px] uppercase tracking-wider text-[#aa9775] font-bold">UPI ID</span>
+                                                    <span className="text-[10px] font-mono text-[#1c1813]">sandysahu1111-3@oksbi</span>
                                                 </div>
-                                            </div>
-
-                                            {/* Transaction Reference Input */}
-                                            <div className="space-y-1">
-                                                <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-bold block mb-1">
-                                                    UPI UTR / Bank Reference Number *
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    value={transactionId}
-                                                    onChange={(e) => { setTransactionId(e.target.value); setTransactionError(""); }}
-                                                    placeholder="Enter 12-digit UTR or Txn Ref ID"
-                                                    className={`w-full px-3 py-2.5 text-xs bg-white border ${
-                                                        transactionError ? "border-red-400" : "border-[#c5a880]/30"
-                                                    } text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#c5a880] transition-colors font-light tracking-wide`}
-                                                />
-                                                {transactionError && <p className="text-[8px] text-red-400 mt-1">{transactionError}</p>}
-                                                <p className="text-[8.5px] text-[#aa9775] italic leading-relaxed pt-1">
-                                                    Scan the QR or complete the bank transfer first, then input your UTR/Reference number to help us confirm your payment.
-                                                </p>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => handleCopy("sandysahu1111-3@oksbi", "upi")}
+                                                    className="p-1 hover:bg-[#c5a880]/10 rounded-sm text-[#aa9775] hover:text-[#1c1813] transition-colors cursor-pointer"
+                                                >
+                                                    {copiedField === "upi" ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
+                                                </button>
                                             </div>
                                         </div>
-                                    )}
 
-                                    {/* COD Content */}
-                                    {paymentMethod === "cod" && (
-                                        <div className="border border-[#c5a880]/25 rounded-sm p-5 bg-[#fdfbf7] text-center space-y-4">
-                                            <div className="w-10 h-10 rounded-full bg-[#aa9775]/10 flex items-center justify-center text-[#aa9775] mx-auto">
-                                                <ShoppingBag size={18} />
-                                            </div>
-                                            <h4 className="text-xs uppercase tracking-wider text-[#1c1813] font-semibold">Cash on Delivery (COD) Selected</h4>
-                                            <p className="text-[10px] sm:text-xs font-light text-[#1c1813]/80 leading-relaxed max-w-xs mx-auto">
-                                                Your order will be shipped to your address and you can pay in cash upon delivery. 
-                                                An additional verification call will be placed to your number (<strong className="text-[#1c1813] font-semibold">{details.phone}</strong>) within 24 hours to confirm dispatch.
+                                        {/* Transaction Reference Input */}
+                                        <div className="space-y-1">
+                                            <label className="text-[8px] uppercase tracking-[0.3em] text-[#1c1813]/60 font-bold block mb-1">
+                                                UPI UTR / Reference Number *
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={transactionId}
+                                                onChange={(e) => { setTransactionId(e.target.value); setTransactionError(""); }}
+                                                placeholder="Enter 12-digit UTR or Txn Ref ID"
+                                                className={`w-full px-3 py-2.5 text-xs bg-white border ${
+                                                    transactionError ? "border-red-400" : "border-[#c5a880]/30"
+                                                } text-[#1c1813] placeholder:text-[#1c1813]/35 focus:outline-none focus:border-[#c5a880] transition-colors font-light tracking-wide`}
+                                            />
+                                            {transactionError && <p className="text-[8px] text-red-400 mt-1">{transactionError}</p>}
+                                            <p className="text-[8.5px] text-[#aa9775] italic leading-relaxed pt-1">
+                                                Scan the QR code and pay via UPI, then input your UTR/Reference number to help us confirm your payment.
                                             </p>
                                         </div>
-                                    )}
+                                    </div>
                                 </div>
 
                                 {/* Bottom controls */}
@@ -494,7 +410,7 @@ export default function CartDrawer() {
                                         onClick={handlePlaceOrder}
                                         className="w-full py-4 bg-[#1c1813] text-[#f5ebd9] text-[9px] uppercase tracking-[0.5em] font-semibold hover:bg-[#c5a880] hover:text-[#1c1813] transition-all duration-500 cursor-pointer"
                                     >
-                                        {paymentMethod === "online" ? "Submit Payment & Confirm" : "Place COD Order"}
+                                        Submit Payment & Confirm
                                     </button>
                                     <button
                                         onClick={() => setStep("details")}
@@ -539,23 +455,22 @@ export default function CartDrawer() {
                                         </div>
                                     )}
 
-                                    <p className="text-[#1c1813]/60">Payment Method: <strong className="text-[#1c1813]/90">{paymentMethod === "online" ? "Online Transfer" : "Cash on Delivery (COD)"}</strong></p>
-                                    {paymentMethod === "online" && (
-                                        <p className="text-[#1c1813]/60">UTR / Ref No: <strong className="text-[#1c1813]/90">{transactionId}</strong></p>
-                                    )}
+                                    <p className="text-[#1c1813]/60">Payment Method: <strong className="text-[#1c1813]/90">Online UPI Transfer</strong></p>
+                                    <p className="text-[#1c1813]/60">UTR / Ref No: <strong className="text-[#1c1813]/90">{transactionId}</strong></p>
                                     <p className="text-[#1c1813]/60">Delivery City: <strong className="text-[#1c1813]/90">{details.city}</strong></p>
                                     <p className="text-[#1c1813]/60">Verification Number: <strong className="text-[#1c1813]/90">{details.phone}</strong></p>
                                 </div>
 
-                                {paymentMethod === "online" ? (
-                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-6 max-w-xs leading-relaxed">
-                                        Our accounts team will verify the payment reference <strong className="text-[#1c1813]">{transactionId}</strong>. We will notify you and call you within 24 hours to confirm dispatch.
+                                <div className="bg-[#aa9775]/10 border border-[#aa9775]/35 rounded-sm p-4 w-full text-center space-y-1 mb-6">
+                                    <p className="text-[9.5px] uppercase tracking-[0.25em] text-[#aa9775] font-bold">Important Notice</p>
+                                    <p className="text-[11px] text-[#1c1813] font-medium leading-relaxed">
+                                        Every Anushka Chauhan piece is handcrafted with exceptional care. Your order will take approximately <strong className="font-bold">45 days</strong> for delivery.
                                     </p>
-                                ) : (
-                                    <p className="text-[9px] text-[#1c1813]/60 font-light mb-6 max-w-xs leading-relaxed">
-                                        We will call you at <strong className="text-[#1c1813]">{details.phone}</strong> within 24 hours to verify your address and confirm dispatch before shipping.
-                                    </p>
-                                )}
+                                </div>
+
+                                <p className="text-[9px] text-[#1c1813]/60 font-light mb-6 max-w-xs leading-relaxed">
+                                    Our accounts team will verify the payment reference <strong className="text-[#1c1813]">{transactionId}</strong>. We will notify you and call you within 24 hours to confirm dispatch.
+                                </p>
 
                                 {placedOrderId && (
                                     <a
